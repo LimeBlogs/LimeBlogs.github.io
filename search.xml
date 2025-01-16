@@ -41,7 +41,7 @@
   </entry>
   <entry>
     <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
-    <url>/2025/01/16/hello-world/</url>
+    <url>/2025/01/13/hello-world/</url>
     <content><![CDATA[<p><img src="https://cdn.pixelbin.io/v2/limeshare/original/LimeHello.jpg" alt="封面"><br>欢迎来到 <a href="https://limeblogs.github.io/">莱姆Lime</a> 平时在这里与大家一起聊聊天（好像还没做评论功能┐(´-｀)┌）叙叙事<br>扯些有的没的<br>该帖子为一切的起点！<br>见证这一切的开始吧！<br><code>此帖子基于一开始生成的hello-world 所修改</code><br></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本教程并不会很详细，不过大概的步骤都会给你，照做即可。</p>

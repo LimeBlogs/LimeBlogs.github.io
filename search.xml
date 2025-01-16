@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>LAB</title>
-    <url>/2025/01/15/LAB/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁</p>
-<h1 id="实验性功能-测试"><a href="#实验性功能-测试" class="headerlink" title="实验性功能[测试]"></a>实验性功能[测试]</h1><p>以下存放代码以及功能实现，一方面是便于我调用，另一方面是为了水一篇帖子</p>
-<h2 id="在md中引入Geogebra"><a href="#在md中引入Geogebra" class="headerlink" title="在md中引入Geogebra"></a>在md中引入Geogebra</h2><p>这个功能就是使用<code>&lt;/iframe&gt;</code>来引入网页<br>功能如下</p>
-<iframe src="https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/" width="400px" height="400px" style="border:0px;"> </iframe>
-如果是几何的话甚至可以拖动！这样就可以很方便的在Hexo引入数学函数图像，方便易用。
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span>   </span></span><br><span class="line"><span class="tag"><span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">height</span>=<span class="string">&quot;400px&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="如何创建分享链接？"><a href="#如何创建分享链接？" class="headerlink" title="如何创建分享链接？"></a>如何创建分享链接？</h3><p><code>首先，你需要一个账户，这太简单了，使用邮箱即可注册，这里跳过不讲</code><br><br>打开<a href="https://www.geogebra.org/classic">Geogebra Classic</a>输入你要的函数之后点击“分享”<br></p>
-<blockquote>
-<p><em>如果你不知道如何正确使用Geogebra，<a href="https://help.geogebra.org/hc/zh-cn/articles/10445800380957">点击这里开始入门</a></em></p>
-</blockquote>
-<p><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra1.jpg" alt="如图"><br><br>在输入需要保存的文件名后选择保存即可<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra2.jpg" alt="输入文件名后保存"><br><br>之后，选择链接<code>插入</code>进行复制<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra3.jpg" alt="复制插入"><br><br>你大概率会得到这样一串这样的代码</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false&quot;</span> <span class="attr">width</span>=<span class="string">&quot;360px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;801px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>你要做的，就是对<code>https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false</code>br&gt;进行净化，把<code>宽度</code>之后的参数删除即可，就会变成<br><code>https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/</code><br>如果你需要开启额外的功能，可以参照<a href="https://geogebra.github.io/docs/reference/en/Material_Embedding_(Iframe)/">这篇文档</a><br>通过输入 <code>参数</code>&#x2F;<code>布尔值</code>的方式来决定你是否要在插入的链接里开启部分功能！<br><br>接着，将链接放回代码中<br>建议将链接里和代码里的<code>width</code>与<code>height</code>的值修改为400！在我看来这样的阅读效果是最佳的！</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>就像这样子！完事！接着将代码直接粘贴到你的md文件中即可被正确加载！</p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>实验室</tag>
-        <tag>测试</tag>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
     <url>/2025/01/16/hello-world/</url>
     <content><![CDATA[<p><img src="https://cdn.pixelbin.io/v2/limeshare/original/LimeHello.jpg" alt="封面"><br>欢迎来到 <a href="https://limeblogs.github.io/">莱姆Lime</a> 平时在这里与大家一起聊聊天（好像还没做评论功能┐(´-｀)┌）叙叙事<br>扯些有的没的<br>该帖子为一切的起点！<br>见证这一切的开始吧！<br><code>此帖子基于一开始生成的hello-world 所修改</code><br></p>
@@ -60,9 +27,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
         <tag>建站</tag>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
         <tag>入门</tag>
       </tags>
   </entry>
@@ -112,10 +79,43 @@
         <category>日常</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
+        <tag>Hexo</tag>
         <tag>置顶</tag>
         <tag>更新日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LAB</title>
+    <url>/2025/01/15/LAB/</url>
+    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁</p>
+<h1 id="实验性功能-测试"><a href="#实验性功能-测试" class="headerlink" title="实验性功能[测试]"></a>实验性功能[测试]</h1><p>以下存放代码以及功能实现，一方面是便于我调用，另一方面是为了水一篇帖子</p>
+<h2 id="在md中引入Geogebra"><a href="#在md中引入Geogebra" class="headerlink" title="在md中引入Geogebra"></a>在md中引入Geogebra</h2><p>这个功能就是使用<code>&lt;/iframe&gt;</code>来引入网页<br>功能如下</p>
+<iframe src="https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/" width="400px" height="400px" style="border:0px;"> </iframe>
+如果是几何的话甚至可以拖动！这样就可以很方便的在Hexo引入数学函数图像，方便易用。
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span>   </span></span><br><span class="line"><span class="tag"><span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">height</span>=<span class="string">&quot;400px&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="如何创建分享链接？"><a href="#如何创建分享链接？" class="headerlink" title="如何创建分享链接？"></a>如何创建分享链接？</h3><p><code>首先，你需要一个账户，这太简单了，使用邮箱即可注册，这里跳过不讲</code><br><br>打开<a href="https://www.geogebra.org/classic">Geogebra Classic</a>输入你要的函数之后点击“分享”<br></p>
+<blockquote>
+<p><em>如果你不知道如何正确使用Geogebra，<a href="https://help.geogebra.org/hc/zh-cn/articles/10445800380957">点击这里开始入门</a></em></p>
+</blockquote>
+<p><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra1.jpg" alt="如图"><br><br>在输入需要保存的文件名后选择保存即可<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra2.jpg" alt="输入文件名后保存"><br><br>之后，选择链接<code>插入</code>进行复制<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra3.jpg" alt="复制插入"><br><br>你大概率会得到这样一串这样的代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false&quot;</span> <span class="attr">width</span>=<span class="string">&quot;360px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;801px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>你要做的，就是对<code>https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false</code>br&gt;进行净化，把<code>宽度</code>之后的参数删除即可，就会变成<br><code>https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/</code><br>如果你需要开启额外的功能，可以参照<a href="https://geogebra.github.io/docs/reference/en/Material_Embedding_(Iframe)/">这篇文档</a><br>通过输入 <code>参数</code>&#x2F;<code>布尔值</code>的方式来决定你是否要在插入的链接里开启部分功能！<br><br>接着，将链接放回代码中<br>建议将链接里和代码里的<code>width</code>与<code>height</code>的值修改为400！在我看来这样的阅读效果是最佳的！</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>就像这样子！完事！接着将代码直接粘贴到你的md文件中即可被正确加载！</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>实验室</tag>
+        <tag>测试</tag>
       </tags>
   </entry>
 </search>

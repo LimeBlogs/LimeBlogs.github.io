@@ -307,7 +307,7 @@ utils.addGlobalFn('pjaxSend', () => {
     elements: 'a:not([target="_blank"])',
     selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
     cacheBust: false,
-    analytics: false,
+    analytics: true,
     scrollRestoration: false
 })
 
@@ -338,7 +338,10 @@ document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
         pjax.loadUrl('/404.html')
     }
-})</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=3.0.3"></script><!-- Tianli-Talk--><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">音乐已暂停</div><meting-js id="13099864693" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+})</script><!-- google adsense--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="document.querySelectorAll('.google-ads-warp').forEach(i =&gt; i.style.display='none')"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+	google_ad_client: 'ca-pub-8381739813295423',
+	enable_page_level_ads: true,
+});</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=3.0.3"></script><!-- Tianli-Talk--><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">音乐已暂停</div><meting-js id="13099864693" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
         <script>
             const posts = ["2025/01/27/MC-Launcher/","2025/01/21/customcss/","2025/01/18/gaoyisuibi/","2025/01/15/LAB/","2025/01/15/莱姆の更新日志/","2025/01/13/hello-world/"];
             function toRandomPost() {

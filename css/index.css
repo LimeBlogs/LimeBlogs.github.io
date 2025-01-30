@@ -5337,6 +5337,11 @@ span.tags-punctuation {
 .recent-post-item:hover .recent-post-info-top .article-title {
   color: var(--efu-theme);
 }
+.recent-post-item + .google-ads-warp iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+}
 .recent-post-item .post_cover {
   position: relative;
   transition: 1s;
@@ -6909,6 +6914,37 @@ i.bber-gotobb {
 #bbTimeList .li-style:hover {
   color: var(--efu-theme);
   transition: 0.3s;
+}
+.google-vignette-test {
+  animation: 0.6s ease 0s 1 normal none running to_show;
+}
+.google-vignette-test > body {
+  background-color: var(--efu-maskbgdeep);
+}
+.google-vignette-test .header-panel {
+  background-color: transparent;
+  border: none;
+}
+.google-vignette-test .header-panel .header-message {
+  color: var(--efu-fontcolor);
+}
+.google-vignette-test .header-panel .close-button {
+  line-height: inherit;
+  background: var(--efu-maskbg);
+  border-radius: 50%;
+  padding: 4px;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.google-vignette-test .container ins iframe {
+  border-radius: 12px;
+  border: var(--style-border);
+  box-shadow: var(--efu-shadow-border);
+}
+.google-vignette-test .container ins iframe > body {
+  background-color: var(--efu-maskbg);
 }
 #equipment {
   margin-top: 26px;
@@ -9183,6 +9219,11 @@ div#banners .bannerText {
   #post #pagination.show-window {
     bottom: 20px;
     opacity: 1;
+  }
+}
+@media screen and (max-width: 900px) {
+  #post .google-ads-warp {
+    margin: 0 1rem;
   }
 }
 [data-theme=dark] {

@@ -1,119 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>LAB</title>
-    <url>/2025/01/15/LAB/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁</p>
-<h1 id="实验性功能-测试"><a href="#实验性功能-测试" class="headerlink" title="实验性功能[测试]"></a>实验性功能[测试]</h1><p>以下存放代码以及功能实现，一方面是便于我调用，另一方面是为了水一篇帖子</p>
-<h2 id="Hexo-Admonition"><a href="#Hexo-Admonition" class="headerlink" title="Hexo-Admonition"></a>Hexo-Admonition</h2><blockquote>
-<p>Hexo 内容辅助插件，支持将类似 reStructuredText 的警告提示块添加到 Markdown 文档中。<br></p>
-</blockquote>
-<p><a href="https://github.com/lxl80/hexo-admonition">官方Github</a><br><br>其实也没啥好说的，安装之后直接看示例就可以了<br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-admonition --save</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!!! note 原神</span><br><span class="line"><span class="code">    这是一条note提示块</span></span><br><span class="line"><span class="code">!!! warning 原神</span></span><br><span class="line"><span class="code">    这是一条warning提示块</span></span><br></pre></td></tr></table></figure>
-
-<p>以此类推，接下来我将会把所有可用的提示块样式列举出来<br></p>
-<div class="admonition note"><p class="admonition-title">原神
-</p><p>这是一条note提示块</p>
-</div>
-
-<div class="admonition warning"><p class="admonition-title">原神
-</p><p>这是一条warning提示块</p>
-</div>
-
-<div class="admonition info"><p class="admonition-title">原神
-</p><p>这是一条info提示块</p>
-</div>
-
-<div class="admonition todo"><p class="admonition-title">原神
-</p><p>这是一条todo提示块</p>
-</div>
-
-<div class="admonition attention"><p class="admonition-title">原神
-</p><p>这是一条attention提示块</p>
-</div>
-
-<div class="admonition caution"><p class="admonition-title">原神
-</p><p>这是一条caution提示块</p>
-</div>
-
-<div class="admonition error"><p class="admonition-title">原神
-</p><p>这是一条error提示块</p>
-</div>
-
-<div class="admonition failure"><p class="admonition-title">原神
-</p><p>这是一条failure提示块</p>
-</div>
-
-<div class="admonition missing"><p class="admonition-title">原神
-</p><p>这是一条missing提示块</p>
-</div>
-
-<div class="admonition fail"><p class="admonition-title">原神
-</p><p>这是一条fail提示块</p>
-</div>
-
-<p><br>就是这样子，个人感觉在md中使用还是很方便的！<br><br>其中</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!!! info &quot;&quot;</span><br><span class="line"><span class="code">    这是一条不带标题的info提示块</span></span><br></pre></td></tr></table></figure>
-
-<div class="admonition info"><p>这是一条不带标题的info提示块</p>
-</div>
-
-<p>等等，请在自定义css目录下创建<code>Hexo-admonition.css</code>然后在其中添加以下css代码，以确保该插件可以正常显示以及字体颜色正确。</p>
-<div class="admonition info"><p class="admonition-title">提示
-</p><p>如果你不知道什么是自定义css目录，请在博客搜索相关内容</p>
-<blockquote>
-<p>或者<a href="https://limeblogs.github.io/2025/01/21/customcss/">单击这里查看教程</a></p>
-</blockquote>
-</div>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">.admonition &#123;</span><br><span class="line">  margin: 1.5625em 0;</span><br><span class="line">  padding: .6rem;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  color: #808080;</span><br><span class="line">  font-size: .64rem;</span><br><span class="line">  page-break-inside: avoid;</span><br><span class="line">  border-left: .3rem solid #42b983;</span><br><span class="line">  border-radius: .3rem;</span><br><span class="line">  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,.05), 0 0 0.05rem rgba(0,0,0,.1);</span><br><span class="line">  background-color: #fafafa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p.admonition-title &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  position: relative;</span><br><span class="line">  margin: -.6rem -.6rem .8em -.6rem !important;</span><br><span class="line">  padding: .4rem .6rem .4rem 2.5rem;</span><br><span class="line">  font-weight: 700;</span><br><span class="line">  background-color:rgba(66, 185, 131, .1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition-title::before &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  color: #808080;</span><br><span class="line">  top: .9rem;</span><br><span class="line">  left: 1rem;</span><br><span class="line">  width: 12px;</span><br><span class="line">  height: 12px;</span><br><span class="line">  background-color: #42b983;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  content: &#x27; &#x27;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.info&gt;.admonition-title, .todo&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(0,184,212,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning&gt;.admonition-title, .attention&gt;.admonition-title, .caution&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(255,145,0,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.failure&gt;.admonition-title, .missing&gt;.admonition-title, .fail&gt;.admonition-title, .error&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(255,82,82,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.info, .admonition.todo &#123;</span><br><span class="line">  border-color: #00b8d4;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.warning, .admonition.attention, .admonition.caution &#123;</span><br><span class="line">  border-color: #ff9100;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.failure, .admonition.missing, .admonition.fail, .admonition.error &#123;</span><br><span class="line">  border-color: #ff5252;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.info&gt;.admonition-title::before, .todo&gt;.admonition-title::before &#123;</span><br><span class="line">  background-color: #00b8d4;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning&gt;.admonition-title::before, .attention&gt;.admonition-title::before, .caution&gt;.admonition-title::before &#123;</span><br><span class="line">  background-color: #ff9100;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.failure&gt;.admonition-title::before,.missing&gt;.admonition-title::before,.fail&gt;.admonition-title::before,.error&gt;.admonition-title::before&#123;</span><br><span class="line">  background-color: #ff5252;;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition&gt;:last-child &#123;</span><br><span class="line">  margin-bottom: 0 !important;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="在md中引入Geogebra"><a href="#在md中引入Geogebra" class="headerlink" title="在md中引入Geogebra"></a>在md中引入Geogebra</h2><p>这个功能就是使用<code>&lt;/iframe&gt;</code>来引入网页<br>功能如下</p>
-<iframe src="https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/" width="400px" height="400px" style="border:0px;"> </iframe>
-如果是几何的话甚至可以拖动！这样就可以很方便的在Hexo引入数学函数图像，方便易用。
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span>   </span></span><br><span class="line"><span class="tag"><span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">height</span>=<span class="string">&quot;400px&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="如何创建分享链接？"><a href="#如何创建分享链接？" class="headerlink" title="如何创建分享链接？"></a>如何创建分享链接？</h3><p><code>首先，你需要一个账户，这太简单了，使用邮箱即可注册，这里跳过不讲</code><br><br>打开<a href="https://www.geogebra.org/classic">Geogebra Classic</a>输入你要的函数之后点击“分享”<br></p>
-<blockquote>
-<p><em>如果你不知道如何正确使用Geogebra，<a href="https://help.geogebra.org/hc/zh-cn/articles/10445800380957">点击这里开始入门</a></em></p>
-</blockquote>
-<p><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra1.jpg" alt="如图"><br><br>在输入需要保存的文件名后选择保存即可<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra2.jpg" alt="输入文件名后保存"><br><br>之后，选择链接<code>插入</code>进行复制<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra3.jpg" alt="复制插入"><br><br>你大概率会得到这样一串这样的代码</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false&quot;</span> <span class="attr">width</span>=<span class="string">&quot;360px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;801px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>你要做的，就是对以下链接进行净化</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false</span><br></pre></td></tr></table></figure>
-
-<p><br>以下为净化后的链接<br>就是把height之后的参数删除了而已</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/</span><br></pre></td></tr></table></figure>
-
-<p><br>如果你需要开启额外的功能，可以参照<a href="https://geogebra.github.io/docs/reference/en/Material_Embedding_(Iframe)/">这篇文档</a><br>通过输入 <code>参数</code>&#x2F;<code>布尔值</code>的方式来决定你是否要在插入的链接里开启部分功能！<br><br>接着，将链接放回代码中<br>建议将链接里和代码里的<code>width</code>与<code>height</code>的值修改为400！在我看来这样的阅读效果是最佳的！</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>就像这样子！完事！接着将代码直接粘贴到你的md文件中即可被正确加载！</p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>实验室</tag>
-        <tag>测试</tag>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lime-Fork</title>
     <url>/2025/02/16/Lime-Fork/</url>
     <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a href="https://limeblogs.github.io/">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
 <div class="admonition fail"><p>该页面仅仅收录我存档的项目，不会注明Github的项目地址。</p>
 </div>
 
-   
-<p>!!! info “”<br>    你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。</p>
+<div class="admonition info"><p>你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。</p>
+</div>
+
 <h2 id="人生重开模拟器"><a href="#人生重开模拟器" class="headerlink" title="人生重开模拟器"></a>人生重开模拟器</h2><p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
 <h2 id="ubc2-资料参闻馆"><a href="#ubc2-资料参闻馆" class="headerlink" title="ubc2 资料参闻馆"></a>ubc2 资料参闻馆</h2><div class="admonition fail"><p>该页面内容可能引人不适！</p>
 </div>
@@ -236,9 +132,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
         <tag>建站</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -284,9 +180,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
         <tag>建站</tag>
+        <tag>Hexo</tag>
         <tag>入门</tag>
       </tags>
   </entry>
@@ -336,10 +232,115 @@
         <category>日常</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
+        <tag>Hexo</tag>
         <tag>置顶</tag>
         <tag>更新日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LAB</title>
+    <url>/2025/01/15/LAB/</url>
+    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁</p>
+<h1 id="实验性功能-测试"><a href="#实验性功能-测试" class="headerlink" title="实验性功能[测试]"></a>实验性功能[测试]</h1><p>以下存放代码以及功能实现，一方面是便于我调用，另一方面是为了水一篇帖子</p>
+<h2 id="Hexo-Admonition"><a href="#Hexo-Admonition" class="headerlink" title="Hexo-Admonition"></a>Hexo-Admonition</h2><blockquote>
+<p>Hexo 内容辅助插件，支持将类似 reStructuredText 的警告提示块添加到 Markdown 文档中。<br></p>
+</blockquote>
+<p><a href="https://github.com/lxl80/hexo-admonition">官方Github</a><br><br>其实也没啥好说的，安装之后直接看示例就可以了<br></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-admonition --save</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!!! note 原神</span><br><span class="line"><span class="code">    这是一条note提示块</span></span><br><span class="line"><span class="code">!!! warning 原神</span></span><br><span class="line"><span class="code">    这是一条warning提示块</span></span><br></pre></td></tr></table></figure>
+
+<p>以此类推，接下来我将会把所有可用的提示块样式列举出来<br></p>
+<div class="admonition note"><p class="admonition-title">原神
+</p><p>这是一条note提示块</p>
+</div>
+
+<div class="admonition warning"><p class="admonition-title">原神
+</p><p>这是一条warning提示块</p>
+</div>
+
+<div class="admonition info"><p class="admonition-title">原神
+</p><p>这是一条info提示块</p>
+</div>
+
+<div class="admonition todo"><p class="admonition-title">原神
+</p><p>这是一条todo提示块</p>
+</div>
+
+<div class="admonition attention"><p class="admonition-title">原神
+</p><p>这是一条attention提示块</p>
+</div>
+
+<div class="admonition caution"><p class="admonition-title">原神
+</p><p>这是一条caution提示块</p>
+</div>
+
+<div class="admonition error"><p class="admonition-title">原神
+</p><p>这是一条error提示块</p>
+</div>
+
+<div class="admonition failure"><p class="admonition-title">原神
+</p><p>这是一条failure提示块</p>
+</div>
+
+<div class="admonition missing"><p class="admonition-title">原神
+</p><p>这是一条missing提示块</p>
+</div>
+
+<div class="admonition fail"><p class="admonition-title">原神
+</p><p>这是一条fail提示块</p>
+</div>
+
+<p><br>就是这样子，个人感觉在md中使用还是很方便的！<br><br>其中</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!!! info &quot;&quot;</span><br><span class="line"><span class="code">    这是一条不带标题的info提示块</span></span><br></pre></td></tr></table></figure>
+
+<div class="admonition info"><p>这是一条不带标题的info提示块</p>
+</div>
+
+<p>等等，请在自定义css目录下创建<code>Hexo-admonition.css</code>然后在其中添加以下css代码，以确保该插件可以正常显示以及字体颜色正确。</p>
+<div class="admonition info"><p class="admonition-title">提示
+</p><p>如果你不知道什么是自定义css目录，请在博客搜索相关内容</p>
+<blockquote>
+<p>或者<a href="https://limeblogs.github.io/2025/01/21/customcss/">单击这里查看教程</a></p>
+</blockquote>
+</div>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">.admonition &#123;</span><br><span class="line">  margin: 1.5625em 0;</span><br><span class="line">  padding: .6rem;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  color: #808080;</span><br><span class="line">  font-size: .64rem;</span><br><span class="line">  page-break-inside: avoid;</span><br><span class="line">  border-left: .3rem solid #42b983;</span><br><span class="line">  border-radius: .3rem;</span><br><span class="line">  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,.05), 0 0 0.05rem rgba(0,0,0,.1);</span><br><span class="line">  background-color: #fafafa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p.admonition-title &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  position: relative;</span><br><span class="line">  margin: -.6rem -.6rem .8em -.6rem !important;</span><br><span class="line">  padding: .4rem .6rem .4rem 2.5rem;</span><br><span class="line">  font-weight: 700;</span><br><span class="line">  background-color:rgba(66, 185, 131, .1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition-title::before &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  color: #808080;</span><br><span class="line">  top: .9rem;</span><br><span class="line">  left: 1rem;</span><br><span class="line">  width: 12px;</span><br><span class="line">  height: 12px;</span><br><span class="line">  background-color: #42b983;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  content: &#x27; &#x27;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.info&gt;.admonition-title, .todo&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(0,184,212,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning&gt;.admonition-title, .attention&gt;.admonition-title, .caution&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(255,145,0,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.failure&gt;.admonition-title, .missing&gt;.admonition-title, .fail&gt;.admonition-title, .error&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(255,82,82,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.info, .admonition.todo &#123;</span><br><span class="line">  border-color: #00b8d4;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.warning, .admonition.attention, .admonition.caution &#123;</span><br><span class="line">  border-color: #ff9100;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.failure, .admonition.missing, .admonition.fail, .admonition.error &#123;</span><br><span class="line">  border-color: #ff5252;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.info&gt;.admonition-title::before, .todo&gt;.admonition-title::before &#123;</span><br><span class="line">  background-color: #00b8d4;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning&gt;.admonition-title::before, .attention&gt;.admonition-title::before, .caution&gt;.admonition-title::before &#123;</span><br><span class="line">  background-color: #ff9100;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.failure&gt;.admonition-title::before,.missing&gt;.admonition-title::before,.fail&gt;.admonition-title::before,.error&gt;.admonition-title::before&#123;</span><br><span class="line">  background-color: #ff5252;;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition&gt;:last-child &#123;</span><br><span class="line">  margin-bottom: 0 !important;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="在md中引入Geogebra"><a href="#在md中引入Geogebra" class="headerlink" title="在md中引入Geogebra"></a>在md中引入Geogebra</h2><p>这个功能就是使用<code>&lt;/iframe&gt;</code>来引入网页<br>功能如下</p>
+<iframe src="https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/" width="400px" height="400px" style="border:0px;"> </iframe>
+如果是几何的话甚至可以拖动！这样就可以很方便的在Hexo引入数学函数图像，方便易用。
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span>   </span></span><br><span class="line"><span class="tag"><span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">height</span>=<span class="string">&quot;400px&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="如何创建分享链接？"><a href="#如何创建分享链接？" class="headerlink" title="如何创建分享链接？"></a>如何创建分享链接？</h3><p><code>首先，你需要一个账户，这太简单了，使用邮箱即可注册，这里跳过不讲</code><br><br>打开<a href="https://www.geogebra.org/classic">Geogebra Classic</a>输入你要的函数之后点击“分享”<br></p>
+<blockquote>
+<p><em>如果你不知道如何正确使用Geogebra，<a href="https://help.geogebra.org/hc/zh-cn/articles/10445800380957">点击这里开始入门</a></em></p>
+</blockquote>
+<p><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra1.jpg" alt="如图"><br><br>在输入需要保存的文件名后选择保存即可<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra2.jpg" alt="输入文件名后保存"><br><br>之后，选择链接<code>插入</code>进行复制<br><img src="https://cdn.pixelbin.io/v2/limeshare/original/HexoLAB/Geogebra3.jpg" alt="复制插入"><br><br>你大概率会得到这样一串这样的代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false&quot;</span> <span class="attr">width</span>=<span class="string">&quot;360px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;801px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>你要做的，就是对以下链接进行净化</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false</span><br></pre></td></tr></table></figure>
+
+<p><br>以下为净化后的链接<br>就是把height之后的参数删除了而已</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/</span><br></pre></td></tr></table></figure>
+
+<p><br>如果你需要开启额外的功能，可以参照<a href="https://geogebra.github.io/docs/reference/en/Material_Embedding_(Iframe)/">这篇文档</a><br>通过输入 <code>参数</code>&#x2F;<code>布尔值</code>的方式来决定你是否要在插入的链接里开启部分功能！<br><br>接着，将链接放回代码中<br>建议将链接里和代码里的<code>width</code>与<code>height</code>的值修改为400！在我看来这样的阅读效果是最佳的！</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>就像这样子！完事！接着将代码直接粘贴到你的md文件中即可被正确加载！</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>实验室</tag>
+        <tag>测试</tag>
       </tags>
   </entry>
 </search>

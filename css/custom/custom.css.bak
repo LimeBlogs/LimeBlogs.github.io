@@ -1,3 +1,85 @@
+[data-theme=light] #nav .menus_items .menus_item .menus_item_child {
+    background-color: #ffffff4f!important;
+    backdrop-filter: blur(7px)!important;
+    -webkit-backdrop-filter: blur(7px)!important
+}
+
+[data-theme=dark] #nav .menus_items .menus_item .menus_item_child {
+    background-color: #1d1e224f!important;
+    backdrop-filter: blur(7px)!important;
+    -webkit-backdrop-filter: blur(7px)!important
+}
+
+[data-theme=dark] #page-header.nav-fixed #nav {
+    background: #0000006f!important
+}
+
+[data-theme=light] #page-header.nav-fixed #nav {
+    background: #ffffff4f!important;
+}
+
+#page-header.nav-fixed #nav {
+    outline: 1px #7c7c7c43 solid!important;
+    backdrop-filter: blur(7px)!important;
+    -webkit-backdrop-filter: blur(7px)!important
+}
+
+@media screen and (max-width: 768px) {
+    #nav {
+        background:#fff0!important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body[data-type=post] #page-header #nav {
+        --font-color:#fff
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #page-header.nav-fixed #nav {
+    --font-color: var(--efu-fontcolor)!important;
+    }
+}
+
+[data-theme=dark] #page-header.nav-fixed #nav {
+    background: #1d1e224f!important;
+    backdrop-filter: blur(7px)!important;
+    -webkit-backdrop-filter: blur(7px)!important
+}
+
+#card-digit-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clock {
+    font-size: 10px;
+    position: relative;
+}
+.digit-group {
+    display: inline-block;
+}
+.digit-group:not(:last-child):after {
+    color: inherit;
+    content: ":";
+    font-size: 50px;
+}
+.digit {
+    display: inline-block;
+    width: 33px;
+}
+.digit .digit-number {
+    color: inherit;
+    transform: rotate(-90deg);
+    transition: font-size 200ms,transform 350ms,color 150ms;
+}
+.digit .digit-number.bright {
+    color: inherit;
+    font-size: 25px;
+    transform: rotate(0deg);
+}
+
 .card-widget {
     padding: 10px!important;
     max-height: calc(100vh - 100px);

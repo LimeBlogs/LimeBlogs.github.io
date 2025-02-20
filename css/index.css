@@ -48,6 +48,9 @@
     backdrop-filter: blur(7px)!important;
     -webkit-backdrop-filter: blur(7px)!important
 }
+
+/* 这是自定义时钟的css */
+
 #card-digit-clock {
     display: flex;
     justify-content: center;
@@ -80,92 +83,10 @@
     transform: rotate(0deg);
 }
 
-.admonition {
-  margin: 1.5625em 0;
-  padding: .6rem;
-  overflow: hidden;
-  color: #808080;
-  font-size: .64rem;
-  page-break-inside: avoid;
-  border-left: .3rem solid #42b983;
-  border-radius: .3rem;
-  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,.05), 0 0 0.05rem rgba(0,0,0,.1);
-  background-color: #fafafa;
-}
+/* 这是自定义时钟的css */
 
-p.admonition-title {
-  color: #808080;
-  position: relative;
-  margin: -.6rem -.6rem .8em -.6rem !important;
-  padding: .4rem .6rem .4rem 2.5rem;
-  font-weight: 700;
-  background-color:rgba(66, 185, 131, .1);
-}
+/* 这是自定义日历的css */
 
-.admonition-title::before {
-  position: absolute;
-  color: #808080;
-  top: .9rem;
-  left: 1rem;
-  width: 12px;
-  height: 12px;
-  background-color: #42b983;
-  border-radius: 50%;
-  content: ' ';
-}
-
-.info>.admonition-title, .todo>.admonition-title {
-  background-color: rgba(0,184,212,.1);
-  color: #808080;
-}
-
-.warning>.admonition-title, .attention>.admonition-title, .caution>.admonition-title {
-  background-color: rgba(255,145,0,.1);
-  color: #808080;
-}
-
-.failure>.admonition-title, .missing>.admonition-title, .fail>.admonition-title, .error>.admonition-title {
-  background-color: rgba(255,82,82,.1);
-  color: #808080;
-}
-
-.admonition.info, .admonition.todo {
-  border-color: #00b8d4;
-  color: #808080;
-}
-
-.admonition.warning, .admonition.attention, .admonition.caution {
-  border-color: #ff9100;
-  color: #808080;
-}
-
-.admonition.failure, .admonition.missing, .admonition.fail, .admonition.error {
-  border-color: #ff5252;
-  color: #808080;
-}
-
-.info>.admonition-title::before, .todo>.admonition-title::before {
-  background-color: #00b8d4;
-  border-radius: 50%;
-  color: #808080;
-}
-
-.warning>.admonition-title::before, .attention>.admonition-title::before, .caution>.admonition-title::before {
-  background-color: #ff9100;
-  border-radius: 50%;
-  color: #808080;
-}
-
-.failure>.admonition-title::before,.missing>.admonition-title::before,.fail>.admonition-title::before,.error>.admonition-title::before{
-  background-color: #ff5252;;
-  border-radius: 50%;
-  color: #808080;
-}
-
-.admonition>:last-child {
-  margin-bottom: 0 !important;
-  color: #808080;
-}
 .card-widget {
     padding: 10px!important;
     max-height: calc(100vh - 100px);
@@ -378,6 +299,8 @@ progress::-webkit-progress-value {
     font-size: 12px;
     color: var(--efu-secondtext);
 }
+
+/* 这是自定义日历的css */
 @keyframes snackbar-progress{0%{width:0}to{width:100%}}.snackbar-container{transition:.5s;font-size:14px;position:fixed;align-items:center;line-height:22px;padding:18px 24px;bottom:-100px;top:-100px;opacity:0;z-index:9999;background:var(--efu-lighttext)!important;color:var(--efu-card-bg);border-radius:0;display:flex;justify-content:center;max-width:none;min-width:100%;margin:0;left:0;height:60px;transform:none}.snackbar-container p{color:var(--efu-card-bg)!important;font-weight:700!important;text-align:center;font-size:.8rem!important;display:flex;justify-content:center}.snackbar-container .action{display:inline-block;font-size:inherit;margin:0 0 0 24px;min-width:min-content;cursor:pointer;color:var(--efu-card-bg)!important;background:var(--efu-lighttext)!important;padding:4px 6px;font-weight:700;border-radius:8px;transition:.3s;border:var(--style-border)}.snackbar-container .action:hover{background:var(--efu-card-bg)!important;color:var(--efu-lighttext)!important}.snackbar-container:after{position:absolute;width:0;height:100%;left:0;top:0;background:var(--efu-white);opacity:.1;content:"";animation:snackbar-progress var(--efu-snackbar-time) linear forwards;pointer-events:none}.snackbar-pos.top-center,.snackbar-pos.top-left{bottom:auto;top:0;left:0}.snackbar-pos.top-right{bottom:auto;top:0;right:0}
 @media screen and (min-width: 768px) {
 @-moz-keyframes showCover {
@@ -2462,14 +2385,14 @@ span.tags-punctuation i {
   opacity: 0.2;
   width: 100%;
   height: 100%;
-  background-image: url("https://limeblogs.github.io/LimePan/rbg.jpg");
+  background-image: url("https://limeblogs.github.io/LimePan/rbg.jpeg");
   background-size: cover;
   background-position: center;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 [data-theme=dark] #global_bg {
-  background-image: url("https://limeblogs.github.io/LimePan/rbg.jpg");
+  background-image: url("https://limeblogs.github.io/LimePan/rbg.jpeg");
 }
 .article-container {
   overflow-wrap: break-word;

@@ -2462,14 +2462,14 @@ span.tags-punctuation i {
   opacity: 0.2;
   width: 100%;
   height: 100%;
-  background-image: url("https://cdn.pixelbin.io/v2/limeshare/original/rbg.jpg");
+  background-image: url("https://limeblogs.github.io/LimePan/rbg.jpg");
   background-size: cover;
   background-position: center;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 [data-theme=dark] #global_bg {
-  background-image: url("https://cdn.pixelbin.io/v2/limeshare/original/rbg.jpg");
+  background-image: url("https://limeblogs.github.io/LimePan/rbg.jpg");
 }
 .article-container {
   overflow-wrap: break-word;

@@ -32,13 +32,13 @@
 
 @media screen and (max-width: 768px) {
     body[data-type=post] #page-header #nav {
-        --font-color:#fff
+        --color:#fff
     }
 }
 
 @media screen and (max-width: 768px) {
     #page-header.nav-fixed #nav {
-    --font-color: var(--efu-fontcolor)!important;
+    --color: var(--efu-fontcolor)!important;
     }
 }
 
@@ -302,10 +302,12 @@ progress::-webkit-progress-value {
 /* 这是自定义日历的css */
 
 /* 这是自定义admo */
+ 
 .admonition {
   margin: 1.5625em 0;
   padding: .6rem;
   overflow: hidden;
+  color: #696969;
   font-size: .64rem;
   page-break-inside: avoid;
   border-left: .3rem solid #42b983;
@@ -316,6 +318,7 @@ progress::-webkit-progress-value {
 
 p.admonition-title {
   position: relative;
+  color: #696969;
   margin: -.6rem -.6rem .8em -.6rem !important;
   padding: .4rem .6rem .4rem 2.5rem;
   font-weight: 700;
@@ -335,14 +338,17 @@ p.admonition-title {
 
 .info>.admonition-title, .todo>.admonition-title {
   background-color: rgba(0,184,212,.1);
+  color: #696969;
 }
 
 .warning>.admonition-title, .attention>.admonition-title, .caution>.admonition-title {
   background-color: rgba(255,145,0,.1);
+  color: #696969;
 }
 
 .failure>.admonition-title, .missing>.admonition-title, .fail>.admonition-title, .error>.admonition-title {
   background-color: rgba(255,82,82,.1);
+  color: #696969;
 }
 
 .admonition.info, .admonition.todo {

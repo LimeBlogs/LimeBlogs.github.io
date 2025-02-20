@@ -48,6 +48,8 @@
     -webkit-backdrop-filter: blur(7px)!important
 }
 
+/* 这是自定义时钟的css */
+
 #card-digit-clock {
     display: flex;
     justify-content: center;
@@ -79,6 +81,10 @@
     font-size: 25px;
     transform: rotate(0deg);
 }
+
+/* 这是自定义时钟的css */
+
+/* 这是自定义日历的css */
 
 .card-widget {
     padding: 10px!important;
@@ -292,3 +298,5 @@ progress::-webkit-progress-value {
     font-size: 12px;
     color: var(--efu-secondtext);
 }
+
+/* 这是自定义日历的css */

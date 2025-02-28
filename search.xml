@@ -3,96 +3,147 @@
   <entry>
     <title>LAB</title>
     <url>/2025/01/15/LAB/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁</p>
-<h1 id="实验性功能-测试"><a href="#实验性功能-测试" class="headerlink" title="实验性功能[测试]"></a>实验性功能[测试]</h1><p>以下存放代码以及功能实现，一方面是便于我调用，另一方面是为了水一篇帖子</p>
-<h2 id="Hexo-Admonition"><a href="#Hexo-Admonition" class="headerlink" title="Hexo-Admonition"></a>Hexo-Admonition</h2><blockquote>
-<p>Hexo 内容辅助插件，支持将类似 reStructuredText 的警告提示块添加到 Markdown 文档中。<br></p>
-</blockquote>
-<p><a href="https://github.com/lxl80/hexo-admonition">官方Github</a><br><br>其实也没啥好说的，安装之后直接看示例就可以了<br></p>
+    <content><![CDATA[<h1 id="起因">起因</h1>
+<p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁
+# 实验性功能[测试]
+以下存放代码以及功能实现，一方面是便于我调用，另一方面是为了水一篇帖子
+## Hexo-Admonition &gt; Hexo 内容辅助插件，支持将类似 reStructuredText
+的警告提示块添加到 Markdown 文档中。<br></p>
+<p><a href="https://github.com/lxl80/hexo-admonition">官方Github</a>
+<br>其实也没啥好说的，安装之后直接看示例就可以了<br></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-admonition --save</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!!! note 原神</span><br><span class="line"><span class="code">    这是一条note提示块</span></span><br><span class="line"><span class="code">!!! warning 原神</span></span><br><span class="line"><span class="code">    这是一条warning提示块</span></span><br></pre></td></tr></table></figure>
-
 <p>以此类推，接下来我将会把所有可用的提示块样式列举出来<br></p>
-<div class="admonition note"><p class="admonition-title">原神
-</p><p>这是一条note提示块</p>
+<div class="admonition note">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条note提示块
+</p>
 </div>
-
-<div class="admonition warning"><p class="admonition-title">原神
-</p><p>这是一条warning提示块</p>
+<div class="admonition warning">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条warning提示块
+</p>
 </div>
-
-<div class="admonition info"><p class="admonition-title">原神
-</p><p>这是一条info提示块</p>
+<div class="admonition info">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条info提示块
+</p>
 </div>
-
-<div class="admonition todo"><p class="admonition-title">原神
-</p><p>这是一条todo提示块</p>
+<div class="admonition todo">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条todo提示块
+</p>
 </div>
-
-<div class="admonition attention"><p class="admonition-title">原神
-</p><p>这是一条attention提示块</p>
+<div class="admonition attention">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条attention提示块
+</p>
 </div>
-
-<div class="admonition caution"><p class="admonition-title">原神
-</p><p>这是一条caution提示块</p>
+<div class="admonition caution">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条caution提示块
+</p>
 </div>
-
-<div class="admonition error"><p class="admonition-title">原神
-</p><p>这是一条error提示块</p>
+<div class="admonition error">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条error提示块
+</p>
 </div>
-
-<div class="admonition failure"><p class="admonition-title">原神
-</p><p>这是一条failure提示块</p>
+<div class="admonition failure">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条failure提示块
+</p>
 </div>
-
-<div class="admonition missing"><p class="admonition-title">原神
-</p><p>这是一条missing提示块</p>
+<div class="admonition missing">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条missing提示块
+</p>
 </div>
-
-<div class="admonition fail"><p class="admonition-title">原神
-</p><p>这是一条fail提示块</p>
+<div class="admonition fail">
+<p class="admonition-title">
+原神
+</p>
+<p>
+这是一条fail提示块
+</p>
 </div>
-
-<p><br>就是这样子，个人感觉在md中使用还是很方便的！<br><br>其中</p>
+<p><br>就是这样子，个人感觉在md中使用还是很方便的！ <br>其中</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!!! info &quot;&quot;</span><br><span class="line"><span class="code">    这是一条不带标题的info提示块</span></span><br></pre></td></tr></table></figure>
-
-<div class="admonition info"><p>这是一条不带标题的info提示块</p>
+<div class="admonition info">
+<p>
+这是一条不带标题的info提示块
+</p>
 </div>
-
 <p>等等，请在自定义css目录下创建<code>Hexo-admonition.css</code>然后在其中添加以下css代码，以确保该插件可以正常显示以及字体颜色正确。</p>
-<div class="admonition info"><p class="admonition-title">提示
-</p><p>如果你不知道什么是自定义css目录，请在博客搜索相关内容</p>
+<div class="admonition info">
+<p class="admonition-title">
+提示
+</p>
+<p>
+如果你不知道什么是自定义css目录，请在博客搜索相关内容
+</p>
 <blockquote>
-<p>或者<a href="https://limeblogs.github.io/2025/01/21/customcss/">单击这里查看教程</a></p>
+<p>
+或者<a href="https://limeblogs.github.io/2025/01/21/customcss/">单击这里查看教程</a>
+</p>
 </blockquote>
 </div>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">.admonition &#123;</span><br><span class="line">  margin: 1.5625em 0;</span><br><span class="line">  padding: .6rem;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  color: #808080;</span><br><span class="line">  font-size: .64rem;</span><br><span class="line">  page-break-inside: avoid;</span><br><span class="line">  border-left: .3rem solid #42b983;</span><br><span class="line">  border-radius: .3rem;</span><br><span class="line">  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,.05), 0 0 0.05rem rgba(0,0,0,.1);</span><br><span class="line">  background-color: #fafafa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p.admonition-title &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  position: relative;</span><br><span class="line">  margin: -.6rem -.6rem .8em -.6rem !important;</span><br><span class="line">  padding: .4rem .6rem .4rem 2.5rem;</span><br><span class="line">  font-weight: 700;</span><br><span class="line">  background-color:rgba(66, 185, 131, .1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition-title::before &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  color: #808080;</span><br><span class="line">  top: .9rem;</span><br><span class="line">  left: 1rem;</span><br><span class="line">  width: 12px;</span><br><span class="line">  height: 12px;</span><br><span class="line">  background-color: #42b983;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  content: &#x27; &#x27;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.info&gt;.admonition-title, .todo&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(0,184,212,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning&gt;.admonition-title, .attention&gt;.admonition-title, .caution&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(255,145,0,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.failure&gt;.admonition-title, .missing&gt;.admonition-title, .fail&gt;.admonition-title, .error&gt;.admonition-title &#123;</span><br><span class="line">  background-color: rgba(255,82,82,.1);</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.info, .admonition.todo &#123;</span><br><span class="line">  border-color: #00b8d4;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.warning, .admonition.attention, .admonition.caution &#123;</span><br><span class="line">  border-color: #ff9100;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition.failure, .admonition.missing, .admonition.fail, .admonition.error &#123;</span><br><span class="line">  border-color: #ff5252;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.info&gt;.admonition-title::before, .todo&gt;.admonition-title::before &#123;</span><br><span class="line">  background-color: #00b8d4;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning&gt;.admonition-title::before, .attention&gt;.admonition-title::before, .caution&gt;.admonition-title::before &#123;</span><br><span class="line">  background-color: #ff9100;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.failure&gt;.admonition-title::before,.missing&gt;.admonition-title::before,.fail&gt;.admonition-title::before,.error&gt;.admonition-title::before&#123;</span><br><span class="line">  background-color: #ff5252;;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.admonition&gt;:last-child &#123;</span><br><span class="line">  margin-bottom: 0 !important;</span><br><span class="line">  color: #808080;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="在md中引入Geogebra"><a href="#在md中引入Geogebra" class="headerlink" title="在md中引入Geogebra"></a>在md中引入Geogebra</h2><p>这个功能就是使用<code>&lt;/iframe&gt;</code>来引入网页<br>功能如下</p>
-<iframe src="https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/" width="400px" height="400px" style="border:0px;"> </iframe>
-如果是几何的话甚至可以拖动！这样就可以很方便的在Hexo引入数学函数图像，方便易用。
-
+<h2 id="在md中引入geogebra">在md中引入Geogebra</h2>
+<p>这个功能就是使用<code>&lt;/iframe&gt;</code>来引入网页<br>功能如下
+<iframe src="https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/" width="400px" height="400px" style="border:0px;">
+</iframe>
+如果是几何的话甚至可以拖动！这样就可以很方便的在Hexo引入数学函数图像，方便易用。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span>   </span></span><br><span class="line"><span class="tag"><span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">height</span>=<span class="string">&quot;400px&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="如何创建分享链接？"><a href="#如何创建分享链接？" class="headerlink" title="如何创建分享链接？"></a>如何创建分享链接？</h3><p><code>首先，你需要一个账户，这太简单了，使用邮箱即可注册，这里跳过不讲</code><br><br>打开<a href="https://www.geogebra.org/classic">Geogebra Classic</a>输入你要的函数之后点击“分享”<br></p>
-<blockquote>
-<p><em>如果你不知道如何正确使用Geogebra，<a href="https://help.geogebra.org/hc/zh-cn/articles/10445800380957">点击这里开始入门</a></em></p>
-</blockquote>
-<p><img src="https://limeblogs.github.io/LimePan/HexoLAB/Geogebra1.jpeg" alt="如图"><br><br>在输入需要保存的文件名后选择保存即可<br><img src="https://limeblogs.github.io/LimePan/HexoLAB/Geogebra2.jpeg" alt="输入文件名后保存"><br><br>之后，选择链接<code>插入</code>进行复制<br><img src="https://limeblogs.github.io/LimePan/HexoLAB/Geogebra3.jpeg" alt="复制插入"><br><br>你大概率会得到这样一串这样的代码</p>
+<h3 id="如何创建分享链接">如何创建分享链接？</h3>
+<p><code>首先，你需要一个账户，这太简单了，使用邮箱即可注册，这里跳过不讲</code><br>
+打开<a href="https://www.geogebra.org/classic">Geogebra
+Classic</a>输入你要的函数之后点击“分享”<br> &gt;
+<em>如果你不知道如何正确使用Geogebra，<a
+href="https://help.geogebra.org/hc/zh-cn/articles/10445800380957">点击这里开始入门</a></em></p>
+<p><img src="https://limeblogs.github.io/LimePan/HexoLAB/Geogebra1.jpeg"
+alt="如图" /><br> 在输入需要保存的文件名后选择保存即可 <img
+src="https://limeblogs.github.io/LimePan/HexoLAB/Geogebra2.jpeg"
+alt="输入文件名后保存" /><br> 之后，选择链接<code>插入</code>进行复制
+<img src="https://limeblogs.github.io/LimePan/HexoLAB/Geogebra3.jpeg"
+alt="复制插入" /><br> 你大概率会得到这样一串这样的代码</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false&quot;</span> <span class="attr">width</span>=<span class="string">&quot;360px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;801px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>你要做的，就是对以下链接进行净化</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false</span><br></pre></td></tr></table></figure>
-
-<p><br>以下为净化后的链接<br>就是把height之后的参数删除了而已</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/</span><br></pre></td></tr></table></figure>
-
-<p><br>如果你需要开启额外的功能，可以参照<a href="https://geogebra.github.io/docs/reference/en/Material_Embedding_(Iframe)/">这篇文档</a><br>通过输入 <code>参数</code>&#x2F;<code>布尔值</code>的方式来决定你是否要在插入的链接里开启部分功能！<br><br>接着，将链接放回代码中<br>建议将链接里和代码里的<code>width</code>与<code>height</code>的值修改为400！在我看来这样的阅读效果是最佳的！</p>
+<p><br>以下为净化后的链接<br>就是把height之后的参数删除了而已
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">https://www.geogebra.org/material/iframe/id/aybe2kg6/width/360/height/801/</span><br></pre></td></tr></table></figure></p>
+<p><br>如果你需要开启额外的功能，可以参照<a
+href="https://geogebra.github.io/docs/reference/en/Material_Embedding_(Iframe)/">这篇文档</a><br>通过输入
+<code>参数</code>/<code>布尔值</code>的方式来决定你是否要在插入的链接里开启部分功能！<br>
+接着，将链接放回代码中<br>建议将链接里和代码里的<code>width</code>与<code>height</code>的值修改为400！在我看来这样的阅读效果是最佳的！</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">title</span>=<span class="string">&quot;test&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.geogebra.org/material/iframe/id/aybe2kg6/width/400/height/400/&quot;</span> <span class="attr">width</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400px&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border:0px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>就像这样子！完事！接着将代码直接粘贴到你的md文件中即可被正确加载！</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
@@ -108,26 +159,45 @@
   <entry>
     <title>Lime-Fork</title>
     <url>/2025/02/16/Lime-Fork/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a href="https://limeblogs.github.io/">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div class="admonition fail"><p>该页面仅仅收录我存档的项目，不会注明Github的项目地址。</p>
+    <content><![CDATA[<h1 id="起因">起因</h1>
+<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
+href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
+<div class="admonition fail">
+<p>
+该页面仅仅收录我存档的项目，不会注明Github的项目地址。
+</p>
 </div>
-
-<div class="admonition info"><p>你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。</p>
+<div class="admonition info">
+<p>
+你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
+</p>
 </div>
-
-<h2 id="人生重开模拟器"><a href="#人生重开模拟器" class="headerlink" title="人生重开模拟器"></a>人生重开模拟器</h2><p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
-<h2 id="ubc2-资料参闻馆"><a href="#ubc2-资料参闻馆" class="headerlink" title="ubc2 资料参闻馆"></a>ubc2 资料参闻馆</h2><div class="admonition fail"><p>该页面内容可能引人不适！</p>
+<h2 id="人生重开模拟器">人生重开模拟器</h2>
+<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
+href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
+<h2 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h2>
+<div class="admonition fail">
+<p>
+该页面内容可能引人不适！
+</p>
 </div>
-
-<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
-<h2 id="tang-love-汤汤好梦"><a href="#tang-love-汤汤好梦" class="headerlink" title="tang-love 汤汤好梦"></a>tang-love 汤汤好梦</h2><div class="admonition fail"><p>超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭</p>
+<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
+href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
+<h2 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h2>
+<div class="admonition fail">
+<p>
+超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
+</p>
 </div>
-
-<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
-<h2 id="LimeLinks"><a href="#LimeLinks" class="headerlink" title="LimeLinks"></a>LimeLinks</h2><div class="admonition info"><p>该页面没有描述</p>
+<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
+href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
+<h2 id="limelinks">LimeLinks</h2>
+<div class="admonition info">
+<p>
+该页面没有描述
+</p>
 </div>
-
-<p>&#x2F;LimeLinks</p>
+<p>/LimeLinks</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>教程</category>
@@ -142,71 +212,152 @@
   <entry>
     <title>【持续更新】各大常用MC启动器下载集合</title>
     <url>/2025/01/27/MC-Launcher/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>MC启动器是一个在日常游戏中必不可少的工具<br>此文章就是将各大常用MC启动器的官网以及下载地址整理至此，并持续更新<br>方便各位小白下载并体验游戏内容<br>此页也方便各位同学将此分享给其它人。<br>你可以按下Ctrl+F搜索关键词以快速定位并寻找自己所需的资源。<br>话不多说，直接开始！</p>
-<div class="admonition todo"><p class="admonition-title">提示
-</p><p>该文章将会持续更新<br>你可以点击右下角文章目录来快速寻找你所需要的启动器资源。</p>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>MC启动器是一个在日常游戏中必不可少的工具<br>此文章就是将各大常用MC启动器的官网以及下载地址整理至此，并持续更新<br>方便各位小白下载并体验游戏内容<br>此页也方便各位同学将此分享给其它人。<br>你可以按下Ctrl+F搜索关键词以快速定位并寻找自己所需的资源。<br>话不多说，直接开始！</p>
+<div class="admonition todo">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该文章将会持续更新<br>你可以点击右下角文章目录来快速寻找你所需要的启动器资源。
+</p>
 </div>
-
-<div class="admonition fail"><p class="admonition-title">关于收录/侵权
-</p><p>你可以向LimeOnTop@outlook.com<br>提供您的启动器的相关信息以在此页收录。<br>同时，如有侵权也可以联系我删除<br>排名不分前后！<br>排名不分前后！<br>排名不分前后！</p>
+<div class="admonition fail">
+<p class="admonition-title">
+关于收录/侵权
+</p>
+<p>
+你可以向LimeOnTop@outlook.com<br>提供您的启动器的相关信息以在此页收录。<br>同时，如有侵权也可以联系我删除<br>排名不分前后！<br>排名不分前后！<br>排名不分前后！
+</p>
 </div>
-
-<h1 id="PCL2-Plain-Craft-Launcher-2"><a href="#PCL2-Plain-Craft-Launcher-2" class="headerlink" title="[PCL2] Plain Craft Launcher 2"></a>[PCL2] Plain Craft Launcher 2</h1><blockquote>
-<p>Minecraft启动器PCL2 是新一代 Minecraft &#x2F; 我的世界启动器：Plain Craft Launcher 2！ 超快的下载速度，下载安装 Mod 和整合包，简洁且高度自定义的界面，流畅精细的动画……总之很棒就完事啦 &#x3D;w&#x3D;…</p>
-</blockquote>
-<p><br>详情请见<a href="https://www.minebbs.com/resources/pcl2-plain-craft-launcher-2.4256/">MineBBS - [PCL2]Plain Craft Launcher 2 －新时代简洁|高速|好用的启动器</a><br><img src="https://limeblogs.github.io/LimePan/pcl2.jpeg" alt="官方宣传图"></p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><div class="admonition todo"><p class="admonition-title">链接
-</p><p>本帖仅分享 @龙腾猫跃 的爱发电下载页与Github仓库地址<br>如有能力请赞助原作者！</p>
+<h1 id="pcl2-plain-craft-launcher-2">[PCL2] Plain Craft Launcher 2</h1>
 <blockquote>
-<p><a href="https://github.com/Hex-Dragon/PCL2">Github仓库</a><br><a href="https://afdian.com/p/0164034c016c11ebafcb52540025c377">爱发电-推荐</a></p>
+<p>Minecraft启动器PCL2 是新一代 Minecraft / 我的世界启动器：Plain Craft
+Launcher 2！ 超快的下载速度，下载安装 Mod
+和整合包，简洁且高度自定义的界面，流畅精细的动画……总之很棒就完事啦
+=w=…</p>
 </blockquote>
-</div>
-
-<h1 id="HMCL-Hello-Minecraft-Launcher"><a href="#HMCL-Hello-Minecraft-Launcher" class="headerlink" title="[HMCL] Hello Minecraft! Launcher"></a>[HMCL] Hello Minecraft! Launcher</h1><blockquote>
-<p>HMCL 是一款开源、跨平台的 Minecraft 启动器，支持模组管理、游戏自定义、游戏自动安装 (Forge、NeoForge、Fabric、Quilt、LiteLoader 和 OptiFine)、整合包创建、界面自定义等功能。<br><br>HMCL 有着强大的跨平台能力。它不仅支持 Windows、Linux、macOS 等常见的操作系统，同时也支持 x86、ARM、MIPS、LoongArch 等不同的 CPU 架构。你可以使用 HMCL 在不同平台上轻松地游玩 Minecraft。</p>
-</blockquote>
-<p><br>详情请见<a href="https://hmcl.huangyuhui.net/">HMCL官网</a>或<a href="https://github.com/HMCL-dev/HMCL">HMCL Github</a></p>
-<h2 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><div class="admonition todo"><p class="admonition-title">链接
-</p><p>本帖分享官网的下载页以及GithubRelease页面。</p>
+<p><br>详情请见<a
+href="https://www.minebbs.com/resources/pcl2-plain-craft-launcher-2.4256/">MineBBS
+- [PCL2]Plain Craft Launcher 2 －新时代简洁|高速|好用的启动器</a> <img
+src="https://limeblogs.github.io/LimePan/pcl2.jpeg"
+alt="官方宣传图" /></p>
+<h2 id="下载">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖仅分享 <span class="citation" data-cites="龙腾猫跃">@龙腾猫跃</span>
+的爱发电下载页与Github仓库地址<br>如有能力请赞助原作者！
+</p>
 <blockquote>
-<p><a href="https://hmcl.huangyuhui.net/download/">HMCL官网-推荐</a><br><a href="https://github.com/HMCL-dev/HMCL/releases">Github Release</a></p>
+<p>
+<a href="https://github.com/Hex-Dragon/PCL2">Github仓库</a><br><a href="https://afdian.com/p/0164034c016c11ebafcb52540025c377">爱发电-推荐</a>
+</p>
 </blockquote>
 </div>
-
-<h1 id="BakaXL-BakaXL-Launcher"><a href="#BakaXL-BakaXL-Launcher" class="headerlink" title="[BakaXL] BakaXL Launcher"></a>[BakaXL] BakaXL Launcher</h1><blockquote>
-<p>BakaXL 天生就与众不同。打破传统启动器的层级概念，使用起来更加称心如意。 强大的自定义主题功能无需任何额外付费即可使用，还有视差效果和实况壁纸加持，实在是泰裤辣！<br>不光支持 Forge、Fabric 等你所热爱的模组加载器，BakaXL 还是国内首个支持 Quilt 和 NeoForge 模组加载器的启动器。还有 BakaXL Network 加持，可随时与好友一起同乐。<br>…</p>
-</blockquote>
-<p><br>详情请见<a href="https://www.bakaxl.com/">BakaXL官网</a>或[BakaXL Giithub(<a href="https://github.com/BakaXL-Launcher/BakaXL">https://github.com/BakaXL-Launcher/BakaXL</a>)</p>
-<h2 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h2><div class="admonition todo"><p class="admonition-title">链接
-</p><p>本帖分享官网的下载页以及TT的爱发电页面欢迎支持ta。</p>
+<h1 id="hmcl-hello-minecraft-launcher">[HMCL] Hello Minecraft!
+Launcher</h1>
 <blockquote>
-<p><a href="https://www.bakaxl.com/#download">BakaXL官网-推荐</a><br><a href="https://afdian.com/a/TT702">爱发电</a></p>
+<p>HMCL 是一款开源、跨平台的 Minecraft
+启动器，支持模组管理、游戏自定义、游戏自动安装
+(Forge、NeoForge、Fabric、Quilt、LiteLoader 和
+OptiFine)、整合包创建、界面自定义等功能。<br> HMCL
+有着强大的跨平台能力。它不仅支持 Windows、Linux、macOS
+等常见的操作系统，同时也支持 x86、ARM、MIPS、LoongArch 等不同的 CPU
+架构。你可以使用 HMCL 在不同平台上轻松地游玩 Minecraft。</p>
+</blockquote>
+<p><br>详情请见<a href="https://hmcl.huangyuhui.net/">HMCL官网</a>或<a
+href="https://github.com/HMCL-dev/HMCL">HMCL Github</a></p>
+<h2 id="下载-1">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享官网的下载页以及GithubRelease页面。
+</p>
+<blockquote>
+<p>
+<a href="https://hmcl.huangyuhui.net/download/">HMCL官网-推荐</a><br><a href="https://github.com/HMCL-dev/HMCL/releases">Github
+Release</a>
+</p>
 </blockquote>
 </div>
-
-<h1 id="Fluent-Fluent-Launcher"><a href="#Fluent-Fluent-Launcher" class="headerlink" title="[Fluent] Fluent Launcher"></a>[Fluent] Fluent Launcher</h1><blockquote>
+<h1 id="bakaxl-bakaxl-launcher">[BakaXL] BakaXL Launcher</h1>
+<blockquote>
+<p>BakaXL
+天生就与众不同。打破传统启动器的层级概念，使用起来更加称心如意。
+强大的自定义主题功能无需任何额外付费即可使用，还有视差效果和实况壁纸加持，实在是泰裤辣！<br>不光支持
+Forge、Fabric 等你所热爱的模组加载器，BakaXL 还是国内首个支持 Quilt 和
+NeoForge 模组加载器的启动器。还有 BakaXL Network
+加持，可随时与好友一起同乐。<br>…</p>
+</blockquote>
+<p><br>详情请见<a href="https://www.bakaxl.com/">BakaXL官网</a>或[BakaXL
+Giithub(https://github.com/BakaXL-Launcher/BakaXL)</p>
+<h2 id="下载-2">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享官网的下载页以及TT的爱发电页面欢迎支持ta。
+</p>
+<blockquote>
+<p>
+<a href="https://www.bakaxl.com/#download">BakaXL官网-推荐</a><br><a href="https://afdian.com/a/TT702">爱发电</a>
+</p>
+</blockquote>
+</div>
+<h1 id="fluent-fluent-launcher">[Fluent] Fluent Launcher</h1>
+<blockquote>
 <p>一款专为Win11设计的启动器</p>
 </blockquote>
-<p>详情请见<a href="https://github.com/Xcube-Studio/Natsurainko.FluentLauncher">Fluent Launcher Github</a>或<a href="https://fluentlauncher.natsurainko.work/">Fluent Launcher官网</a></p>
-<h2 id="下载-3"><a href="#下载-3" class="headerlink" title="下载"></a>下载</h2><div class="admonition todo"><p class="admonition-title">链接
-</p><p>本帖分享微软商店的下载页面以及Github发行版的下载页面。</p>
+<p>详情请见<a
+href="https://github.com/Xcube-Studio/Natsurainko.FluentLauncher">Fluent
+Launcher Github</a>或<a
+href="https://fluentlauncher.natsurainko.work/">Fluent
+Launcher官网</a></p>
+<h2 id="下载-3">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享微软商店的下载页面以及Github发行版的下载页面。
+</p>
 <blockquote>
-<p><a href="https://apps.microsoft.com/detail/9p4nqqxq942p?ocid=webpdpshare">Microsoft Store-推荐</a><br><a href="https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/">Github Release</a></p>
+<p>
+<a href="https://apps.microsoft.com/detail/9p4nqqxq942p?ocid=webpdpshare">Microsoft
+Store-推荐</a><br><a href="https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/">Github
+Release</a>
+</p>
 </blockquote>
 </div>
-
-   
-<h1 id="WonderLab-WonderLab-Launcher"><a href="#WonderLab-WonderLab-Launcher" class="headerlink" title="[WonderLab] WonderLab Launcher"></a>[WonderLab] WonderLab Launcher</h1><blockquote>
-<p>WonderLab是一个跨平台 Minecraft 启动器，支持自动更新，Mod安装，Java运行时安装，并支持Windows，MacOS，Linux等操作系统，同时兼容x86,x64,Arm系统架构。</p>
-</blockquote>
-<p><br>详情请见<a href="https://github.com/Blessing-Studio/WonderLab">Github</a></p>
-<h2 id="下载-4"><a href="#下载-4" class="headerlink" title="下载"></a>下载</h2><div class="admonition todo"><p class="admonition-title">链接
-</p><p>本帖分享Github发行版的下载页面。</p>
+<h1 id="wonderlab-wonderlab-launcher">[WonderLab] WonderLab
+Launcher</h1>
 <blockquote>
-<p><a href="https://github.com/Blessing-Studio/WonderLab/releases/">Github Release-推荐</a></p>
+<p>WonderLab是一个跨平台 Minecraft
+启动器，支持自动更新，Mod安装，Java运行时安装，并支持Windows，MacOS，Linux等操作系统，同时兼容x86,x64,Arm系统架构。</p>
+</blockquote>
+<p><br>详情请见<a
+href="https://github.com/Blessing-Studio/WonderLab">Github</a></p>
+<h2 id="下载-4">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享Github发行版的下载页面。
+</p>
+<blockquote>
+<p>
+<a href="https://github.com/Blessing-Studio/WonderLab/releases/">Github
+Release-推荐</a>
+</p>
 </blockquote>
 </div>
-
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>教程</category>
@@ -219,21 +370,31 @@
   <entry>
     <title>【持续更新】最全！高中数学大合集！从零开始自学！全网最详细的赛博自学档案</title>
     <url>/2025/02/28/NJUPLS/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<blockquote>
 <p>该篇目为我在数学学习上的心得，同时，也包含整个高中数学的知识点以及完整学习资源。该文章将会持续更新，直至所有内容更新完毕，每个章节都存在以下几个分支。<br>分别为:<br>知识点｜拓展&amp;注意点｜习题(例题)｜参考引用</p>
 </blockquote>
 <blockquote>
 <p>有人说自学应该看网课，可是早期人们学习都是通过书本<br>人们在书本上学习是需要思考的<br>而在信息量爆炸的今天，倘若有人愿意对着原本自己并不理解的知识点进行思考并进行练习<br>最后的结果并不会比听网课差，甚至优于网课。</p>
 </blockquote>
-<div class="admonition info"><p class="admonition-title">Tips
-</p><p>该篇目正在搭建！详情请见最后更新时间</p>
+<div class="admonition info">
+<p class="admonition-title">
+Tips
+</p>
+<p>
+该篇目正在搭建！详情请见最后更新时间
+</p>
 </div>
-
-<div class="admonition fail"><p class="admonition-title">Tips
-</p><p>该篇目内容仅供参考<br>如有错误欢迎于<br>LimeOnTop@outlook.com提交！十分感谢</p>
+<div class="admonition fail">
+<p class="admonition-title">
+Tips
+</p>
+<p>
+该篇目内容仅供参考<br>如有错误欢迎于<br>LimeOnTop@outlook.com提交！十分感谢
+</p>
 </div>
-
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+<h1 id="函数">函数</h1>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>高中数学</category>
       </categories>
@@ -247,23 +408,27 @@
   <entry>
     <title>【Solitude】Hexo如何引入自定义css?</title>
     <url>/2025/01/21/customcss/</url>
-    <content><![CDATA[<div class="admonition warning"><p class="admonition-title">警告
-</p><p>该教程仅适用于Solitude主题！
-<br>不过大概思路以及方法都是类似的</p>
+    <content><![CDATA[<div class="admonition warning">
+<p class="admonition-title">
+警告
+</p>
+<p>
+该教程仅适用于Solitude主题！ <br>不过大概思路以及方法都是类似的
+</p>
 </div>
-
 <p>说到自定义css，这是个很美妙的东西，在一定程度上，扩展了主题的实用性以及开发性，因此有许多以solitude的自定义css与js为基础的拓展存在于互联网。</p>
-<div class="admonition info"><p class="admonition-title">作用
-</p><p>自定义字体
-<br>拓展主题功能
-<br>美化
-<br>…</p>
+<div class="admonition info">
+<p class="admonition-title">
+作用
+</p>
+<p>
+自定义字体 <br>拓展主题功能 <br>美化 <br>…
+</p>
 </div>
-
-<p>那么话不多说，其实很简单，新建个目录，一行代码即可<br><br>首先在<code>hexo-theme-solitude/source/css/</code><br>其实就是你的Solitude主题的<code>source</code>目录下的<code>css</code>目录下创建一个<code>custom</code>文件夹，名称也是随意的<br>接着，使用文本编辑器打开<code>css</code>目录下的<code>index.styl</code><br>在顶部添加这样一行代码。</p>
+<p>那么话不多说，其实很简单，新建个目录，一行代码即可
+<br>首先在<code>hexo-theme-solitude/source/css/</code><br>其实就是你的Solitude主题的<code>source</code>目录下的<code>css</code>目录下创建一个<code>custom</code>文件夹，名称也是随意的<br>接着，使用文本编辑器打开<code>css</code>目录下的<code>index.styl</code><br>在顶部添加这样一行代码。</p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;custom/*.css&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>这样，在custom目录下的所有css都会起作用。<br>即操作完毕。</p>
+<p>这样，在custom目录下的所有css都会起作用。 即操作完毕。</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>教程</category>
@@ -277,8 +442,12 @@
   <entry>
     <title>我的高一上是BE</title>
     <url>/2025/01/18/gaoyisuibi/</url>
-    <content><![CDATA[<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>这篇文章我也不知道为什么会出现在我的博客里面<br>或许是为了那张刚写完的试卷，写完后的无助让我想在这里发发牢骚<br>又或许是对今后的焦虑，未来该何去何从的担忧<br>亦或，两者都有<br>半夜时间写这些东西无疑是再正常不过的，可这些乱七八糟的东西时常出现在我的脑海里，我觉得，有必要来解决一下这个问题<br>从我打的tag也能看出来，在高一就迷茫是不是太早了？嫩芽才刚从土里漏出点头，你就在担心他未来是怎么死的了？<br>这有点杞人忧天了吧。</p>
-<h1 id="。"><a href="#。" class="headerlink" title="。"></a>。</h1><p>今天是分班考试前的最后一天，或许也是我与他们相见的最后一天。<br>就连我的同桌，所有人都是几乎带着戏谑的态度去看待他，我不知道是因为他的淳朴多一点还是少了些情商，我平时也是这样去看待他的，可今天放学时，他真挚的祝福我能考上自己理想的大学。他唯一和我说过的，他最明白的话就是，分班以后我们俩就见不到了。我早在无形之中成为了他最好的哥们。<br>他到底是怎么了？<br>我的好友，以下简称l，我很开心能与这位班级第一成为最好的朋友，这是他亲口和我说的。他平时的一天就是在课上睡睡觉，睡睡觉，以及睡睡觉。<br>我不明白，他为什么这样能在班上考第一，这也是我唯一嫉妒他的点，于我而言，他对我真的很好，我曾经问过他一道物理题不下6遍，他就那样子给我讲了6遍，黑板上两遍，本子上三遍，嘴巴里又聊了一遍。<br>在我印象里，他的的确确是不用写作业，不用听课就可以考好的人，可这几天，我也的的确确看到他在政治课上开始爬起来写物理，我每次都在后面往前看着他，好像离我确实蛮远的。<br>他和我说过他以后会怎么样，可能正常老死，也可能在某个工作岗位上活活累死，这的确很悲观，他唯一的希望也不过只是能够高考结束后上一个二本。<br>可是我这些天所看到的他的样子，又在告诉我他心里也许不是这样想的，至少我是这样认为。<br>是他变了吗？还是我变了？<br>接下来，我的另外一位好友，一下简称c，前段时间，互联网上“理科战神皮肤”这类关键热词在互联网上爆红，他是很符合这类特征的，成绩也很好，几乎和l不相上下，今天，算是他邀请我吧，去他的出租屋去学习。路上，我问他：“你觉得我能不能考上好班？”**我的理科成绩和文科成绩均在一百名开外，在班上顶多属于中下游。**他告诉我我一定可以，我偏科的英语加上并不算差的数学，以及生物都还算可以。但是我知道我是什么水平，也知道他所说的这一切不过是为了鼓励我。<strong>我真的很感激他</strong>，尽管这一切真的很勉强。有一段时间，他上午几乎都没有来学校，好像他把学校的上午从自己的一天中所删除了似的。我仔细问过其原因，原来是因为在家里刷题复习的效率更高<br>我与以上这三个人的纽带均不是学习，我知道我把自己的时间投入了某些没有意义的事情中（比如现在正在写文章），直到我与他们的话题从娱乐变成了分班考，直到班主任把上次月考的成绩表撕下来贴上了考场序号，直到我看见了他们身上的改变。<br>我有什么？物理课和化学课越来越难，几乎不像话，天书般，知识在我的面前撇了我一眼，就离开了。想过这一切是因为什么，或许是手机的吸引力对我实在是太大，亦或是我真的不喜欢学习，可是我的潜意识告诉我我要去学习，要不我和潜意识打一架呢？<br>我走的路越来越多，我想要迷途知返。<br>可惜，没时间了<img src="https://limeblogs.github.io/LimePan/suibi/gaoyi-daysmatter.jpeg" alt="能否让我把故事重写"><br>够了，这一切到此为止吧，我到底是为了什么而焦虑？我为什么还有时间去焦虑，我真的为这一切努力过吗？没有，，，我在这里发的牢骚的一切原因都是源于我的咎由自取。<br>想到这，我发现没什么可写了，我可能会与大家分道扬镳，也有可能存在交集，就算是空集又会怎样呢？<br>时间已经走到了这一步，就算我这段时间没认真对待过学习，我也应该去认真对待那次好吃，即便结果可能并不理想。<br>我从来都觉得我不比任何人差，我不过是那些别人用在这一方面的东西用在了别的方面上，把它重新叫回去，我觉得我也可以<br>再给我一次机会，<strong>我会选择放下手机，这段虚无缥缈的岁月被我写到这里方可结束于此。</strong><br>致你致我，无限进步。</p>
+    <content><![CDATA[<h1 id="引入">引入</h1>
+<p>这篇文章我也不知道为什么会出现在我的博客里面<br>或许是为了那张刚写完的试卷，写完后的无助让我想在这里发发牢骚<br>又或许是对今后的焦虑，未来该何去何从的担忧<br>亦或，两者都有<br>半夜时间写这些东西无疑是再正常不过的，可这些乱七八糟的东西时常出现在我的脑海里，我觉得，有必要来解决一下这个问题<br>从我打的tag也能看出来，在高一就迷茫是不是太早了？嫩芽才刚从土里漏出点头，你就在担心他未来是怎么死的了？<br>这有点杞人忧天了吧。
+# 。
+今天是分班考试前的最后一天，或许也是我与他们相见的最后一天。<br>就连我的同桌，所有人都是几乎带着戏谑的态度去看待他，我不知道是因为他的淳朴多一点还是少了些情商，我平时也是这样去看待他的，可今天放学时，他真挚的祝福我能考上自己理想的大学。他唯一和我说过的，他最明白的话就是，分班以后我们俩就见不到了。我早在无形之中成为了他最好的哥们。<br>他到底是怎么了？<br>我的好友，以下简称l，我很开心能与这位班级第一成为最好的朋友，这是他亲口和我说的。他平时的一天就是在课上睡睡觉，睡睡觉，以及睡睡觉。<br>我不明白，他为什么这样能在班上考第一，这也是我唯一嫉妒他的点，于我而言，他对我真的很好，我曾经问过他一道物理题不下6遍，他就那样子给我讲了6遍，黑板上两遍，本子上三遍，嘴巴里又聊了一遍。<br>在我印象里，他的的确确是不用写作业，不用听课就可以考好的人，可这几天，我也的的确确看到他在政治课上开始爬起来写物理，我每次都在后面往前看着他，好像离我确实蛮远的。<br>他和我说过他以后会怎么样，可能正常老死，也可能在某个工作岗位上活活累死，这的确很悲观，他唯一的希望也不过只是能够高考结束后上一个二本。<br>可是我这些天所看到的他的样子，又在告诉我他心里也许不是这样想的，至少我是这样认为。<br>是他变了吗？还是我变了？<br>接下来，我的另外一位好友，一下简称c，前段时间，互联网上“理科战神皮肤”这类关键热词在互联网上爆红，他是很符合这类特征的，成绩也很好，几乎和l不相上下，今天，算是他邀请我吧，去他的出租屋去学习。路上，我问他：“你觉得我能不能考上好班？”<strong>我的理科成绩和文科成绩均在一百名开外，在班上顶多属于中下游。</strong>他告诉我我一定可以，我偏科的英语加上并不算差的数学，以及生物都还算可以。但是我知道我是什么水平，也知道他所说的这一切不过是为了鼓励我。<strong>我真的很感激他</strong>，尽管这一切真的很勉强。有一段时间，他上午几乎都没有来学校，好像他把学校的上午从自己的一天中所删除了似的。我仔细问过其原因，原来是因为在家里刷题复习的效率更高<br>我与以上这三个人的纽带均不是学习，我知道我把自己的时间投入了某些没有意义的事情中（比如现在正在写文章），直到我与他们的话题从娱乐变成了分班考，直到班主任把上次月考的成绩表撕下来贴上了考场序号，直到我看见了他们身上的改变。<br>我有什么？物理课和化学课越来越难，几乎不像话，天书般，知识在我的面前撇了我一眼，就离开了。想过这一切是因为什么，或许是手机的吸引力对我实在是太大，亦或是我真的不喜欢学习，可是我的潜意识告诉我我要去学习，要不我和潜意识打一架呢？<br>我走的路越来越多，我想要迷途知返。<br>可惜，没时间了<img
+src="https://limeblogs.github.io/LimePan/suibi/gaoyi-daysmatter.jpeg"
+alt="能否让我把故事重写" /><br>够了，这一切到此为止吧，我到底是为了什么而焦虑？我为什么还有时间去焦虑，我真的为这一切努力过吗？没有，，，我在这里发的牢骚的一切原因都是源于我的咎由自取。<br>想到这，我发现没什么可写了，我可能会与大家分道扬镳，也有可能存在交集，就算是空集又会怎样呢？<br>时间已经走到了这一步，就算我这段时间没认真对待过学习，我也应该去认真对待那次好吃，即便结果可能并不理想。<br>我从来都觉得我不比任何人差，我不过是那些别人用在这一方面的东西用在了别的方面上，把它重新叫回去，我觉得我也可以<br>再给我一次机会，<strong>我会选择放下手机，这段虚无缥缈的岁月被我写到这里方可结束于此。</strong><br>致你致我，无限进步。</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>碎笔</category>
@@ -293,25 +462,42 @@
   <entry>
     <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
     <url>/2025/01/13/hello-world/</url>
-    <content><![CDATA[<p><img src="https://limeblogs.github.io/LimePan/LimeHello.jpeg" alt="封面"><br>欢迎来到 <a href="https://limeblogs.github.io/">莱姆Lime</a> 平时在这里与大家一起聊聊天（好像还没做评论功能┐(´-｀)┌）叙叙事<br>扯些有的没的<br>该帖子为一切的起点！<br>见证这一切的开始吧！<br><code>此帖子基于一开始生成的hello-world 所修改</code><br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本教程并不会很详细，不过大概的步骤都会给你，照做即可。</p>
-<h3 id="关于本站是怎么来的"><a href="#关于本站是怎么来的" class="headerlink" title="关于本站是怎么来的"></a>关于本站是怎么来的</h3><p>之前早就听过<a href="https://hexo.io/">Hexo</a>这一博客的大名<br>其实心里早就想要花时间去搭建一个博客<br>于是，纷争开始了</p>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>关键是我只有部手机，这怎么玩，装这玩意是要<a href="https://git-scm.com/?hl=zh-cn">Git</a>的啊，在安卓上，折腾的过程中出现了很多问题<br><br>而且操作并不方便，这可咋办咋办咋办T^T<br>可是你们还是可以看到这篇文章，说明我已经成功了</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>基于<a href="https://ghjayce.github.io/p/system/android/env/install-git/">这篇教程</a>，可以在安卓设备上安装<a href="https://termux.dev/cn/">termux</a>以在终端里安装并使用<a href="https://nodejs.org/">node.js</a>与git<br><br>在参照上篇教程安装git后，在termux使用以下命令安装Node.js<br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt install nodejs</span><br></pre></td></tr></table></figure>
-<p>在跑完进度条后即算作安装成功，接着，按<a href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">照该教程</a>一路走即可<br>不要按照他的方式在别的目录安装hexo！会出现问题！<br>先cd到根目录，再使用npm安装hexo</p>
+    <content><![CDATA[<p><img src="https://limeblogs.github.io/LimePan/LimeHello.jpeg"
+alt="封面" /> 欢迎来到 <a
+href="https://LimeBlogs.github.io">莱姆Lime</a>
+平时在这里与大家一起聊聊天（好像还没做评论功能┐(´-｀)┌）叙叙事<br>扯些有的没的<br>该帖子为一切的起点！<br>见证这一切的开始吧！<br><code>此帖子基于一开始生成的hello-world 所修改</code><br>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure> ## 前言
+本教程并不会很详细，不过大概的步骤都会给你，照做即可。 ###
+关于本站是怎么来的 之前早就听过<a
+href="https://hexo.io/">Hexo</a>这一博客的大名<br>其实心里早就想要花时间去搭建一个博客<br>于是，纷争开始了</p>
+<h3 id="问题">问题</h3>
+<p>关键是我只有部手机，这怎么玩，装这玩意是要<a
+href="https://git-scm.com/?hl=zh-cn">Git</a>的啊，在安卓上，折腾的过程中出现了很多问题
+<br>而且操作并不方便，这可咋办咋办咋办T^T<br>可是你们还是可以看到这篇文章，说明我已经成功了</p>
+<h3 id="解决方法">解决方法</h3>
+<p>基于<a
+href="https://ghjayce.github.io/p/system/android/env/install-git/">这篇教程</a>，可以在安卓设备上安装<a
+href="https://termux.dev/cn/">termux</a>以在终端里安装并使用<a
+href="https://nodejs.org/">node.js</a>与git<br>
+在参照上篇教程安装git后，在termux使用以下命令安装Node.js<br>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt install nodejs</span><br></pre></td></tr></table></figure> 在跑完进度条后即算作安装成功，接着，按<a
+href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">照该教程</a>一路走即可
+不要按照他的方式在别的目录安装hexo！会出现问题！<br>先cd到根目录，再使用npm安装hexo
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span></span><br><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>安装之后，目录是在<code>/data/user/0/com.termux/files/home/hexo/(至少安卓12是这样的)</code><br><br>将这一切完成后，在修改<code>_config.yml</code>就是部署到github这一步时，请按照如下方式修改<code>踩坑踩出来的教训</code></p>
+安装之后，目录是在<code>/data/user/0/com.termux/files/home/hexo/(至少安卓12是这样的)</code><br>
+将这一切完成后，在修改<code>_config.yml</code>就是部署到github这一步时，请按照如下方式修改<code>踩坑踩出来的教训</code>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#文本末尾</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: #这里按照他的方式做即可</span><br><span class="line">  branch: main  #将那篇文章的gh-pages改成main，后面改分支的操作就不需要了</span><br></pre></td></tr></table></figure>
-<p>将这一切做好后，即可使用你专属的Github.io域名来访问独属于你自己的Hexo！</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>请确保你创建<code>id_rsa.pub</code>时的网络环境与你在Github添加时的网络环境<code>（不要翻墙/更换局域网）</code>一致！</li>
-<li>开始前，请把<code>“所有文件的访问权限”给termux！</code>以确保不会出现文件无法访问这一类的错误</li>
-<li>需要安装主题可以去网络上搜索教程，主要是在<code>_config.yml</code>中修改：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions      【第96行】</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: #将此处修改为你要启用的主题名称</span><br></pre></td></tr></table></figure>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>算是水了一篇帖子，这真的走了我好久的弯路，实在不会的可以查度娘捏<br><br>╭ ◜◝ ͡ ◝ ͡ ◜◝╮<br><br>♡ ∧＿∧ ＿∧ ♡<br><br>♡ (๑･ω･)•ㅅ•๑) ♡  <br><br>♡ &#x2F;⌒ づ⊂⌒ヽ♡<br><br>╰     ͜ ⠀  ͜     ͜    ͜   ╯</p>
+将这一切做好后，即可使用你专属的Github.io域名来访问独属于你自己的Hexo！
+### 注意事项 -
+请确保你创建<code>id_rsa.pub</code>时的网络环境与你在Github添加时的网络环境<code>（不要翻墙/更换局域网）</code>一致！
+-
+开始前，请把<code>“所有文件的访问权限”给termux！</code>以确保不会出现文件无法访问这一类的错误
+-
+需要安装主题可以去网络上搜索教程，主要是在<code>_config.yml</code>中修改：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions      【第96行】</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: #将此处修改为你要启用的主题名称</span><br></pre></td></tr></table></figure> ### 总结
+算是水了一篇帖子，这真的走了我好久的弯路，实在不会的可以查度娘捏<br> ╭
+◜◝ ͡ ◝ ͡ ◜◝╮<br> ♡ ∧＿∧ ＿∧ ♡<br> ♡ (๑･ω･)•ㅅ•๑) ♡ <br> ♡ /⌒ づ⊂⌒ヽ♡<br>
+╰ ͜ ⠀ ͜ ͜ ͜ ╯</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>教程</category>
@@ -326,45 +512,42 @@
   <entry>
     <title>莱姆の更新日志</title>
     <url>/2025/01/15/%E8%8E%B1%E5%A7%86%E3%81%AE%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>莱姆｜Lime 是我于25-1-13日晚上所搭建的一个博客项目<br>其目的是为了平时在上面写一些有的没的，我觉得这是一件很值得记录的事情<br>故在Hexo的基本配置完成后，我决定开始编写该博客的更新日志<br></p>
-<h2 id="版本更新规律"><a href="#版本更新规律" class="headerlink" title="版本更新规律"></a>版本更新规律</h2><p>该博客决定以大的版本号来决定，某些细小的更新将算作一个大版本<code>就是写在首页的版本号</code><br>例如：βONE<br>这是一开始的版本，在我添加了n多新功能后，ONE将会变成TWO，THREE<br>等到了一定的限度后将会使用罗马数字代替<br>总而言之就是一堆小功能更新后更新一个大的版本号。</p>
-<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p>前言已结束，将开始进入大的更新日志！</p>
-<h2 id="βONE"><a href="#βONE" class="headerlink" title="βONE"></a>βONE</h2><p><img src="https://limeblogs.github.io/LimePan/Update-beta1.jpeg" alt="Beta1-βONE 版本封面"><br><br><strong>2025-1-15</strong><br>一切的开始！一切的起源，起因只是我的灵光一闪？</p>
-<h3 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h3><ul>
-<li>安装<code>hexo-simple-mindmap</code>插件，对hexo提供了简易的思维导图支持</li>
-</ul>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>莱姆｜Lime
+是我于25-1-13日晚上所搭建的一个博客项目<br>其目的是为了平时在上面写一些有的没的，我觉得这是一件很值得记录的事情<br>故在Hexo的基本配置完成后，我决定开始编写该博客的更新日志<br>
+## 版本更新规律
+该博客决定以大的版本号来决定，某些细小的更新将算作一个大版本<code>就是写在首页的版本号</code><br>例如：βONE<br>这是一开始的版本，在我添加了n多新功能后，ONE将会变成TWO，THREE<br>等到了一定的限度后将会使用罗马数字代替<br>总而言之就是一堆小功能更新后更新一个大的版本号。
+# 更新日志 前言已结束，将开始进入大的更新日志！ ## βONE <img
+src="https://limeblogs.github.io/LimePan/Update-beta1.jpeg"
+alt="Beta1-βONE 版本封面" /><br>
+<strong>2025-1-15</strong><br>一切的开始！一切的起源，起因只是我的灵光一闪？
+### 更新内容 -
+安装<code>hexo-simple-mindmap</code>插件，对hexo提供了简易的思维导图支持
 <blockquote class="pullquote mindmap mindmap-md"><ul>
-<li>βONE更新内容<ul>
-<li>将网站基本内容几乎全部配置完毕<ul>
+<li>βONE更新内容
+<ul>
+<li>将网站基本内容几乎全部配置完毕
+<ul>
 <li>首页样式</li>
 <li>网站封面</li>
 <li>主题选择配置</li>
 <li>图床选择</li>
-</ul>
-</li>
-<li>插件添加<ul>
+</ul></li>
+<li>插件添加
+<ul>
 <li>hexo-simple-mindmap</li>
 <li>hexo-theme-solitude</li>
 <li>添加置顶功能</li>
-</ul>
-</li>
+</ul></li>
 <li>将本地Hexo推送至Githubpages</li>
 <li>更新了一篇文章[不算作本篇]</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li>网站颜色配置基本完成</li>
-<li>添加置顶功能</li>
-<li>部分功能启用调整</li>
-<li>主题基本选择完毕</li>
-<li>*其实就是思维导图里的东西</li>
-</ul>
-<h3 id="安装部分"><a href="#安装部分" class="headerlink" title="安装部分"></a>安装部分</h3><p>安装简单思维导图<br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-simple-mindmap</span><br></pre></td></tr></table></figure>
-<p>安装Solitude主题<br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i hexo-theme-solitude</span><br></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+</blockquote> - 网站颜色配置基本完成 - 添加置顶功能 - 部分功能启用调整 -
+主题基本选择完毕 - *其实就是思维导图里的东西 ### 安装部分
+安装简单思维导图<br> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-simple-mindmap</span><br></pre></td></tr></table></figure> 安装Solitude主题<br>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i hexo-theme-solitude</span><br></pre></td></tr></table></figure></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>日常</category>
       </categories>

@@ -265,6 +265,194 @@ href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
       </tags>
   </entry>
   <entry>
+    <title>【持续更新】各大常用MC启动器下载集合</title>
+    <url>/2025/01/27/MC-Launcher/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>MC启动器是一个在日常游戏中必不可少的工具<br>此文章就是将各大常用MC启动器的官网以及下载地址整理至此，并持续更新<br>方便各位小白下载并体验游戏内容<br>此页也方便各位同学将此分享给其它人。<br>你可以按下Ctrl+F搜索关键词以快速定位并寻找自己所需的资源。<br>话不多说，直接开始！</p>
+<div class="admonition todo">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该文章将会持续更新<br>你可以点击右下角文章目录来快速寻找你所需要的启动器资源。
+</p>
+</div>
+<div class="admonition fail">
+<p class="admonition-title">
+关于收录/侵权
+</p>
+<p>
+你可以向LimeOnTop@outlook.com<br>提供您的启动器的相关信息以在此页收录。<br>同时，如有侵权也可以联系我删除<br>排名不分前后！<br>排名不分前后！<br>排名不分前后！
+</p>
+</div>
+<h1 id="pcl2-plain-craft-launcher-2">[PCL2] Plain Craft Launcher 2</h1>
+<blockquote>
+<p>Minecraft启动器PCL2 是新一代 Minecraft / 我的世界启动器：Plain Craft
+Launcher 2！ 超快的下载速度，下载安装 Mod
+和整合包，简洁且高度自定义的界面，流畅精细的动画……总之很棒就完事啦
+=w=…</p>
+</blockquote>
+<p><br>详情请见<a
+href="https://www.minebbs.com/resources/pcl2-plain-craft-launcher-2.4256/">MineBBS
+- [PCL2]Plain Craft Launcher 2 －新时代简洁|高速|好用的启动器</a> <img
+src="https://limeblogs.github.io/LimePan/pcl2.jpeg"
+alt="官方宣传图" /></p>
+<h2 id="下载">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖仅分享 <span class="citation" data-cites="龙腾猫跃">@龙腾猫跃</span>
+的爱发电下载页与Github仓库地址<br>如有能力请赞助原作者！
+</p>
+<blockquote>
+<p>
+<a href="https://github.com/Hex-Dragon/PCL2">Github仓库</a><br><a href="https://afdian.com/p/0164034c016c11ebafcb52540025c377">爱发电-推荐</a>
+</p>
+</blockquote>
+</div>
+<h2 id="pcl2-ce-plain-craft-launcher-2社区版">[PCL2-CE] Plain Craft
+Launcher 2社区版</h2>
+<p>!!! fail 注意事项 PCL2
+社区版并非由上游开发者龙腾猫跃开发与管理，且与龙腾猫跃本人无关。使用
+PCL2 社区版带来的一切风险请您自行承担。<br></p>
+<pre><code>PCL2 社区版下载不需要您支付任何费用。PCL-Community 组织及其成员始终建议您使用官方版 PCL2。&lt;br&gt;
+
+社区版出现问题请向社区版仓库反馈，不要向主线仓库反馈！</code></pre>
+<p>!!! info 关于运行库需求 自 2.9.3 版本以后，社区版需要 .NET Framework
+4.8 才能运行。<br> 自 2.10.0 版本以后，社区版需要 Windows 10 20H2
+或以上版本的系统以及 .NET Framework 4.8.1
+才能运行。若不满足最低要求，只能使用 2.9.x 版本（Legacy 版本）。<br>
+PCL-Community
+始终建议您使用最新版本的系统和相关组件以保证系统安全和良好体验。</p>
+<blockquote>
+<p>基于 PCL2
+开源代码二次开发的社区版本，包括了主线暂未制作的功能和改进！<br>
+代码会在主线发布更新时与主线同步一次，但来自社区的功能会保持自己的更新节奏。<br>
+同时需注意，社区版的版本号与主线并非严格对应关系。<br>
+欢迎大家来用用看！<br>你可以<a
+href="https://github.com/Hex-Dragon/PCL2/discussions/5342">点击这里</a>以查看详细介绍</p>
+</blockquote>
+<p><strong>B站视频介绍</strong>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113865304048458&bvid=BV1w5wheQEAy&cid=28195815657&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></p>
+<h3 id="下载-1">下载</h3>
+<p>!!! info 链接 本帖子仅提供Github
+Releases链接，大陆用户可能并不方便，可以考虑使用镜像 &gt;<a
+href="https://github.com/PCL-Community/PCL2-CE">Github</a><br><a
+href="https://github.com/PCL-Community/PCL2-CE/releases">Github
+Release</a></p>
+<h1 id="hmcl-hello-minecraft-launcher">[HMCL] Hello Minecraft!
+Launcher</h1>
+<blockquote>
+<p>HMCL 是一款开源、跨平台的 Minecraft
+启动器，支持模组管理、游戏自定义、游戏自动安装
+(Forge、NeoForge、Fabric、Quilt、LiteLoader 和
+OptiFine)、整合包创建、界面自定义等功能。<br> HMCL
+有着强大的跨平台能力。它不仅支持 Windows、Linux、macOS
+等常见的操作系统，同时也支持 x86、ARM、MIPS、LoongArch 等不同的 CPU
+架构。你可以使用 HMCL 在不同平台上轻松地游玩 Minecraft。</p>
+</blockquote>
+<p><br>详情请见<a href="https://hmcl.huangyuhui.net/">HMCL官网</a>或<a
+href="https://github.com/HMCL-dev/HMCL">HMCL Github</a></p>
+<h2 id="下载-2">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享官网的下载页以及GithubRelease页面。
+</p>
+<blockquote>
+<p>
+<a href="https://hmcl.huangyuhui.net/download/">HMCL官网-推荐</a><br><a href="https://github.com/HMCL-dev/HMCL/releases">Github
+Release</a>
+</p>
+</blockquote>
+</div>
+<h1 id="bakaxl-bakaxl-launcher">[BakaXL] BakaXL Launcher</h1>
+<blockquote>
+<p>BakaXL
+天生就与众不同。打破传统启动器的层级概念，使用起来更加称心如意。
+强大的自定义主题功能无需任何额外付费即可使用，还有视差效果和实况壁纸加持，实在是泰裤辣！<br>不光支持
+Forge、Fabric 等你所热爱的模组加载器，BakaXL 还是国内首个支持 Quilt 和
+NeoForge 模组加载器的启动器。还有 BakaXL Network
+加持，可随时与好友一起同乐。<br>…</p>
+</blockquote>
+<p><br>详情请见<a href="https://www.bakaxl.com/">BakaXL官网</a>或[BakaXL
+Giithub(https://github.com/BakaXL-Launcher/BakaXL)</p>
+<h2 id="下载-3">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享官网的下载页以及TT的爱发电页面欢迎支持ta。
+</p>
+<blockquote>
+<p>
+<a href="https://www.bakaxl.com/#download">BakaXL官网-推荐</a><br><a href="https://afdian.com/a/TT702">爱发电</a>
+</p>
+</blockquote>
+</div>
+<h1 id="fluent-fluent-launcher">[Fluent] Fluent Launcher</h1>
+<blockquote>
+<p>一款专为Win11设计的启动器</p>
+</blockquote>
+<p>详情请见<a
+href="https://github.com/Xcube-Studio/Natsurainko.FluentLauncher">Fluent
+Launcher Github</a>或<a
+href="https://fluentlauncher.natsurainko.work/">Fluent
+Launcher官网</a></p>
+<h2 id="下载-4">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享微软商店的下载页面以及Github发行版的下载页面。
+</p>
+<blockquote>
+<p>
+<a href="https://apps.microsoft.com/detail/9p4nqqxq942p?ocid=webpdpshare">Microsoft
+Store-推荐</a><br><a href="https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/">Github
+Release</a>
+</p>
+</blockquote>
+</div>
+<h1 id="wonderlab-wonderlab-launcher">[WonderLab] WonderLab
+Launcher</h1>
+<blockquote>
+<p>WonderLab是一个跨平台 Minecraft
+启动器，支持自动更新，Mod安装，Java运行时安装，并支持Windows，MacOS，Linux等操作系统，同时兼容x86,x64,Arm系统架构。</p>
+</blockquote>
+<p><br>详情请见<a
+href="https://github.com/Blessing-Studio/WonderLab">Github</a></p>
+<h2 id="下载-5">下载</h2>
+<div class="admonition todo">
+<p class="admonition-title">
+链接
+</p>
+<p>
+本帖分享Github发行版的下载页面。
+</p>
+<blockquote>
+<p>
+<a href="https://github.com/Blessing-Studio/WonderLab/releases/">Github
+Release-推荐</a>
+</p>
+</blockquote>
+</div>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>资源</tag>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【持续更新】最全！高中数学大合集！从零开始自学！全网最详细的赛博自学档案</title>
     <url>/2025/02/28/NJUPLS/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -455,6 +643,78 @@ U是关于x的集合，其中x为2k+1，k属于整数
         <tag>Hexo</tag>
         <tag>博客</tag>
         <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开 幕 雷 击</title>
+    <url>/2025/03/16/fkyuekao/</url>
+    <content><![CDATA[<h1 id="引入">引入</h1>
+<p>这篇文章应该算是<a
+href="https://limeblogs.github.io/2025/01/18/gaoyisuibi/">另外一篇文章</a>的后续，在上册结束以后，度过了一个寒假，于是莫名其妙的开始了高一下学期的学习生活。
+# 关于前期的一次试错
+我在开学到这篇文章写完（20250316）之前的学习状态都是像这样来描述的。<br>我原本想对上学期的所有问题做一个交代，因为我上学习一开始打算当文科生，故理科的课程基本没听，而在选科时我又选择了理科。<br>我理科基本没听，因此，我在高一下册的一开学就决定听网课把上册没学的东西补回来<br><strong>但是结果总是事与愿违</strong><br>我或许是失去了上册的那种干劲，脑子里想的是好好听课做笔记认真做题，可是每天（几乎）我都是长时间泡在抖音里。<br>我的学习状态就可能像下面这样。
+&gt;回来的路上→我要好好学习<br>到家后→脑子里想着要上网课<br>坐到桌子前→手机打开抖音<br>晚上12:00→仍旧刷着抖音，而且作业一字没动<br>晚上1:00至2:00左右→用5分钟把老师布置的作业写完，开始忏悔。</p>
+<p>如此往复，一天的时间里我基本上什么事情都没干。终于第一次月考来了，分数出来后狠狠地给了我一巴掌。</p>
+<figure>
+<img src="https://limeblogs.github.io/LimePan/sila.jpg"
+alt="月考成绩" />
+<figcaption aria-hidden="true">月考成绩</figcaption>
+</figure>
+<p>我开始难受了😭，这是为什么啊😭一切的一切不过是我的自我感动吗？原来这就是假努力是吗？🤩<br>难过是很难过，但是能找出为什么会这样并且给出解决方案，我相信这样做肯定能够解决问题，我考虑了以下导致这些问题的原因。<br>
+&gt;1.长期只听网课，不练题目<br>2.自己自制力差，抖音我日你妈<br>3.有点过于浮躁，静不下心来</p>
+<p>这三个是主要原因，期间我尝试过🍅番茄学习法来试图挽救自己，无济于事，这是自律性的问题。不过换一个角度来看，以上的三个问题基本上全是和手机有关系，这可能就是一个最主要的原因，所以在这个学期结束前，从今天起（20250316）我将会放下手机，去尝试静下心来。</p>
+<h1 id="总结">总结</h1>
+<p>我的时间并不多，从中考结束到高一下册，时间好像就在一瞬，我希望我能够遵守自己的承诺，放下手机。</p>
+<h2 id="deepseek给出的深刻见解">DeepSeek给出的深刻见解</h2>
+<blockquote>
+<p>我把DeepSeek生存的结果放在这里，希望能略微帮助到后人</p>
+</blockquote>
+<p>这篇文章是高一下学期的学习反思，延续了作者上学期末的状态记录。寒假后选择理科的作者面临困境：上学期因误判分科方向导致理科基础薄弱，开学后计划通过网课补习却陷入恶性循环。<br>
+当前学习状态呈现为持续性拖延：每天回家后沉迷抖音，凌晨仓促应付作业，长期缺乏有效学习。首次月考成绩暴跌成为转折点，迫使作者直面问题根源。通过自我剖析，总结出三大核心问题：（1）网课学习与习题训练脱节（2）手机成瘾严重摧毁自制力（3）整体心态浮躁难以专注。曾尝试番茄工作法等时间管理工具但收效甚微，最终意识到根本症结在于手机依赖。<br>
+在2025年3月16日的节点，作者决心采取断舍离策略：彻底戒除手机干扰，尝试重建专注力体系。全文展现从迷茫逃避到觉醒反思的心路历程，揭示当代学生群体普遍面临的注意力争夺战与自律困境，最终落脚于自我救赎的实践承诺。
+### 1. <strong>关于「戒手机」的深层矛盾</strong>
+手机成瘾的本质是大脑对即时快感的依赖，但单纯物理隔离可能只是治标。你需要思考：
+-
+<strong>空虚感填补</strong>：刷抖音或许是为了逃避学习压力带来的焦虑。试着记录每次想刷手机时的情绪（如「现在很累」「这道题不会做」），找到触发点。
+-
+<strong>替代性奖励机制</strong>：将「刷手机」替换为其他能带来成就感的行为，例如完成一套习题后允许自己画一幅简笔画、听一首喜欢的歌，用微小正反馈重建自律神经回路。</p>
+<h3 id="警惕补偿型学习的陷阱">2.
+<strong>警惕「补偿型学习」的陷阱</strong></h3>
+<p>你试图用网课狂补上学期内容，这可能导致： -
+<strong>知识幻觉</strong>：看网课时大脑处于被动接收状态，容易产生「我会了」的错觉，实际上缺乏提取练习（如做题、自我测试）。
+-
+<strong>建议</strong>：采用「30分钟网课→立刻默写思维导图→针对性刷3道题」的闭环模式，让输入与输出强制捆绑。</p>
+<h3 id="假努力背后的心理保护机制">3.
+<strong>「假努力」背后的心理保护机制</strong></h3>
+<p>自我批判「假努力」时，或许潜意识在保护你： -
+<strong>恐惧失败合理化</strong>：如果认定自己「没真正努力」，考差时可以说「我只是没尽力」，避免承认「努力了还失败」的更大痛苦。
+-
+<strong>行动建议</strong>：给自己设定「最小行动单位」，如每天只要求专注学习15分钟，完成后在日历打钩。通过累积微小成功体验，逐步瓦解逃避心理。</p>
+<h3 id="重新定义自律的认知">4.
+<strong>重新定义「自律」的认知</strong></h3>
+<p>真正的自律不是咬牙切齿的坚持，而是： -
+<strong>系统设计</strong>：将手机放在客厅充电，书桌只放纸质资料；把抖音图标藏在文件夹第三页，增加打开成本。
+-
+<strong>环境塑造</strong>：周末去图书馆/自习室学习，利用公共空间的「观众效应」增强执行力。
+-
+<strong>物理标记法</strong>：用不同颜色荧光笔在课本标记「完全不懂」「需要巩固」「已掌握」，将抽象焦虑转化为可视进度。</p>
+<h3 id="关于浮躁心态的破局点">5.
+<strong>关于「浮躁心态」的破局点</strong></h3>
+<p>浮躁往往源于目标模糊，建议： -
+<strong>错题回溯法</strong>：把月考错题涉及的知识点列成清单，每解决一个划掉一项，用具体成就对冲焦虑。
+-
+<strong>具象化目标</strong>：将「补理科基础」拆解为「本周弄懂牛顿三大定律的7种题型」，避免在宏大目标中迷失。
+<br>
+你正处于认知觉醒的关键期，这种自我剖析的痛苦恰恰是蜕变的开始。不必苛求立刻脱胎换骨，真正的改变往往发生在你接受「偶尔会失控」之后——就像学骑自行车时，重要的不是永远不摔倒，而是摔倒后再次握紧车把的勇气。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>碎笔</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>学业</tag>
+        <tag>高一</tag>
+        <tag>后续</tag>
       </tags>
   </entry>
   <entry>

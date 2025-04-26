@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Lime-Fork</title>
+    <url>/2025/02/16/Lime-Fork/</url>
+    <content><![CDATA[<h1 id="起因">起因</h1>
+<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
+href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
+<div class="admonition fail">
+<p>
+该页面仅仅收录我存档的项目，不会注明Github的项目地址。
+</p>
+</div>
+<div class="admonition info">
+<p>
+你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
+</p>
+</div>
+<h2 id="人生重开模拟器">人生重开模拟器</h2>
+<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
+href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
+<h2 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h2>
+<div class="admonition fail">
+<p>
+该页面内容可能引人不适！
+</p>
+</div>
+<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
+href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
+<h2 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h2>
+<div class="admonition fail">
+<p>
+超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
+</p>
+</div>
+<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
+href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
+<h2 id="limelinks">LimeLinks</h2>
+<div class="admonition info">
+<p>
+该页面没有描述
+</p>
+</div>
+<p>/LimeLinks</p>
+<h2 id="masturbation-helper">Masturbation-Helper</h2>
+<div class="admonition info">
+<p>
+该页面没有描述，请自行访问
+</p>
+</div>
+<p><a
+href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>资源</tag>
+        <tag>Github</tag>
+        <tag>Fork</tag>
+        <tag>项目</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LAB</title>
     <url>/2025/01/15/LAB/</url>
     <content><![CDATA[<h1 id="起因">起因</h1>
@@ -209,67 +270,6 @@ Classic</a>输入你要的函数之后点击“分享”</p>
         <tag>测试</tag>
         <tag>Hexo</tag>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lime-Fork</title>
-    <url>/2025/02/16/Lime-Fork/</url>
-    <content><![CDATA[<h1 id="起因">起因</h1>
-<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
-href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div class="admonition fail">
-<p>
-该页面仅仅收录我存档的项目，不会注明Github的项目地址。
-</p>
-</div>
-<div class="admonition info">
-<p>
-你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
-</p>
-</div>
-<h2 id="人生重开模拟器">人生重开模拟器</h2>
-<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
-href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
-<h2 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h2>
-<div class="admonition fail">
-<p>
-该页面内容可能引人不适！
-</p>
-</div>
-<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
-href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
-<h2 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h2>
-<div class="admonition fail">
-<p>
-超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
-</p>
-</div>
-<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
-href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
-<h2 id="limelinks">LimeLinks</h2>
-<div class="admonition info">
-<p>
-该页面没有描述
-</p>
-</div>
-<p>/LimeLinks</p>
-<h2 id="masturbation-helper">Masturbation-Helper</h2>
-<div class="admonition info">
-<p>
-该页面没有描述，请自行访问
-</p>
-</div>
-<p><a
-href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>资源</tag>
-        <tag>Github</tag>
-        <tag>Fork</tag>
-        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -664,79 +664,6 @@ href="https://www.bilibili.com/video/BV12BXvYEEx1">点击这里</a>访问原视�
       </tags>
   </entry>
   <entry>
-    <title>开 幕 雷 击</title>
-    <url>/2025/03/16/fkyuekao/</url>
-    <content><![CDATA[<h1 id="引入">引入</h1>
-<p>这篇文章应该算是<a
-href="https://limeblogs.github.io/2025/01/18/gaoyisuibi/">另外一篇文章</a>的后续，在上册结束以后，度过了一个寒假，于是莫名其妙的开始了高一下学期的学习生活。
-# 关于前期的一次试错
-我在开学到这篇文章写完（20250316）之前的学习状态都是像这样来描述的。<br>我原本想对上学期的所有问题做一个交代，因为我上学习一开始打算当文科生，故理科的课程基本没听，而在选科时我又选择了理科。<br>我理科基本没听，因此，我在高一下册的一开学就决定听网课把上册没学的东西补回来<br><strong>但是结果总是事与愿违</strong><br>我或许是失去了上册的那种干劲，脑子里想的是好好听课做笔记认真做题，可是每天（几乎）我都是长时间泡在抖音里。<br>我的学习状态就可能像下面这样。
-&gt;回来的路上→我要好好学习<br>到家后→脑子里想着要上网课<br>坐到桌子前→手机打开抖音<br>晚上12:00→仍旧刷着抖音，而且作业一字没动<br>晚上1:00至2:00左右→用5分钟把老师布置的作业写完，开始忏悔。</p>
-<p>如此往复，一天的时间里我基本上什么事情都没干。终于第一次月考来了，分数出来后狠狠地给了我一巴掌。</p>
-<figure>
-<img src="https://limeblogs.github.io/LimePan/sila.jpg"
-alt="月考成绩" />
-<figcaption aria-hidden="true">月考成绩</figcaption>
-</figure>
-<p>我开始难受了😭，这是为什么啊😭一切的一切不过是我的自我感动吗？原来这就是假努力是吗？🤩<br>难过是很难过，但是能找出为什么会这样并且给出解决方案，我相信这样做肯定能够解决问题，我考虑了以下导致这些问题的原因。<br>
-&gt;1.长期只听网课，不练题目<br>2.自己自制力差，抖音我日你妈<br>3.有点过于浮躁，静不下心来</p>
-<p>这三个是主要原因，期间我尝试过🍅番茄学习法来试图挽救自己，无济于事，这是自律性的问题。不过换一个角度来看，以上的三个问题基本上全是和手机有关系，这可能就是一个最主要的原因，所以在这个学期结束前，从今天起（20250316）我将会放下手机，去尝试静下心来。</p>
-<h1 id="总结">总结</h1>
-<p>我的时间并不多，从中考结束到高一下册，时间好像就在一瞬，我希望我能够遵守自己的承诺，放下手机。</p>
-<h2 id="deepseek给出的深刻见解">DeepSeek给出的深刻见解</h2>
-<blockquote>
-<p>我把DeepSeek生存的结果放在这里，希望能略微帮助到后人</p>
-</blockquote>
-<p>这篇文章是高一下学期的学习反思，延续了作者上学期末的状态记录。寒假后选择理科的作者面临困境：上学期因误判分科方向导致理科基础薄弱，开学后计划通过网课补习却陷入恶性循环。<br>
-当前学习状态呈现为持续性拖延：每天回家后沉迷抖音，凌晨仓促应付作业，长期缺乏有效学习。首次月考成绩暴跌成为转折点，迫使作者直面问题根源。通过自我剖析，总结出三大核心问题：（1）网课学习与习题训练脱节（2）手机成瘾严重摧毁自制力（3）整体心态浮躁难以专注。曾尝试番茄工作法等时间管理工具但收效甚微，最终意识到根本症结在于手机依赖。<br>
-在2025年3月16日的节点，作者决心采取断舍离策略：彻底戒除手机干扰，尝试重建专注力体系。全文展现从迷茫逃避到觉醒反思的心路历程，揭示当代学生群体普遍面临的注意力争夺战与自律困境，最终落脚于自我救赎的实践承诺。</p>
-<h3 id="关于戒手机的深层矛盾">1.
-<strong>关于「戒手机」的深层矛盾</strong></h3>
-<p>手机成瘾的本质是大脑对即时快感的依赖，但单纯物理隔离可能只是治标。你需要思考：
--
-<strong>空虚感填补</strong>：刷抖音或许是为了逃避学习压力带来的焦虑。试着记录每次想刷手机时的情绪（如「现在很累」「这道题不会做」），找到触发点。
--
-<strong>替代性奖励机制</strong>：将「刷手机」替换为其他能带来成就感的行为，例如完成一套习题后允许自己画一幅简笔画、听一首喜欢的歌，用微小正反馈重建自律神经回路。</p>
-<h3 id="警惕补偿型学习的陷阱">2.
-<strong>警惕「补偿型学习」的陷阱</strong></h3>
-<p>你试图用网课狂补上学期内容，这可能导致： -
-<strong>知识幻觉</strong>：看网课时大脑处于被动接收状态，容易产生「我会了」的错觉，实际上缺乏提取练习（如做题、自我测试）。
--
-<strong>建议</strong>：采用「30分钟网课→立刻默写思维导图→针对性刷3道题」的闭环模式，让输入与输出强制捆绑。</p>
-<h3 id="假努力背后的心理保护机制">3.
-<strong>「假努力」背后的心理保护机制</strong></h3>
-<p>自我批判「假努力」时，或许潜意识在保护你： -
-<strong>恐惧失败合理化</strong>：如果认定自己「没真正努力」，考差时可以说「我只是没尽力」，避免承认「努力了还失败」的更大痛苦。
--
-<strong>行动建议</strong>：给自己设定「最小行动单位」，如每天只要求专注学习15分钟，完成后在日历打钩。通过累积微小成功体验，逐步瓦解逃避心理。</p>
-<h3 id="重新定义自律的认知">4.
-<strong>重新定义「自律」的认知</strong></h3>
-<p>真正的自律不是咬牙切齿的坚持，而是： -
-<strong>系统设计</strong>：将手机放在客厅充电，书桌只放纸质资料；把抖音图标藏在文件夹第三页，增加打开成本。
--
-<strong>环境塑造</strong>：周末去图书馆/自习室学习，利用公共空间的「观众效应」增强执行力。
--
-<strong>物理标记法</strong>：用不同颜色荧光笔在课本标记「完全不懂」「需要巩固」「已掌握」，将抽象焦虑转化为可视进度。</p>
-<h3 id="关于浮躁心态的破局点">5.
-<strong>关于「浮躁心态」的破局点</strong></h3>
-<p>浮躁往往源于目标模糊，建议： -
-<strong>错题回溯法</strong>：把月考错题涉及的知识点列成清单，每解决一个划掉一项，用具体成就对冲焦虑。
--
-<strong>具象化目标</strong>：将「补理科基础」拆解为「本周弄懂牛顿三大定律的7种题型」，避免在宏大目标中迷失。
-<br>
-你正处于认知觉醒的关键期，这种自我剖析的痛苦恰恰是蜕变的开始。不必苛求立刻脱胎换骨，真正的改变往往发生在你接受「偶尔会失控」之后——就像学骑自行车时，重要的不是永远不摔倒，而是摔倒后再次握紧车把的勇气。</p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>碎笔</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>学业</tag>
-        <tag>高一</tag>
-        <tag>后续</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【持续更新】最全！高中数学大合集！从零开始自学！全网最详细的赛博自学档案</title>
     <url>/2025/02/28/NJUPLS/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -927,6 +854,79 @@ U是关于x的集合，其中x为2k+1，k属于整数
         <tag>Hexo</tag>
         <tag>博客</tag>
         <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开 幕 雷 击</title>
+    <url>/2025/03/16/fkyuekao/</url>
+    <content><![CDATA[<h1 id="引入">引入</h1>
+<p>这篇文章应该算是<a
+href="https://limeblogs.github.io/2025/01/18/gaoyisuibi/">另外一篇文章</a>的后续，在上册结束以后，度过了一个寒假，于是莫名其妙的开始了高一下学期的学习生活。
+# 关于前期的一次试错
+我在开学到这篇文章写完（20250316）之前的学习状态都是像这样来描述的。<br>我原本想对上学期的所有问题做一个交代，因为我上学习一开始打算当文科生，故理科的课程基本没听，而在选科时我又选择了理科。<br>我理科基本没听，因此，我在高一下册的一开学就决定听网课把上册没学的东西补回来<br><strong>但是结果总是事与愿违</strong><br>我或许是失去了上册的那种干劲，脑子里想的是好好听课做笔记认真做题，可是每天（几乎）我都是长时间泡在抖音里。<br>我的学习状态就可能像下面这样。
+&gt;回来的路上→我要好好学习<br>到家后→脑子里想着要上网课<br>坐到桌子前→手机打开抖音<br>晚上12:00→仍旧刷着抖音，而且作业一字没动<br>晚上1:00至2:00左右→用5分钟把老师布置的作业写完，开始忏悔。</p>
+<p>如此往复，一天的时间里我基本上什么事情都没干。终于第一次月考来了，分数出来后狠狠地给了我一巴掌。</p>
+<figure>
+<img src="https://limeblogs.github.io/LimePan/sila.jpg"
+alt="月考成绩" />
+<figcaption aria-hidden="true">月考成绩</figcaption>
+</figure>
+<p>我开始难受了😭，这是为什么啊😭一切的一切不过是我的自我感动吗？原来这就是假努力是吗？🤩<br>难过是很难过，但是能找出为什么会这样并且给出解决方案，我相信这样做肯定能够解决问题，我考虑了以下导致这些问题的原因。<br>
+&gt;1.长期只听网课，不练题目<br>2.自己自制力差，抖音我日你妈<br>3.有点过于浮躁，静不下心来</p>
+<p>这三个是主要原因，期间我尝试过🍅番茄学习法来试图挽救自己，无济于事，这是自律性的问题。不过换一个角度来看，以上的三个问题基本上全是和手机有关系，这可能就是一个最主要的原因，所以在这个学期结束前，从今天起（20250316）我将会放下手机，去尝试静下心来。</p>
+<h1 id="总结">总结</h1>
+<p>我的时间并不多，从中考结束到高一下册，时间好像就在一瞬，我希望我能够遵守自己的承诺，放下手机。</p>
+<h2 id="deepseek给出的深刻见解">DeepSeek给出的深刻见解</h2>
+<blockquote>
+<p>我把DeepSeek生存的结果放在这里，希望能略微帮助到后人</p>
+</blockquote>
+<p>这篇文章是高一下学期的学习反思，延续了作者上学期末的状态记录。寒假后选择理科的作者面临困境：上学期因误判分科方向导致理科基础薄弱，开学后计划通过网课补习却陷入恶性循环。<br>
+当前学习状态呈现为持续性拖延：每天回家后沉迷抖音，凌晨仓促应付作业，长期缺乏有效学习。首次月考成绩暴跌成为转折点，迫使作者直面问题根源。通过自我剖析，总结出三大核心问题：（1）网课学习与习题训练脱节（2）手机成瘾严重摧毁自制力（3）整体心态浮躁难以专注。曾尝试番茄工作法等时间管理工具但收效甚微，最终意识到根本症结在于手机依赖。<br>
+在2025年3月16日的节点，作者决心采取断舍离策略：彻底戒除手机干扰，尝试重建专注力体系。全文展现从迷茫逃避到觉醒反思的心路历程，揭示当代学生群体普遍面临的注意力争夺战与自律困境，最终落脚于自我救赎的实践承诺。</p>
+<h3 id="关于戒手机的深层矛盾">1.
+<strong>关于「戒手机」的深层矛盾</strong></h3>
+<p>手机成瘾的本质是大脑对即时快感的依赖，但单纯物理隔离可能只是治标。你需要思考：
+-
+<strong>空虚感填补</strong>：刷抖音或许是为了逃避学习压力带来的焦虑。试着记录每次想刷手机时的情绪（如「现在很累」「这道题不会做」），找到触发点。
+-
+<strong>替代性奖励机制</strong>：将「刷手机」替换为其他能带来成就感的行为，例如完成一套习题后允许自己画一幅简笔画、听一首喜欢的歌，用微小正反馈重建自律神经回路。</p>
+<h3 id="警惕补偿型学习的陷阱">2.
+<strong>警惕「补偿型学习」的陷阱</strong></h3>
+<p>你试图用网课狂补上学期内容，这可能导致： -
+<strong>知识幻觉</strong>：看网课时大脑处于被动接收状态，容易产生「我会了」的错觉，实际上缺乏提取练习（如做题、自我测试）。
+-
+<strong>建议</strong>：采用「30分钟网课→立刻默写思维导图→针对性刷3道题」的闭环模式，让输入与输出强制捆绑。</p>
+<h3 id="假努力背后的心理保护机制">3.
+<strong>「假努力」背后的心理保护机制</strong></h3>
+<p>自我批判「假努力」时，或许潜意识在保护你： -
+<strong>恐惧失败合理化</strong>：如果认定自己「没真正努力」，考差时可以说「我只是没尽力」，避免承认「努力了还失败」的更大痛苦。
+-
+<strong>行动建议</strong>：给自己设定「最小行动单位」，如每天只要求专注学习15分钟，完成后在日历打钩。通过累积微小成功体验，逐步瓦解逃避心理。</p>
+<h3 id="重新定义自律的认知">4.
+<strong>重新定义「自律」的认知</strong></h3>
+<p>真正的自律不是咬牙切齿的坚持，而是： -
+<strong>系统设计</strong>：将手机放在客厅充电，书桌只放纸质资料；把抖音图标藏在文件夹第三页，增加打开成本。
+-
+<strong>环境塑造</strong>：周末去图书馆/自习室学习，利用公共空间的「观众效应」增强执行力。
+-
+<strong>物理标记法</strong>：用不同颜色荧光笔在课本标记「完全不懂」「需要巩固」「已掌握」，将抽象焦虑转化为可视进度。</p>
+<h3 id="关于浮躁心态的破局点">5.
+<strong>关于「浮躁心态」的破局点</strong></h3>
+<p>浮躁往往源于目标模糊，建议： -
+<strong>错题回溯法</strong>：把月考错题涉及的知识点列成清单，每解决一个划掉一项，用具体成就对冲焦虑。
+-
+<strong>具象化目标</strong>：将「补理科基础」拆解为「本周弄懂牛顿三大定律的7种题型」，避免在宏大目标中迷失。
+<br>
+你正处于认知觉醒的关键期，这种自我剖析的痛苦恰恰是蜕变的开始。不必苛求立刻脱胎换骨，真正的改变往往发生在你接受「偶尔会失控」之后——就像学骑自行车时，重要的不是永远不摔倒，而是摔倒后再次握紧车把的勇气。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>碎笔</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>学业</tag>
+        <tag>高一</tag>
+        <tag>后续</tag>
       </tags>
   </entry>
   <entry>

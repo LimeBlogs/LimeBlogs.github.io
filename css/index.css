@@ -383,6 +383,32 @@ progress::-webkit-progress-value {
 /* 这是自定义admo */
  
 
+@font-face {
+  /* 为载入的字体取名字(随意) */
+  font-family: 'HarmonySans';        
+  /* 字体文件地址(相对或者绝对路径都可以) */
+  src: url(font/hexo.ttf);
+  /* 定义加粗样式(加粗多少) */
+  font-weight: normal;
+  /* 定义字体样式(斜体/非斜体) */
+  font-style: normal;
+  /* 定义显示样式 */
+  font-display: block;
+}
+
+@font-face {
+  /* 为载入的字体取名字(随意) */
+  font-family: 'JEmo';        
+  /* 字体文件地址(相对或者绝对路径都可以) */
+  src: url(/font/code.ttf);
+  /* 定义加粗样式(加粗多少) */
+  font-weight: normal;
+  /* 定义字体样式(斜体/非斜体) */
+  font-style: normal;
+  /* 定义显示样式 */
+  font-display: block;
+}
+
 @keyframes snackbar-progress{0%{width:0}to{width:100%}}.snackbar-container{transition:.5s;font-size:14px;position:fixed;align-items:center;line-height:22px;padding:18px 24px;bottom:-100px;top:-100px;opacity:0;z-index:9999;background:var(--efu-lighttext)!important;color:var(--efu-card-bg);border-radius:0;display:flex;justify-content:center;max-width:none;min-width:100%;margin:0;left:0;height:60px;transform:none}.snackbar-container p{color:var(--efu-card-bg)!important;font-weight:700!important;text-align:center;font-size:.8rem!important;display:flex;justify-content:center}.snackbar-container .action{display:inline-block;font-size:inherit;margin:0 0 0 24px;min-width:min-content;cursor:pointer;color:var(--efu-card-bg)!important;background:var(--efu-lighttext)!important;padding:4px 6px;font-weight:700;border-radius:8px;transition:.3s;border:var(--style-border)}.snackbar-container .action:hover{background:var(--efu-card-bg)!important;color:var(--efu-lighttext)!important}.snackbar-container:after{position:absolute;width:0;height:100%;left:0;top:0;background:var(--efu-white);opacity:.1;content:"";animation:snackbar-progress var(--efu-snackbar-time) linear forwards;pointer-events:none}.snackbar-pos.top-center,.snackbar-pos.top-left{bottom:auto;top:0;left:0}.snackbar-pos.top-right{bottom:auto;top:0;right:0}
 @media screen and (min-width: 768px) {
 @-moz-keyframes showCover {
@@ -2057,7 +2083,7 @@ body {
   background: var(--efu-background);
   color: var(--efu-fontcolor);
   font-size: 16px;
-  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+  font-family: HarmonySans, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
   line-height: 2;
   -webkit-tap-highlight-color: transparent;
   margin: 0;
@@ -2157,7 +2183,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "monospace", monospace;
+  font-family: JEmo, "monospace", monospace;
   font-size: 16px;
 }
 small {
@@ -6696,7 +6722,7 @@ span.tagsPageCount {
   padding: 0.5rem;
   text-align: center;
   font-size: 14px;
-  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+  font-family: HarmonySans, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
 }
 @media screen and (max-width: 768px) {
   #body-wrap.error #error-wrap .error-content .error-info {

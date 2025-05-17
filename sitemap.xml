@@ -190,13 +190,6 @@
   </url>
   
   <url>
-    <loc>https://limeblogs.github.io/tags/Minecraft/</loc>
-    <lastmod>2025-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://limeblogs.github.io/tags/Github/</loc>
     <lastmod>2025-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -212,6 +205,13 @@
   
   <url>
     <loc>https://limeblogs.github.io/tags/%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://limeblogs.github.io/tags/Minecraft/</loc>
     <lastmod>2025-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -304,14 +304,14 @@
   </url>
   
   <url>
-    <loc>https://limeblogs.github.io/categories/%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://limeblogs.github.io/categories/Github/</loc>
     <lastmod>2025-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://limeblogs.github.io/categories/Github/</loc>
+    <loc>https://limeblogs.github.io/categories/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2025-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

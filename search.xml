@@ -823,20 +823,6 @@ U是关于x的集合，其中x为2k+1，k属于整数
       </tags>
   </entry>
   <entry>
-    <title>现在的互联网，到底是一个怎样的互联网？</title>
-    <url>/2025/05/12/Networknow/</url>
-    <content><![CDATA[
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>真相之下</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>现状</tag>
-        <tag>真相</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Solitude】Hexo如何引入自定义css?</title>
     <url>/2025/01/21/customcss/</url>
     <content><![CDATA[<div class="admonition warning">
@@ -868,6 +854,20 @@ U是关于x的集合，其中x为2k+1，k属于整数
         <tag>Hexo</tag>
         <tag>博客</tag>
         <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>现在的互联网，到底是一个怎样的互联网？</title>
+    <url>/2025/05/12/Networknow/</url>
+    <content><![CDATA[
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>真相之下</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>现状</tag>
+        <tag>真相</tag>
       </tags>
   </entry>
   <entry>
@@ -914,9 +914,10 @@ href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">�
 <ul>
 <li>请确保你创建<code>id_rsa.pub</code>时的网络环境与你在Github添加时的网络环境<code>（不要翻墙/更换局域网）</code>一致！</li>
 <li>开始前，请把<code>“所有文件的访问权限”给termux！</code>以确保不会出现文件无法访问这一类的错误</li>
-<li>需要安装主题可以去网络上搜索教程，主要是在<code>_config.yml</code>中修改：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions      【第96行】</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: #将此处修改为你要启用的主题名称</span><br></pre></td></tr></table></figure> ### 总结</li>
+<li>需要安装主题可以去网络上搜索教程，主要是在<code>_config.yml</code>中修改：</li>
 </ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions      【第96行】</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: #将此处修改为你要启用的主题名称</span><br></pre></td></tr></table></figure>
+<h3 id="总结">总结</h3>
 <p>算是水了一篇帖子，这真的走了我好久的弯路，实在不会的可以查度娘捏<br></p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>

@@ -1,67 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Lime-Fork</title>
-    <url>/2025/02/16/Lime-Fork/</url>
-    <content><![CDATA[<h1 id="起因">起因</h1>
-<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
-href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div class="admonition fail">
-<p>
-该页面仅仅收录我存档的项目，不会注明Github的项目地址。
-</p>
-</div>
-<div class="admonition info">
-<p>
-你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
-</p>
-</div>
-<h2 id="人生重开模拟器">人生重开模拟器</h2>
-<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
-href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
-<h2 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h2>
-<div class="admonition fail">
-<p>
-该页面内容可能引人不适！
-</p>
-</div>
-<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
-href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
-<h2 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h2>
-<div class="admonition fail">
-<p>
-超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
-</p>
-</div>
-<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
-href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
-<h2 id="limelinks">LimeLinks</h2>
-<div class="admonition info">
-<p>
-该页面没有描述
-</p>
-</div>
-<p>/LimeLinks</p>
-<h2 id="masturbation-helper">Masturbation-Helper</h2>
-<div class="admonition info">
-<p>
-该页面没有描述，请自行访问
-</p>
-</div>
-<p><a
-href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>资源</tag>
-        <tag>Github</tag>
-        <tag>Fork</tag>
-        <tag>项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LAB</title>
     <url>/2025/01/15/LAB/</url>
     <content><![CDATA[<h1 id="起因">起因</h1>
@@ -270,6 +209,67 @@ Classic</a>输入你要的函数之后点击“分享”</p>
         <tag>测试</tag>
         <tag>Hexo</tag>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lime-Fork</title>
+    <url>/2025/02/16/Lime-Fork/</url>
+    <content><![CDATA[<h1 id="起因">起因</h1>
+<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
+href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
+<div class="admonition fail">
+<p>
+该页面仅仅收录我存档的项目，不会注明Github的项目地址。
+</p>
+</div>
+<div class="admonition info">
+<p>
+你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
+</p>
+</div>
+<h2 id="人生重开模拟器">人生重开模拟器</h2>
+<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
+href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
+<h2 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h2>
+<div class="admonition fail">
+<p>
+该页面内容可能引人不适！
+</p>
+</div>
+<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
+href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
+<h2 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h2>
+<div class="admonition fail">
+<p>
+超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
+</p>
+</div>
+<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
+href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
+<h2 id="limelinks">LimeLinks</h2>
+<div class="admonition info">
+<p>
+该页面没有描述
+</p>
+</div>
+<p>/LimeLinks</p>
+<h2 id="masturbation-helper">Masturbation-Helper</h2>
+<div class="admonition info">
+<p>
+该页面没有描述，请自行访问
+</p>
+</div>
+<p><a
+href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>资源</tag>
+        <tag>Github</tag>
+        <tag>Fork</tag>
+        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -882,7 +882,7 @@ href="http://60.205.141.124:5244/Phira游戏本体/">点我</a>跳转至镜像�
 <p><img src="/LimePan/Phira/phira_download_mirror.jpg"
 alt="Dmocken镜像页预览" /><br></p>
 <h1 id="注册并登陆phira">注册并登陆Phira</h1>
-<p>Phira在不登陆的情况下无法使用铺面社区（无法在线下载铺面）和上传成绩，因此，你需要注册一个Phira账号以正常使用Phira。</p>
+<p>Phira在不登陆的情况下无法使用谱面社区（无法在线下载谱面）和上传成绩，因此，你需要注册一个Phira账号以正常使用Phira。</p>
 <p><img src="/LimePan/Phira/mainmenu-not-login.jpg"
 alt="首次进入Phira预览" /><br></p>
 <blockquote>
@@ -902,21 +902,21 @@ alt="首次进入Phira预览" /><br></p>
 <p>你可以点击主界面右下角的“设置”，然后切换至音频选项卡以调整延迟。</p>
 </blockquote>
 <p><img src="/LimePan/Phira/change_delay.jpg" alt="调整延迟" /><br></p>
-<h2 id="下载铺面">下载铺面</h2>
+<h2 id="下载谱面">下载谱面</h2>
 <blockquote>
-<p>你需要知道的是“未上架”的铺面数量远高于“上架”的铺面数量，且“未上架”的铺面无法增长rks</p>
+<p>你需要知道的是“未上架”的谱面数量远高于“上架”的谱面数量，且“未上架”的谱面无法增长rks</p>
 </blockquote>
 <p><img src="/LimePan/Phira/putaway.jpg" alt="上架" /><br></p>
 <p><img src="/LimePan/Phira/not_putaway.jpg" alt="未上架" /><br></p>
 <p>条一首你喜欢的铺子，进入后下载直接开打即可</p>
 <h2 id="导入">导入</h2>
-<p>Phira支持导入自定义铺面和自定义音符资源包，向下查看具体操作。</p>
+<p>Phira支持导入自定义谱面和自定义音符资源包，向下查看具体操作。</p>
 <div class="admonition note">
 <p class="admonition-title">
 提示
 </p>
 <p>
-你需要自己提前下载好铺面/资源包文件！
+你需要自己提前下载好谱面/资源包文件！
 </p>
 </div>
 <h3 id="导入资源包">导入资源包</h3>
@@ -926,13 +926,13 @@ alt="首次进入Phira预览" /><br></p>
 <p><img src="/LimePan/Phira/respack.jpg" alt="资源包" /><br></p>
 <p><img src="/LimePan/Phira/pack_file_import.jpg"
 alt="导入资源包" /><br></p>
-<h3 id="导入铺面">导入铺面</h3>
+<h3 id="导入谱面">导入谱面</h3>
 <blockquote>
-<p>在“铺面库”选项卡，单击右上角的“导入”按钮，后选择你的zip铺面文件即可，与资源包导入同理。</p>
+<p>在“谱面库”选项卡，单击右上角的“导入”按钮，后选择你的zip谱面文件即可，与资源包导入同理。</p>
 </blockquote>
-<p><img src="/LimePan/Phira/local.jpg" alt="本地铺面" /><br></p>
+<p><img src="/LimePan/Phira/local.jpg" alt="本地谱面" /><br></p>
 <p><img src="/LimePan/Phira/puzi_file_import.jpg"
-alt="导入本地铺面" /><br></p>
+alt="导入本地谱面" /><br></p>
 <h2 id="phira练习功能">Phira“练习”功能</h2>
 <blockquote>
 <p>Phira具有非常强大的练习功能，支持对铺子变速和自定义开头与结尾。</p>
@@ -951,6 +951,58 @@ alt="导入本地铺面" /><br></p>
 该页面还在建设中，期待后续更新。
 </p>
 </div>
+<h2 id="phizone">Phizone</h2>
+<blockquote>
+<p>PhiZone是一个提供Phigros谱面二创资源的平台，需要注册并同意服务条款才能使用。<br>来自-<a
+href="https://wiki.xhsr.org.cn/PhiZone">吾萌百科</a></p>
+</blockquote>
+<hr />
+<p>你可以在这里下载许多谱面，貌似登陆后才可以使用并下载？ <br> <a
+href="https://www.phi.zone/">点我出发</a></p>
+<h2 id="prprblog">prprBlog</h2>
+<blockquote>
+<p>该网站收录了许多的免费音符资源包，无需登陆即可免费下载</p>
+</blockquote>
+<p><a href="https://prprblog.kevin2106.top/">点我出发</a></p>
+<h2 id="phira官方文档">Phira官方文档</h2>
+<blockquote>
+<p>此站点为Phira的官方文档，包含许多小白开发者可能会遇到的问题</p>
+</blockquote>
+<p><a
+href="https://teamflos.github.io/phira-docs/index.html">点我出发</a></p>
+<h2 id="phitogether">Phitogether</h2>
+<blockquote>
+<p>该站点为Phigros的在线版网页社区，可以在线游玩自制谱，甚至可以自己导入本地谱面进行游玩。</p>
+</blockquote>
+<p><a href="https://phitogether.fun/">点我出发</a></p>
+<h2 id="rephiedit">Re’:’PhiEdit</h2>
+<div class="admonition fail">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该工具只存在Windows版本！
+</p>
+</div>
+<blockquote>
+<p>Re’:’PhiEdit，简称RPE，是由cmdysj开发的Phigros谱面制作软件。</p>
+</blockquote>
+<p>这是一款非常强大的自制谱制作器，你可以通过Wiki页面的下载链接下载 <br>
+<a href="https://pgrfm.miraheze.org/wiki/Re:PhiEdit">点我出发</a></p>
+<h2 id="open-phiedit">Open-PhiEdit</h2>
+<div class="admonition fail">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该工具只存在Windows版本！该软件使用Electron框架编写，也许你可以自己考虑编译构建其它平台的版本？
+</p>
+</div>
+<blockquote>
+<p>一款十分简洁的开源谱面制作工具</p>
+</blockquote>
+<p><a
+href="https://github.com/cbs001/open-phiedit/releases/tag/windows">点我出发-Github</a></p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>教程</category>

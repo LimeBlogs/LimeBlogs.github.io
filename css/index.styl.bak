@@ -1,4 +1,5 @@
 @charset "UTF-8"
+@import 'custom/*.css'
 
 if hexo-config('css_prefix')
   @import 'nib'

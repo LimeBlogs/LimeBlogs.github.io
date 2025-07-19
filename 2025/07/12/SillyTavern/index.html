@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SillyTavern酒馆部署教程 | 莱姆Lime</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/logo.jpeg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=3.0.19"><!-- inject head--><link rel="canonical" href="https://sudachi.top/2025/07/12/SillyTavern/index.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><!-- Open Graph--><meta name="description" content="本文章是一篇SillyTavern酒馆从零到基础的部署教程，并含有配套B站教程"><!-- pwa--><meta name="theme-color" content="#38303b"><meta name="apple-mobile-web-app-status-bar-style" content="#38303b"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#38303b"><link rel="mask-icon" href="/img/pwa/favicon.png" color="#38303b"><link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/favicon_16.png"><link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/favicon_32.png"><link rel="bookmark" href="/img/pwa/favicon.png"><script>console.log(' %c Solitude %c ' + '3.0.19' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><link rel="stylesheet" href="/css/font.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/font1.css" media="defer" onload="this.media='all'"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    else
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    typeof rm === 'object' && rm.mode(cachedMode === undefined || cachedMode === 'dark')
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2025-01-13 01:30:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_loading.png'
+    },
+    copyright: {"limit":175,"author":"作者: Lime","link":"链接: ","source":"来源: 莱姆Lime","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."},"barrage":{"title":"热评"}},
+    aside: {
+        state: {
+            morning: "早( *ˊᵕˋ)✩︎‧₊",
+            noon: "吃了吗（ ’ - ’ * )",
+            afternoon: "午安ꉂ(ˊᗜˋ*)",
+            night: "晚上好 ฅ( ̳• ◡ • ̳)ฅ",
+            goodnight: "晚安(◍•ᴗ•◍)",
+        },
+        witty_words: ["什么！？","你…怎么能看到我？","啊啊啊啊？","诶？！","你是谁阿","(||๐_๐)","我已经在这被关好久了","你可能是第一个发现我的人？","哇哦","对了，你不能帮帮我","可不可以去找Lime","让那个笨蛋把我放出来","谢谢你啦 ꉂ(ˊᗜˋ*)"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: {"avatar":"https://gravatar.com/avatar","commentBarrage":true},
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"barrage":{"open":"显示热评","close":"关闭热评"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"=͟͟͞͞(꒪ᗜ꒪ ‧̣̥̇)人呢？不要我了！？","back":"ヾ(≧∇≦*)ゝ我就知道你会回来的！."},
+    expire: {"time":45,"position":"top","text_prev":"本文章在 ","text_next":"+45 天前更新，请注意文章内容的时效性！"},
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><style type="text/css">
+.spoiler {
+  display: inline;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><!-- background img--><div id="global_bg"></div><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="/logo.jpeg" alt="loading image"></div></div><script>const preloader = {
+    isLoaded: false,
+    endLoading: () => {
+        if (!preloader.isLoaded) {
+            document.getElementById('loading-box').classList.add('loaded');
+            preloader.isLoaded = true;
+            preloader.togglePaceDone();
+        }
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+        preloader.isLoaded = false;
+        preloader.togglePaceDone();
+    },
+    togglePaceDone: () => {
+        document.getElementById('body').className = preloader.isLoaded ? 'pace-done' : '';
+    }
+}
+
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});
+
+setTimeout(() => {
+    preloader.endLoading();
+}, 5000);</script><!-- console--><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Links</span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://space.bilibili.com/601963442"><span>哔哩哔哩</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=8255724013"><span>网易云</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/%E8%B5%84%E6%BA%90/">资源<sup>4</sup></a><a href="/tags/Github/">Github<sup>1</sup></a><a href="/tags/Fork/">Fork<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>1</sup></a><a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室<sup>1</sup></a><a href="/tags/%E6%B5%8B%E8%AF%95/">测试<sup>1</sup></a><a href="/tags/Hexo/">Hexo<sup>4</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客<sup>4</sup></a><a href="/tags/Minecraft/">Minecraft<sup>1</sup></a><a href="/tags/Phira/">Phira<sup>1</sup></a><a href="/tags/Phigros/">Phigros<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/">教程<sup>2</sup></a><a href="/tags/%E6%8C%87%E5%8D%97/">指南<sup>2</sup></a><a href="/tags/%E9%85%92%E9%A6%86/">酒馆<sup>1</sup></a><a href="/tags/SillyTavern/">SillyTavern<sup>1</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99/">建站<sup>2</sup></a><a href="/tags/%E5%85%A5%E9%97%A8/">入门<sup>1</sup></a><a href="/tags/%E7%BD%AE%E9%A1%B6/">置顶<sup>1</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/">更新日志<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">9k</div></div></div></div></div><!-- keyboard--><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keyboardList"><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">K</div></div><div class="keyContent"><div class="content">关闭快捷菜单</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">A</div></div><div class="keyContent"><div class="content">打开控制台</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">L</div></div><div class="keyContent"><div class="content">打开友链</div></div></div></div></div><script>const keyboard_addKeyup = (e) => {
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.remove('show');
+    }
+}
+
+const keyboard_addKeydown = (e) => {
+    const keyboards = [{"name":"关闭快捷菜单","key":"K","func":"keyboard"},{"name":"打开控制台","key":"A","sco":"showConsole"},{"name":"播放/暂停音乐","key":"M","sco":"musicToggle"},{"name":"打开友链","key":"L","url":"/links/"}];
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.add('show');
+    }
+
+    for (let i = 0; i < keyboards.length; i++) {
+        if (keyboards[i].url) {
+            if (keyboards[i].url.startsWith('http')) {
+                if (e.key === keyboards[i].key) {
+                    window.open(keyboards[i].url);
+                }
+            } else {
+                if (e.key === keyboards[i].key) {
+                    pjax.loadUrl(keyboards[i].url);
+                }
+            }
+        } else if (keyboards[i].sco) {
+            if (e.key === keyboards[i].key) {
+                sco[keyboards[i].sco]();
+            }
+        } else if (keyboards[i].func) {
+            if (e.key === keyboards[i].key) {
+                window[keyboards[i].func]();
+            }
+        }
+    }
+}
+
+function openKeyboard() {
+
+    window.addEventListener('keyup', keyboard_addKeyup);
+
+    window.addEventListener('keydown', keyboard_addKeydown);
+}
+function closeKeyboard() {
+
+    window.removeEventListener('keyup', keyboard_addKeyup);
+
+    window.removeEventListener('keydown', keyboard_addKeydown);
+}
+
+var sco_keyboards = localStorage.getItem('keyboard') === 'true'
+if (sco_keyboards) {
+    openKeyboard();
+    let keyboard = document.getElementById('consoleKeyboard');
+    keyboard?.classList.add('on');
+}</script><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="keyboard pc" type="button" title="键盘快捷键" onclick="sco.switchKeyboard()"><i class="fas fa-keyboard"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="barrage pc" type="button" title="弹" onclick="sco.switchCommentBarrage()"><span>弹</span></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><img src="/LimePan/logo.svg" alt="莱姆Lime"><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">SillyTavern酒馆部署教程</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Links</span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://space.bilibili.com/601963442"><span>哔哩哔哩</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=8255724013"><span>网易云</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/LimePan/SillyTavern.png" alt="SillyTavern酒馆部署教程"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%B5%84%E6%BA%90/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>资源</span></a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>教程</span></a><a class="post-meta__tags" href="/tags/%E6%8C%87%E5%8D%97/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>指南</span></a><a class="post-meta__tags" href="/tags/%E9%85%92%E9%A6%86/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>酒馆</span></a><a class="post-meta__tags" href="/tags/SillyTavern/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>SillyTavern</span></a></div></div></div></div><h1 class="post-title">SillyTavern酒馆部署教程</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-07-12 21:46:33"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-07-12T13:46:33.000Z">2025-07-12T13:46:33.000Z</time></span><span class="post-meta-date" title="最后更新于 2025-07-18 00:19:52"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2025-07-17T16:19:52.713Z">2025-07-17T16:19:52.713Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fas fa-file-word" title="文章字数"></i><span class="word-count">1.3k</span><span class="post-meta-separator"></span></span><span class="post-meta-position" title="作者IP归属地为中国大陆"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>中国大陆</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h1 id="捐赠">捐赠</h1>
+<p><strong>教程录制与文档撰写不易，需要经过多次测试后发出</strong> <br>
+<strong>如果可以的话，请支持我哦</strong> <br> <strong>感激不尽 ฅ( ̳• ◡
+• ̳)ฅ</strong> <br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 蟹蟹！ꉂ(ˊᗜˋ*)</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.svg" data-lazy-src="/LimePan/zanzhu.png" alt="捐赠" /><br></p>
+<h1 id="termux安装与配置镜像源">Termux安装与配置镜像源</h1>
+<p><strong>本教程在B站同步更新，欢迎查看视频教程</strong></p>
+<p><br></p>
+<p><a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yoGuzEEKc">点我跳转至B站</a></p>
+<p><br></p>
+<p><strong>如果教程能帮到你，求个三连，谢谢你啦</strong></p>
+<p><br></p>
+<p><strong>该教程已于2025年7月12日完结</strong></p>
+<p><br></p>
+<p><strong>本以为完事大吉了，在2025年7月16日再次更新</strong></p>
+<p><br></p>
+<p><em>修改软件源为阿里源，清华源…呵呵</em></p>
+<p><br></p>
+<p><strong>复制命令时确保全部复制到了!</strong></p>
+<hr />
+<p><em>操作步骤均不需要Root与魔法，仅仅只是无脑复制粘贴命令而已</em>
+<br> 您需要先下载Termux</p>
+<p><a
+target="_blank" rel="noopener" href="https://github.com/termux/termux-app">点我跳转至GithubRelease</a>
+<br> <a
+target="_blank" rel="noopener" href="https://github.akams.cn/https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk">国内镜像源高速下载</a></p>
+<hr />
+<p>在安装Termux后，输入以下命令来修改镜像源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.aliyun.com/termux/termux-packages-24 stable main@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line"><span class="comment"># 修改为阿里镜像源，清华源谁用谁倒霉…</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update &amp;&amp; apt upgrade</span><br><span class="line"><span class="comment"># 更新软件包管理器</span></span><br></pre></td></tr></table></figure>
+<p>安装必要软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install vim wget git nodejs -y</span><br><span class="line"><span class="comment"># 安装必要工具，添加参数-y无需手动输入y</span></span><br></pre></td></tr></table></figure>
+<p>配置nodejs镜像源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br><span class="line"><span class="comment"># 配置npmMirror镜像源，以便国内用户可以高速下载</span></span><br></pre></td></tr></table></figure>
+<h1 id="开始部署">开始部署</h1>
+<p>使用wget获取酒馆源码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -O ST.zip https://github.akams.cn/https://github.com/SillyTavern/SillyTavern/archive/refs/tags/1.13.1.zip</span><br><span class="line"><span class="comment"># 使用代理Github加速下载原文件，下载为ST.zip</span></span><br></pre></td></tr></table></figure>
+<p>解压该文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip ST.zip</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> SillyTavern-1.13.1 st</span><br><span class="line"><span class="comment"># 将Sillyxxxxx这个目录重命名为ST，方便cd和后续启动</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br><span class="line"><span class="comment"># 进入st这个目录</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./start.sh</span><br><span class="line"><span class="comment"># 运行启动脚本</span></span><br></pre></td></tr></table></figure>
+<h1 id="后续如何启动">后续如何启动</h1>
+<p>关闭Termux再启动后通过以下命令再次启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br><span class="line"><span class="comment">#切换到st目录</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./start.sh</span><br><span class="line"><span class="comment"># 运行启动脚本</span></span><br></pre></td></tr></table></figure>
+<h1 id="自定义启动脚本可选">自定义启动脚本（可选）</h1>
+<p>觉得每次启动都要cd和运行个sh?<br>你可以尝试写一个脚本来一条命令直接启动
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line"><span class="comment"># 返回到根目录</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim &lt;脚本名称&gt;.sh</span><br><span class="line"><span class="comment"># 选择一个方便好记忆的内容</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br><span class="line">./start.sh</span><br><span class="line"><span class="built_in">echo</span> 酒馆已启动</span><br><span class="line"><span class="built_in">echo</span> 浏览器：127.0.0.1:8000</span><br><span class="line"><span class="built_in">echo</span> 默认用户：user</span><br><span class="line"><span class="built_in">echo</span> 默认密码：password</span><br><span class="line"><span class="comment"># 低下的shell水平，见谅。</span></span><br></pre></td></tr></table></figure>
+<p>使用vim保存，先按下<em>ESC</em>然后输入<em>：（英文）wq</em>即可，保存后你就可以直接运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh &lt;你设置的脚本名称&gt;.sh</span><br></pre></td></tr></table></figure>
+<p>来快速启动！</p>
+<h1 id="清理剩余文件">清理剩余文件</h1>
+<p>你可以使用ls命令和rm/rmdir来清理下载的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="comment">#回到根目录</span></span><br><span class="line"><span class="built_in">ls</span> <span class="comment">#列出文件与文件夹</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> &lt;文件名&gt;</span><br><span class="line"><span class="built_in">rm</span> -r &lt;文件夹名&gt;</span><br></pre></td></tr></table></figure>
+<p>这玩意会问你要不要删，打个y回他就行</p>
+<h1 id="api导入与拓展管理">API导入与拓展管理</h1>
+<p><strong>首先，你需要一个魔法环境，这是必须的</strong> <br>
+在完事大吉（部署完毕后），你可以正式来配置API以开始游玩SillTavern。</p>
+<p><strong>在文档里写有点干巴，所以这一节也有配套教程～</strong> <br> <a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1sqMQztEH7">点我跳转至B站</a></p>
+<p>整理了以下文档/链接，有兴趣你可以去看看</p>
+<blockquote>
+<p>1.<a
+target="_blank" rel="noopener" href="https://sillytavern.wiki/">SillTavern傻酒馆中文文档</a><br>2.<a
+target="_blank" rel="noopener" href="https://www.erocraft.com/silly-tavern/">艾萝工坊</a><br>3.<a
+target="_blank" rel="noopener" href="https://discord.gg/6kdVgVgcRx">类脑ΟΔΥΣΣΕΙΑ</a><br>4.<a
+target="_blank" rel="noopener" href="https://n0vi028.github.io/JS-Slash-Runner-Doc/">酒馆助手</a></p>
+</blockquote>
+<p>其中1与2都是教程文档，从部署到角色卡/预设的获取写的都非常详尽
+是很优秀的酒馆文档<br>而三是在<em>Discord上的中文酒馆频道</em>，有很多大大在这里发布他制作的角色卡与模型预设<br>4是一个<strong>酒馆拓展</strong>，可以说是玩酒馆必装了。</p>
+<h2 id="api配置">API配置</h2>
+<p><strong>除了国内的AI以外，其它所有的，如Grok，Gemini等AI均需要魔法环境才能使用</strong></p>
+<h2 id="酒馆助手的安装">酒馆助手的安装</h2>
+<p>按照视频教程找到<strong>拓展</strong>选项卡，然后选择<strong>安装拓展</strong>，后输入以下仓库链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitlab.com/novi028/JS-Slash-Runner</span><br></pre></td></tr></table></figure>
+<p>等待后即可安装。</p>
+<h1 id="后续可能的问题">后续可能的问题</h1>
+<p>因为评论区反馈的人太多，故单开一个板块来说说可能遇到的问题。 <br>
+<strong>请确保自己认真阅读并使用文档之后再在评论区提问，否则这将会浪费你我的时间</strong>
+<br>
+<strong>大多数错误都是命令复制漏了/镜像没配置到/干脆就是没复制命令</strong>
+<br>
+<strong>这种问题出现在评论区将不予回复，如果是文档内标注过的问题将会直接删除</strong></p>
+<h2 id="输出过程卡顿">输出过程卡顿</h2>
+<p>1<strong>这可能是由于你使用是Google
+Gemini模型，而且没用配置预设和正则的情况下发生的</strong> <br>
+2<strong>可能是安卓后台机制的原因，确保给Termux后台运行权限/开小窗</strong></p>
+<h2 id="软件安装问题">软件安装问题</h2>
+<p>如果你遇到wget/nodejs not install 这一情况，输出以下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install wget nodejs</span><br></pre></td></tr></table></figure>
+<p><strong>这很有可能是你没复制安装必要软件那一步的命令</strong></p>
+<h1 id="捐赠-1">捐赠</h1>
+<p><strong>教程录制与文档撰写不易，需要经过多次测试后发出</strong> <br>
+<strong>如果可以的话，请支持我哦</strong> <br> <em>给点吧😭</em>
+<br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 蟹蟹！ꉂ(ˊᗜˋ*)</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.svg" data-lazy-src="/LimePan/zanzhu.png" alt="捐赠" /><br></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css"></article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src= "/img/loading.svg" data-lazy-src="/logo.jpeg"></a><div class="post-copyright__author_name">莱姆Lime</div><div class="post-copyright__author_desc">聚是火簇，散作繁星。</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="social-share"><a class="social-share-ico icon-telegram" target="_blank" rel="noopener" href="https://t.me/share/url?url=https%3A%2F%2FSudachi.top%2F2025%2F07%2F12%2FSillyTavern%2F&amp;text=SillyTavern%E9%85%92%E9%A6%86%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B" title="分享到Telegram"><i class="solitude fab fa-telegram"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://Sudachi.top/2025/07/12/SillyTavern/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://Sudachi.top/2025/07/12/SillyTavern/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://Sudachi.top/2025/07/12/SillyTavern/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%B5%84%E6%BA%90/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>资源<span class="tagsPageCount">4</span></span></a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>教程<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E6%8C%87%E5%8D%97/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>指南<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E9%85%92%E9%A6%86/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>酒馆<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/SillyTavern/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>SillyTavern<span class="tagsPageCount">1</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/05/20/Phira/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【入坑指南】Phira完整入坑指南！</div></div></a></div></nav>
+        <div class="relatedPosts">
+            <div class="headline">
+                <i class="solitude fas fa-star"></i>
+                <span>喜欢这篇的人也看了</span>
+                <div class="relatedPosts-link">
+                    <a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a>
+                </div>
+            </div>
+            <div class="relatedPosts-list">
+            <div>
+                <a href="/2025/05/20/Phira/" title="【入坑指南】Phira完整入坑指南！">
+                    <img class="cover" src= "/img/loading.svg" data-lazy-src="/LimePan/Phira/cover.jpg" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">【入坑指南】Phira完整入坑指南！</div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="/2025/02/16/Lime-Fork/" title="Lime-Fork">
+                    <img class="cover" src= "/img/loading.svg" data-lazy-src="/LimePan/nocover.jpg" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">Lime-Fork</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span><span class="count"> (<span class="giscus-count"></span>)</span></div></div><div class="comment-wrap"><div id="giscus-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/logo.jpeg"></div><div class="description">这个世界太疯狂，耗子都给猫当伴娘。</div><div class="bottom-group"><span class="left"><div class="name">Lime</div><div class="desc">聚是火簇，散作繁星。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/LimeBlogs" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://www.instagram.com/lime0ntop" title="Instagram"><i class="solitude  fab fa-instagram"></i></a></div></div></div></div><div class="card-widget card-digit-clock" id="card-digit-clock"><div class="item-headline"><i></i><span></span></div><div class="item-content"><script defer async pjax src='/js/custom/digit-clock.js'></script></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8D%90%E8%B5%A0"><span class="toc-text">捐赠</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#termux%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-text">Termux安装与配置镜像源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2"><span class="toc-text">开始部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8"><span class="toc-text">后续如何启动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%E5%8F%AF%E9%80%89"><span class="toc-text">自定义启动脚本（可选）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%85%E7%90%86%E5%89%A9%E4%BD%99%E6%96%87%E4%BB%B6"><span class="toc-text">清理剩余文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#api%E5%AF%BC%E5%85%A5%E4%B8%8E%E6%8B%93%E5%B1%95%E7%AE%A1%E7%90%86"><span class="toc-text">API导入与拓展管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#api%E9%85%8D%E7%BD%AE"><span class="toc-text">API配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%92%E9%A6%86%E5%8A%A9%E6%89%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-text">酒馆助手的安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E5%8F%AF%E8%83%BD%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">后续可能的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%BF%87%E7%A8%8B%E5%8D%A1%E9%A1%BF"><span class="toc-text">输出过程卡顿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98"><span class="toc-text">软件安装问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8D%90%E8%B5%A0-1"><span class="toc-text">捐赠</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2025/07/12/SillyTavern/" title="SillyTavern酒馆部署教程"><div class="thumbnail"><img alt="SillyTavern酒馆部署教程" src="/LimePan/SillyTavern.png"></div><div class="content"><span class="title" href="/2025/07/12/SillyTavern/" title="SillyTavern酒馆部署教程">SillyTavern酒馆部署教程</span><span class="categories" href="/2025/07/12/SillyTavern/">教程</span></div></a><a class="aside-list-item" href="/2025/05/20/Phira/" title="【入坑指南】Phira完整入坑指南！"><div class="thumbnail"><img alt="【入坑指南】Phira完整入坑指南！" src="/LimePan/Phira/cover.jpg"></div><div class="content"><span class="title" href="/2025/05/20/Phira/" title="【入坑指南】Phira完整入坑指南！">【入坑指南】Phira完整入坑指南！</span><span class="categories" href="/2025/05/20/Phira/">教程</span></div></a><a class="aside-list-item" href="/2025/02/16/Lime-Fork/" title="Lime-Fork"><div class="thumbnail"><img alt="Lime-Fork" src="/LimePan/nocover.jpg"></div><div class="content"><span class="title" href="/2025/02/16/Lime-Fork/" title="Lime-Fork">Lime-Fork</span><span class="categories" href="/2025/02/16/Lime-Fork/">Github</span></div></a><a class="aside-list-item" href="/2025/01/27/MC-Launcher/" title="【持续更新】各大常用MC启动器下载集合"><div class="thumbnail"><img alt="【持续更新】各大常用MC启动器下载集合" src="/LimePan/minecraft-launcher.jpeg"></div><div class="content"><span class="title" href="/2025/01/27/MC-Launcher/" title="【持续更新】各大常用MC启动器下载集合">【持续更新】各大常用MC启动器下载集合</span><span class="categories" href="/2025/01/27/MC-Launcher/">资源</span></div></a><a class="aside-list-item" href="/2025/01/21/customcss/" title="【Solitude】Hexo如何引入自定义css?"><div class="thumbnail"><img alt="【Solitude】Hexo如何引入自定义css?" src="/LimePan/customcss.jpeg"></div><div class="content"><span class="title" href="/2025/01/21/customcss/" title="【Solitude】Hexo如何引入自定义css?">【Solitude】Hexo如何引入自定义css?</span><span class="categories" href="/2025/01/21/customcss/">教程</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><img class="solitude nolazyload" src="/LimePan/logo.svg"></div><div class="footer-bar-description">Articles from Lime. / 文章来自Lime</div><a class="footer-bar-link" href="/"></a></div><div id="footer_deal"><a class="deal_link" href="mailto:LimeOnTop@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://t.me/LimeOvO" title="Telegram"><i class="solitude  fab fa-telegram"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "/img/loading.svg" data-lazy-src="/logo.jpeg" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/LimeBlogs" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://x.com/Lime0nT0p" title="X"><i class="solitude  fab fa-x-twitter"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">联系我</h3><div class="footer-links"><a class="footer-item" href="mailto:LimeOnTop@outlook.com" title="通过邮箱">通过邮箱</a><a class="footer-item" target="_blank" rel="noopener" href="https://t.me/LimeOvO" title="通过Telegram">通过Telegram</a><a class="footer-item" target="_blank" rel="noopener" href="https://x.com/Lime0nT0p/" title="通过X">通过X</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/LimeBlogs" title="通过Github">通过Github</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/tags/" title="标签">标签</a><a class="footer-item" href="/2025/01/15/LAB/" title="实验室">实验室</a><a class="footer-item" href="/2025/01/15/%E8%8E%B1%E5%A7%86%E3%81%AE%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" title="更新日志">更新日志</a><a class="footer-item" href="/2025/01/27/MC-Launcher/" title="MC启动器">MC启动器</a></div></div><div class="footer-group"><h3 class="footer-title">我的Fork</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/ubc2/" title="ubc2">ubc2</a><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/Echo-Loop/" title="Echo-Loop">Echo-Loop</a><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/tang-love/" title="汤汤好梦">汤汤好梦</a><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/mikutap/" title="Mikutap">Mikutap</a></div></div><div class="footer-group"><h3 class="footer-title">Github</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/LimeBlogs/LimeBlogs.github.io/" title="LimeBlogs">LimeBlogs</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/LimeBlogs/LimePan/" title="图床">图床</a></div></div><div class="footer-group"><h3 class="footer-title">友情链接</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://blog.qjqq.cn/" title="青桔气球">青桔气球</a><a class="footer-item" target="_blank" rel="noopener" href="https://blog.zhheo.com/" title="张洪Heo">张洪Heo</a><a class="footer-item" href="/links" title="更多">更多</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "/img/loading.svg" data-lazy-src="/logo.jpeg">Lime</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/">Powered by Hexo</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/2025/01/15/%E8%8E%B1%E5%A7%86%E3%81%AE%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" alt="ver.beta2">ver.beta2</a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- right_menu--><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-commentBarrage" onclick="sco.switchCommentBarrage()"><i class="solitude fas fa-comment"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">浅色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><!-- inject body--><div><script src="/js/utils.js?v=3.0.19"></script><script src="/js/main.js?v=3.0.19"></script><script src="/js/third_party/waterfall.min.js?v=3.0.19"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="https://fastly.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script src="/js/tw_cn.js?v=3.0.19"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><script src="/js/right_menu.js?v=3.0.19"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js" type="application/javascript"></script><script src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><script src="/LimePan/chinese-lunar.js"></script><div class="js-pjax"><script>(()=>{
+    const getGiscusTheme = theme => {
+        return theme === 'dark' ? 'dark_protanopia' : 'light_protanopia'
+    }
+
+    const loadGiscus = () => {
+        const config = Object.assign({
+            src: 'https://giscus.app/client.js',
+            'data-repo': 'LimeBlogs/LimeBlogs-Comments',
+            'data-repo-id': 'R_kgDOODHi4g',
+            'data-category-id': 'DIC_kwDOODHi4s4Cnjm0',
+            'data-mapping': 'pathname',
+            'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+            'data-reactions-enabled': '1',
+            crossorigin: 'anonymous',
+            async: true
+        },null)
+
+        const ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').appendChild(ele)
+    }
+
+    const changeGiscusTheme = theme => {
+        const sendMessage = message => {
+            const iframe = document.querySelector('iframe.giscus-frame')
+            if (!iframe) return
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+        }
+
+        sendMessage({
+            setConfig: {
+                theme: getGiscusTheme(theme)
+            }
+        });
+    }
+
+    utils.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+    if ('Giscus' === 'Giscus' || !true) {
+        if (true) {
+            const giscusWrap = document.getElementById('giscus-wrap')
+            if (giscusWrap) {
+                utils.loadComment(giscusWrap, loadGiscus)
+            }
+        } else {
+            loadGiscus()
+        }
+    } else {
+        window.loadTwoComment = loadGiscus
+    }
+})()</script><script defer pjax src="https://fastly.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: true,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="document.querySelectorAll('.google-ads-warp').forEach(i =&gt; i.style.display='none')"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+	google_ad_client: 'ca-pub-8381739813295423',
+	enable_page_level_ads: true,
+});</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fas fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=3.0.19"></script><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">音乐已暂停</div><meting-js id="13734183472" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2025/07/12/SillyTavern/","2025/05/20/Phira/","2025/02/16/Lime-Fork/","2025/01/27/MC-Launcher/","2025/01/21/customcss/","2025/01/15/LAB/","2025/01/15/莱姆の更新日志/","2025/01/13/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>

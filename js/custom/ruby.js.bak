@@ -1,0 +1,5 @@
+const MarkdownIt = require('markdown-it');
+const rubyPlugin = require('markdown-it-ruby');
+
+const md = new MarkdownIt().use(rubyPlugin);
+md.render('{ruby base|ruby text}'); // => '<p><ruby>ruby base<rt>ruby text</rt></ruby></p>'

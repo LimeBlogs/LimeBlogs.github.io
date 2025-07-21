@@ -275,182 +275,6 @@ href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
       </tags>
   </entry>
   <entry>
-    <title>【入坑指南】Phira完整入坑指南！</title>
-    <url>/2025/05/20/Phira/</url>
-    <content><![CDATA[<h1 id="准备工作">准备工作</h1>
-<p>一个可以使用QQ邮箱的QQ或者任意其它邮箱，用于注册和登陆Phira。</p>
-<h2 id="phira-介绍">Phira-介绍</h2>
-<blockquote>
-<p>Phira是在Phigros源码的基础上开发的一款非商业社区性音游，是Phigros最大的第三方社区<br>你可以<a
-href="https://github.com/TeamFlos/phira">点我</a>跳转到它的官方Github.</p>
-</blockquote>
-<blockquote>
-<p>该应用支持Windows, Android, iOS, MacOS,
-甚至Linux！？该篇目篇幅有限，只写了安卓端的下载教程，软件内的使用方法通用。</p>
-</blockquote>
-<blockquote>
-<p>iOS最简单的下载方法就是使用外区AppleID登陆Appstore后下载，没有可以考虑自行下载ipa包签名安装。</p>
-</blockquote>
-<h1 id="下载phira">下载Phira</h1>
-<p>每个平台都可以下载并游玩Phira，最简单的方法的通过Github
-Releases下载，本站也提供镜像的下载页面。</p>
-<h2 id="通过github">通过Github</h2>
-<div class="admonition fail">
-<p class="admonition-title">
-提示
-</p>
-<p>
-使用Github下载需要您拥有一个良好的网络环境，说人话，就是大陆用户不方便下载（大多数）
-</p>
-</div>
-<p><a
-href="https://github.com/TeamFlos/phira/releases/">点我</a>跳转至下载页面，跳转后选择与自己设备相符的版本下载即可（iOS需要签名后安装）</p>
-<p><img src="/LimePan/Phira/phira_download.jpg"
-alt="Github发行版界面预览" /><br></p>
-<h2 id="通过第三方镜像下载">通过第三方镜像下载</h2>
-<blockquote>
-<p>Github在中国的速度实在是一坨，谢天谢地，总有救世主愿意无私为大家搭建镜像，这可以很快提升下载速度。</p>
-</blockquote>
-<h3 id="dmocken的phira下载站">Dmocken的Phira下载站</h3>
-<p><a
-href="http://60.205.141.124:5244/Phira游戏本体/">点我</a>跳转至镜像下载页面，跳转后选择与自己设备相符的版本下载即可（iOS需要签名后安装）</p>
-<p><img src="/LimePan/Phira/phira_download_mirror.jpg"
-alt="Dmocken镜像页预览" /><br></p>
-<h1 id="注册并登陆phira">注册并登陆Phira</h1>
-<p>Phira在不登陆的情况下无法使用谱面社区（无法在线下载谱面）和上传成绩，因此，你需要注册一个Phira账号以正常使用Phira。</p>
-<p><img src="/LimePan/Phira/mainmenu-not-login.jpg"
-alt="首次进入Phira预览" /><br></p>
-<blockquote>
-<p>点击右上角的头像按钮</p>
-</blockquote>
-<p><img src="/LimePan/Phira/Signin.jpg" alt="登陆界面预览" /><br></p>
-<blockquote>
-<p>点击下方注册按钮，填写你的邮箱和你要注册的账号密码，密码满足8位有英文数字就行。</p>
-</blockquote>
-<blockquote>
-<p>之后打开你的邮箱，查看邮件，如果收件箱没有可以在垃圾邮件里查看Phira的注册验证邮件</p>
-</blockquote>
-<p>如果一切顺利，那么你应该就可以使用你所填写的密码和账号登陆了。</p>
-<h1 id="phira的使用">Phira的使用</h1>
-<h2 id="调整延迟">调整延迟</h2>
-<blockquote>
-<p>你可以点击主界面右下角的“设置”，然后切换至音频选项卡以调整延迟。</p>
-</blockquote>
-<p><img src="/LimePan/Phira/change_delay.jpg" alt="调整延迟" /><br></p>
-<h2 id="下载谱面">下载谱面</h2>
-<blockquote>
-<p>你需要知道的是“未上架”的谱面数量远高于“上架”的谱面数量，且“未上架”的谱面无法增长rks</p>
-</blockquote>
-<p><img src="/LimePan/Phira/putaway.jpg" alt="上架" /><br></p>
-<p><img src="/LimePan/Phira/not_putaway.jpg" alt="未上架" /><br></p>
-<p>挑一首你喜欢的铺子，进入后下载直接开打即可</p>
-<h2 id="导入">导入</h2>
-<p>Phira支持导入自定义谱面和自定义音符资源包，向下查看具体操作。</p>
-<div class="admonition note">
-<p class="admonition-title">
-提示
-</p>
-<p>
-你需要自己提前下载好谱面/资源包文件！
-</p>
-</div>
-<h3 id="导入资源包">导入资源包</h3>
-<blockquote>
-<p>在主界面点击“资源包”选项卡，然后点击“＋”号，选择资源包文件即可</p>
-</blockquote>
-<p><img src="/LimePan/Phira/respack.jpg" alt="资源包" /><br></p>
-<p><img src="/LimePan/Phira/pack_file_import.jpg"
-alt="导入资源包" /><br></p>
-<h3 id="导入谱面">导入谱面</h3>
-<blockquote>
-<p>在“谱面库”选项卡，单击右上角的“导入”按钮，后选择你的zip谱面文件即可，与资源包导入同理。</p>
-</blockquote>
-<p><img src="/LimePan/Phira/local.jpg" alt="本地谱面" /><br></p>
-<p><img src="/LimePan/Phira/puzi_file_import.jpg"
-alt="导入本地谱面" /><br></p>
-<h2 id="phira练习功能">Phira“练习”功能</h2>
-<blockquote>
-<p>Phira具有非常强大的练习功能，支持对铺子变速和自定义开头与结尾。</p>
-</blockquote>
-<hr />
-<p><strong>在铺子的详情页</strong>单击右上角三个点</p>
-<p><img src="/LimePan/Phira/puzi.jpg" alt="详情" /><br></p>
-<p>然后点击练习，你就可以进入练习模式。</p>
-<p><img src="/LimePan/Phira/practice.jpg" alt="练习页面" /><br></p>
-<h1 id="寻找第三方资源">寻找第三方资源</h1>
-<div class="admonition note">
-<p class="admonition-title">
-提示
-</p>
-<p>
-该页面还在建设中，期待后续更新。
-</p>
-</div>
-<h2 id="phizone">Phizone</h2>
-<blockquote>
-<p>PhiZone是一个提供Phigros谱面二创资源的平台，需要注册并同意服务条款才能使用。<br>来自-<a
-href="https://wiki.xhsr.org.cn/PhiZone">吾萌百科</a></p>
-</blockquote>
-<hr />
-<p>你可以在这里下载许多谱面，貌似登陆后才可以使用并下载？ <br> <a
-href="https://www.phi.zone/">点我出发</a></p>
-<h2 id="prprblog">prprBlog</h2>
-<blockquote>
-<p>该网站收录了许多的免费音符资源包，无需登陆即可免费下载</p>
-</blockquote>
-<p><a href="https://prprblog.kevin2106.top/">点我出发</a></p>
-<h2 id="phira官方文档">Phira官方文档</h2>
-<blockquote>
-<p>此站点为Phira的官方文档，包含许多小白开发者可能会遇到的问题</p>
-</blockquote>
-<p><a
-href="https://teamflos.github.io/phira-docs/index.html">点我出发</a></p>
-<h2 id="phitogether">Phitogether</h2>
-<blockquote>
-<p>该站点为Phigros的在线版网页社区，可以在线游玩自制谱，甚至可以自己导入本地谱面进行游玩。</p>
-</blockquote>
-<p><a href="https://phitogether.fun/">点我出发</a></p>
-<h2 id="rephiedit">Re:PhiEdit</h2>
-<div class="admonition fail">
-<p class="admonition-title">
-提示
-</p>
-<p>
-该工具只存在Windows版本！
-</p>
-</div>
-<blockquote>
-<p>Re’:’PhiEdit，简称RPE，是由cmdysj开发的Phigros谱面制作软件。</p>
-</blockquote>
-<p>这是一款非常强大的自制谱制作器，你可以通过Wiki页面的下载链接下载 <br>
-<a href="https://pgrfm.miraheze.org/wiki/Re:PhiEdit">点我出发</a></p>
-<h2 id="open-phiedit">Open-PhiEdit</h2>
-<div class="admonition fail">
-<p class="admonition-title">
-提示
-</p>
-<p>
-该工具只存在Windows版本！该软件使用Electron框架编写，也许你可以自己考虑编译构建其它平台的版本？
-</p>
-</div>
-<blockquote>
-<p>一款十分简洁的开源谱面制作工具</p>
-</blockquote>
-<p><a
-href="https://github.com/cbs001/open-phiedit/releases/tag/windows">点我出发-Github</a></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>资源</tag>
-        <tag>Phira</tag>
-        <tag>Phigros</tag>
-        <tag>教程</tag>
-        <tag>指南</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【持续更新】各大常用MC启动器下载集合</title>
     <url>/2025/01/27/MC-Launcher/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -841,6 +665,182 @@ href="https://www.bilibili.com/video/BV12BXvYEEx1">点击这里</a>访问原视�
       <tags>
         <tag>资源</tag>
         <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【入坑指南】Phira完整入坑指南！</title>
+    <url>/2025/05/20/Phira/</url>
+    <content><![CDATA[<h1 id="准备工作">准备工作</h1>
+<p>一个可以使用QQ邮箱的QQ或者任意其它邮箱，用于注册和登陆Phira。</p>
+<h2 id="phira-介绍">Phira-介绍</h2>
+<blockquote>
+<p>Phira是在Phigros源码的基础上开发的一款非商业社区性音游，是Phigros最大的第三方社区<br>你可以<a
+href="https://github.com/TeamFlos/phira">点我</a>跳转到它的官方Github.</p>
+</blockquote>
+<blockquote>
+<p>该应用支持Windows, Android, iOS, MacOS,
+甚至Linux！？该篇目篇幅有限，只写了安卓端的下载教程，软件内的使用方法通用。</p>
+</blockquote>
+<blockquote>
+<p>iOS最简单的下载方法就是使用外区AppleID登陆Appstore后下载，没有可以考虑自行下载ipa包签名安装。</p>
+</blockquote>
+<h1 id="下载phira">下载Phira</h1>
+<p>每个平台都可以下载并游玩Phira，最简单的方法的通过Github
+Releases下载，本站也提供镜像的下载页面。</p>
+<h2 id="通过github">通过Github</h2>
+<div class="admonition fail">
+<p class="admonition-title">
+提示
+</p>
+<p>
+使用Github下载需要您拥有一个良好的网络环境，说人话，就是大陆用户不方便下载（大多数）
+</p>
+</div>
+<p><a
+href="https://github.com/TeamFlos/phira/releases/">点我</a>跳转至下载页面，跳转后选择与自己设备相符的版本下载即可（iOS需要签名后安装）</p>
+<p><img src="/LimePan/Phira/phira_download.jpg"
+alt="Github发行版界面预览" /><br></p>
+<h2 id="通过第三方镜像下载">通过第三方镜像下载</h2>
+<blockquote>
+<p>Github在中国的速度实在是一坨，谢天谢地，总有救世主愿意无私为大家搭建镜像，这可以很快提升下载速度。</p>
+</blockquote>
+<h3 id="dmocken的phira下载站">Dmocken的Phira下载站</h3>
+<p><a
+href="http://60.205.141.124:5244/Phira游戏本体/">点我</a>跳转至镜像下载页面，跳转后选择与自己设备相符的版本下载即可（iOS需要签名后安装）</p>
+<p><img src="/LimePan/Phira/phira_download_mirror.jpg"
+alt="Dmocken镜像页预览" /><br></p>
+<h1 id="注册并登陆phira">注册并登陆Phira</h1>
+<p>Phira在不登陆的情况下无法使用谱面社区（无法在线下载谱面）和上传成绩，因此，你需要注册一个Phira账号以正常使用Phira。</p>
+<p><img src="/LimePan/Phira/mainmenu-not-login.jpg"
+alt="首次进入Phira预览" /><br></p>
+<blockquote>
+<p>点击右上角的头像按钮</p>
+</blockquote>
+<p><img src="/LimePan/Phira/Signin.jpg" alt="登陆界面预览" /><br></p>
+<blockquote>
+<p>点击下方注册按钮，填写你的邮箱和你要注册的账号密码，密码满足8位有英文数字就行。</p>
+</blockquote>
+<blockquote>
+<p>之后打开你的邮箱，查看邮件，如果收件箱没有可以在垃圾邮件里查看Phira的注册验证邮件</p>
+</blockquote>
+<p>如果一切顺利，那么你应该就可以使用你所填写的密码和账号登陆了。</p>
+<h1 id="phira的使用">Phira的使用</h1>
+<h2 id="调整延迟">调整延迟</h2>
+<blockquote>
+<p>你可以点击主界面右下角的“设置”，然后切换至音频选项卡以调整延迟。</p>
+</blockquote>
+<p><img src="/LimePan/Phira/change_delay.jpg" alt="调整延迟" /><br></p>
+<h2 id="下载谱面">下载谱面</h2>
+<blockquote>
+<p>你需要知道的是“未上架”的谱面数量远高于“上架”的谱面数量，且“未上架”的谱面无法增长rks</p>
+</blockquote>
+<p><img src="/LimePan/Phira/putaway.jpg" alt="上架" /><br></p>
+<p><img src="/LimePan/Phira/not_putaway.jpg" alt="未上架" /><br></p>
+<p>挑一首你喜欢的铺子，进入后下载直接开打即可</p>
+<h2 id="导入">导入</h2>
+<p>Phira支持导入自定义谱面和自定义音符资源包，向下查看具体操作。</p>
+<div class="admonition note">
+<p class="admonition-title">
+提示
+</p>
+<p>
+你需要自己提前下载好谱面/资源包文件！
+</p>
+</div>
+<h3 id="导入资源包">导入资源包</h3>
+<blockquote>
+<p>在主界面点击“资源包”选项卡，然后点击“＋”号，选择资源包文件即可</p>
+</blockquote>
+<p><img src="/LimePan/Phira/respack.jpg" alt="资源包" /><br></p>
+<p><img src="/LimePan/Phira/pack_file_import.jpg"
+alt="导入资源包" /><br></p>
+<h3 id="导入谱面">导入谱面</h3>
+<blockquote>
+<p>在“谱面库”选项卡，单击右上角的“导入”按钮，后选择你的zip谱面文件即可，与资源包导入同理。</p>
+</blockquote>
+<p><img src="/LimePan/Phira/local.jpg" alt="本地谱面" /><br></p>
+<p><img src="/LimePan/Phira/puzi_file_import.jpg"
+alt="导入本地谱面" /><br></p>
+<h2 id="phira练习功能">Phira“练习”功能</h2>
+<blockquote>
+<p>Phira具有非常强大的练习功能，支持对铺子变速和自定义开头与结尾。</p>
+</blockquote>
+<hr />
+<p><strong>在铺子的详情页</strong>单击右上角三个点</p>
+<p><img src="/LimePan/Phira/puzi.jpg" alt="详情" /><br></p>
+<p>然后点击练习，你就可以进入练习模式。</p>
+<p><img src="/LimePan/Phira/practice.jpg" alt="练习页面" /><br></p>
+<h1 id="寻找第三方资源">寻找第三方资源</h1>
+<div class="admonition note">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该页面还在建设中，期待后续更新。
+</p>
+</div>
+<h2 id="phizone">Phizone</h2>
+<blockquote>
+<p>PhiZone是一个提供Phigros谱面二创资源的平台，需要注册并同意服务条款才能使用。<br>来自-<a
+href="https://wiki.xhsr.org.cn/PhiZone">吾萌百科</a></p>
+</blockquote>
+<hr />
+<p>你可以在这里下载许多谱面，貌似登陆后才可以使用并下载？ <br> <a
+href="https://www.phi.zone/">点我出发</a></p>
+<h2 id="prprblog">prprBlog</h2>
+<blockquote>
+<p>该网站收录了许多的免费音符资源包，无需登陆即可免费下载</p>
+</blockquote>
+<p><a href="https://prprblog.kevin2106.top/">点我出发</a></p>
+<h2 id="phira官方文档">Phira官方文档</h2>
+<blockquote>
+<p>此站点为Phira的官方文档，包含许多小白开发者可能会遇到的问题</p>
+</blockquote>
+<p><a
+href="https://teamflos.github.io/phira-docs/index.html">点我出发</a></p>
+<h2 id="phitogether">Phitogether</h2>
+<blockquote>
+<p>该站点为Phigros的在线版网页社区，可以在线游玩自制谱，甚至可以自己导入本地谱面进行游玩。</p>
+</blockquote>
+<p><a href="https://phitogether.fun/">点我出发</a></p>
+<h2 id="rephiedit">Re:PhiEdit</h2>
+<div class="admonition fail">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该工具只存在Windows版本！
+</p>
+</div>
+<blockquote>
+<p>Re’:’PhiEdit，简称RPE，是由cmdysj开发的Phigros谱面制作软件。</p>
+</blockquote>
+<p>这是一款非常强大的自制谱制作器，你可以通过Wiki页面的下载链接下载 <br>
+<a href="https://pgrfm.miraheze.org/wiki/Re:PhiEdit">点我出发</a></p>
+<h2 id="open-phiedit">Open-PhiEdit</h2>
+<div class="admonition fail">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该工具只存在Windows版本！该软件使用Electron框架编写，也许你可以自己考虑编译构建其它平台的版本？
+</p>
+</div>
+<blockquote>
+<p>一款十分简洁的开源谱面制作工具</p>
+</blockquote>
+<p><a
+href="https://github.com/cbs001/open-phiedit/releases/tag/windows">点我出发-Github</a></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>资源</tag>
+        <tag>Phira</tag>
+        <tag>Phigros</tag>
+        <tag>教程</tag>
+        <tag>指南</tag>
       </tags>
   </entry>
   <entry>

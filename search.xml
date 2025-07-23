@@ -1,67 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Lime-Fork</title>
-    <url>/2025/02/16/Lime-Fork/</url>
-    <content><![CDATA[<h1 id="起因">起因</h1>
-<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
-href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div class="admonition fail">
-<p>
-该页面仅仅收录我存档的项目，不会注明Github的项目地址。
-</p>
-</div>
-<div class="admonition info">
-<p>
-你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
-</p>
-</div>
-<h2 id="人生重开模拟器">人生重开模拟器</h2>
-<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
-href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
-<h2 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h2>
-<div class="admonition fail">
-<p>
-该页面内容可能引人不适！
-</p>
-</div>
-<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
-href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
-<h2 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h2>
-<div class="admonition fail">
-<p>
-超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
-</p>
-</div>
-<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
-href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
-<h2 id="limelinks">LimeLinks</h2>
-<div class="admonition info">
-<p>
-该页面没有描述
-</p>
-</div>
-<p>/LimeLinks</p>
-<h2 id="masturbation-helper">Masturbation-Helper</h2>
-<div class="admonition info">
-<p>
-该页面没有描述，请自行访问
-</p>
-</div>
-<p><a
-href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>资源</tag>
-        <tag>Github</tag>
-        <tag>Fork</tag>
-        <tag>项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LAB</title>
     <url>/2025/01/15/LAB/</url>
     <content><![CDATA[<h1 id="起因">起因</h1>
@@ -275,233 +214,64 @@ Classic</a>输入你要的函数之后点击“分享”</p>
       </tags>
   </entry>
   <entry>
-    <title>【Solitude】Hexo如何引入自定义css?</title>
-    <url>/2025/01/21/customcss/</url>
-    <content><![CDATA[<div class="admonition warning">
-<p class="admonition-title">
-警告
-</p>
+    <title>Lime-Fork</title>
+    <url>/2025/02/16/Lime-Fork/</url>
+    <content><![CDATA[<h1 id="起因">起因</h1>
+<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
+href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
+<div class="admonition fail">
 <p>
-该教程仅适用于Solitude主题！ <br>不过大概思路以及方法都是类似的
+该页面仅仅收录我存档的项目，不会注明Github的项目地址。
 </p>
 </div>
-<p>说到自定义css，这是个很美妙的东西，在一定程度上，扩展了主题的实用性以及开发性，因此有许多以solitude的自定义css与js为基础的拓展存在于互联网。</p>
 <div class="admonition info">
-<p class="admonition-title">
-作用
-</p>
 <p>
-自定义字体 <br>拓展主题功能 <br>美化 <br>…
+你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
 </p>
 </div>
-<p>那么话不多说，其实很简单，新建个目录，一行代码即可
-<br>首先在<code>hexo-theme-solitude/source/css/</code><br>其实就是你的Solitude主题的<code>source</code>目录下的<code>css</code>目录下创建一个<code>custom</code>文件夹，名称也是随意的<br>接着，使用文本编辑器打开<code>css</code>目录下的<code>index.styl</code><br>在顶部添加这样一行代码。</p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;custom/*.css&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>这样，在custom目录下的所有css都会起作用。 即操作完毕。</p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
-    <url>/2025/01/13/hello-world/</url>
-    <content><![CDATA[<h1 id="这是">这是？</h1>
-<p><img src="/LimePan/LimeHello.jpeg" alt="封面" /> 欢迎来到 <a
-href="https://LimeBlogs.github.io">莱姆Lime</a>
-平时在这里与大家一起聊聊天（好像还没做评论功能┐(´-｀)┌）叙叙事<br>扯些有的没的<br>该帖子为一切的起点！<br>见证这一切的开始吧！<br><code>此帖子基于一开始生成的hello-world 所修改</code><br>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
-<h2 id="前言">前言</h2>
-<p>本教程并不会很详细，不过大概的步骤都会给你，照做即可。</p>
-<h3 id="关于本站是怎么来的">关于本站是怎么来的</h3>
-<p>之前早就听过<a
-href="https://hexo.io/">Hexo</a>这一博客的大名<br>其实心里早就想要花时间去搭建一个博客<br>于是，纷争开始了</p>
-<h3 id="问题">问题</h3>
-<p>关键是我只有部手机，这怎么玩，装这玩意是要<a
-href="https://git-scm.com/?hl=zh-cn">Git</a>的啊，在安卓上，折腾的过程中出现了很多问题
-<br>而且操作并不方便，这可咋办咋办咋办T^T<br>可是你们还是可以看到这篇文章，说明我已经成功了</p>
-<h3 id="解决方法">解决方法</h3>
-<p>基于<a
-href="https://ghjayce.github.io/p/system/android/env/install-git/">这篇教程</a>，可以在安卓设备上安装<a
-href="https://termux.dev/cn/">termux</a>以在终端里安装并使用<a
-href="https://nodejs.org/">node.js</a>与git<br>
-在参照上篇教程安装git后，在termux使用以下命令安装Node.js<br>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt install nodejs</span><br></pre></td></tr></table></figure> 在跑完进度条后即算作安装成功，接着，按<a
-href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">照该教程</a>一路走即可
-不要按照他的方式在别的目录安装hexo！会出现问题！<br>先cd到根目录，再使用npm安装hexo
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span></span><br><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-安装之后，目录是在<code>/data/user/0/com.termux/files/home/hexo/(至少安卓12是这样的)</code><br>
-将这一切完成后，在修改<code>_config.yml</code>就是部署到github这一步时，请按照如下方式修改<code>踩坑踩出来的教训</code></p>
+<h2 id="人生重开模拟器">人生重开模拟器</h2>
+<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
+href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
+<h2 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h2>
+<div class="admonition fail">
+<p>
+该页面内容可能引人不适！
+</p>
+</div>
+<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
+href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
+<h2 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h2>
+<div class="admonition fail">
+<p>
+超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
+</p>
+</div>
+<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
+href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
+<h2 id="limelinks">LimeLinks</h2>
 <div class="admonition info">
-<p class="admonition-title">
-注意
-</p>
 <p>
-未Root的安卓设备无法修改data目录，这时可以在cd到一个可以修改的目录，然后在该目录安装hexo。
+该页面没有描述
 </p>
 </div>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#文本末尾</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: #这里按照他的方式做即可</span><br><span class="line">  branch: main  #将那篇文章的gh-pages改成main，后面改分支的操作就不需要了</span><br></pre></td></tr></table></figure>
-<p>将这一切做好后，即可使用你专属的Github.io域名来访问独属于你自己的Hexo！</p>
-<h3 id="注意事项">注意事项</h3>
-<ul>
-<li>请确保你创建<code>id_rsa.pub</code>时的网络环境与你在Github添加时的网络环境<code>（不要翻墙/更换局域网）</code>一致！</li>
-<li>开始前，请把<code>“所有文件的访问权限”给termux！</code>以确保不会出现文件无法访问这一类的错误</li>
-<li>需要安装主题可以去网络上搜索教程，主要是在<code>_config.yml</code>中修改：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions      【第96行】</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: #将此处修改为你要启用的主题名称</span><br></pre></td></tr></table></figure>
-<h3 id="总结">总结</h3>
-<p>算是水了一篇帖子，这真的走了我好久的弯路，实在不会的可以查度娘捏<br></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-        <tag>建站</tag>
-        <tag>入门</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>莱姆の更新日志</title>
-    <url>/2025/01/15/%E8%8E%B1%E5%A7%86%E3%81%AE%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>莱姆｜Lime
-是我于25-1-13日晚上所搭建的一个博客项目<br>其目的是为了平时在上面写一些有的没的，我觉得这是一件很值得记录的事情<br>故在Hexo的基本配置完成后，我决定开始编写该博客的更新日志<br></p>
-<h2 id="版本更新规律">版本更新规律</h2>
-<p>该博客决定以大的版本号来决定，某些细小的更新将算作一个大版本<code>就是写在首页的版本号</code><br>例如：βONE<br>这是一开始的版本，在我添加了n多新功能后，ONE将会变成TWO，THREE<br>等到了一定的限度后将会使用罗马数字代替<br>总而言之就是一堆小功能更新后更新一个大的版本号。</p>
-<h1 id="更新日志">更新日志</h1>
-<p>前言已结束，将开始进入大的更新日志！</p>
-<h2 id="βone">βONE</h2>
-<p><img src="/LimePan/Update-beta1.jpeg"
-alt="Beta1-βONE 版本封面" /><br></p>
-<p><strong>2025-1-15</strong></p>
-<p><br>一切的开始！一切的起源，起因只是我的灵光一闪？</p>
-<hr />
-<h3 id="更新内容">更新内容</h3>
-<ul>
-<li>安装<code>hexo-simple-mindmap</code>插件，对hexo提供了简易的思维导图支持
-<blockquote class="pullquote mindmap mindmap-md"><ul>
-<li>βONE更新内容
-<ul>
-<li>将网站基本内容几乎全部配置完毕
-<ul>
-<li>首页样式</li>
-<li>网站封面</li>
-<li>主题选择配置</li>
-<li>图床选择</li>
-</ul></li>
-<li>插件添加
-<ul>
-<li>hexo-simple-mindmap</li>
-<li>hexo-theme-solitude</li>
-<li>添加置顶功能</li>
-</ul></li>
-<li>将本地Hexo推送至Githubpages</li>
-<li>更新了一篇文章[不算作本篇]</li>
-</ul></li>
-</ul>
-</blockquote></li>
-<li>网站颜色配置基本完成</li>
-<li>添加置顶功能</li>
-<li>部分功能启用调整</li>
-<li>主题基本选择完毕</li>
-<li>*其实就是思维导图里的东西</li>
-</ul>
-<h2 id="βtwo">βTWO</h2>
-<p><img src="/LimePan/Update-beta2.jpg"
-alt="Beta2-βTWO 版本封面" /><br></p>
-<hr />
-<p><strong>2025-5-17</strong></p>
-<p>网站更新许多功能，补齐许多用户以及使用方面包括视觉方面的许多问题。</p>
-<hr />
-<h3 id="更新内容-1">更新内容</h3>
-<blockquote>
-<p>具体的功能实现方法大多可以在<a
-href="https://limeblogs.github.io/2025/01/15/LAB/">Lime实验室</a>查看实现方法和使用方法。</p>
-</blockquote>
-<p><br></p>
-<p><strong>思维导图略写</strong></p>
-<p><br></p>
-<blockquote class="pullquote mindmap mindmap-md"><ul>
-<li>βTWO更新内容
-<ul>
-<li>功能方面
-<ul>
-<li>数学公式支持</li>
-<li>Tikz支持</li>
-<li>文章支持隐藏</li>
-</ul></li>
-<li>用户使用方面
-<ul>
-<li>更新评论系统</li>
-<li>更新页脚</li>
-<li>更新友情链接</li>
-<li>修正部分文章bug</li>
-<li>启用懒加载</li>
-<li>其它优化</li>
-</ul></li>
-<li>视觉方面
-<ul>
-<li>修改字体</li>
-<li>美化首页排版</li>
-</ul></li>
-<li>文章推送方面
-<ul>
-<li>使用插件实现自动URL推送</li>
-</ul></li>
-<li>插件与功能调整
-<ul>
-<li>太多了记不清</li>
-</ul></li>
-<li>文章更新
-<ul>
-<li>更新七篇文章</li>
-</ul></li>
-</ul></li>
-</ul>
-</blockquote>
-<p><br></p>
-<hr />
-<p><strong>具体更新细节</strong></p>
-<ul>
-<li><p><strong>使用Giscus</strong>驱动评论系统，现在可以使用Github登陆</p></li>
-<li><p><strong>友情链接更新</strong>现在可以向LimeOnTop@outlook.com发送邮件以推送你的网站URL</p></li>
-<li><p><strong>图片懒加载</strong>支持，现在许多用户可以更加快速的访问该站点（存疑）</p></li>
-<li><p><strong>PC端文章三列显示</strong>很奇怪，部分设备有效，部分设备无效</p></li>
-<li><p><strong>使用Harmony
-Sans</strong>字体，现在你看的就是该字体。</p></li>
-<li><p><strong>SEO更新将会更加频繁</strong>你将更容易在Bing搜到本站（仅限bing）</p></li>
-<li><p><strong>修复部分页面的排版Bug</strong>要是其它部分还有问题……呵呵🙂</p></li>
-<li><p><strong>编不下去了</strong>感觉这些天就做了这些，其它的都是我这个站长所用的功能</p></li>
-</ul>
-<h3 id="关于该版本">关于该版本</h3>
-<blockquote>
-<p>该版本(beta2)可能是此站点停留时间最长的版本，因为很多功能已经完善，这可能也意味着LimeBlogs进入平稳区，以后将会持续更新文章。</p>
-</blockquote>
-<h2 id="βthree">βTHREE</h2>
-<div class="admonition note">
-<p class="admonition-title">
-提示
-</p>
+<p>/LimeLinks</p>
+<h2 id="masturbation-helper">Masturbation-Helper</h2>
+<div class="admonition info">
 <p>
-该篇目正在进行，过段时间再来吧～
+该页面没有描述，请自行访问
 </p>
 </div>
+<p><a
+href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>主站建设</category>
+        <category>Github</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-        <tag>置顶</tag>
-        <tag>更新日志</tag>
+        <tag>资源</tag>
+        <tag>Github</tag>
+        <tag>Fork</tag>
+        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -1189,6 +959,236 @@ Gemini模型，而且没用配置预设和正则的情况下发生的</strong> <
         <tag>指南</tag>
         <tag>酒馆</tag>
         <tag>SillyTavern</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Solitude】Hexo如何引入自定义css?</title>
+    <url>/2025/01/21/customcss/</url>
+    <content><![CDATA[<div class="admonition warning">
+<p class="admonition-title">
+警告
+</p>
+<p>
+该教程仅适用于Solitude主题！ <br>不过大概思路以及方法都是类似的
+</p>
+</div>
+<p>说到自定义css，这是个很美妙的东西，在一定程度上，扩展了主题的实用性以及开发性，因此有许多以solitude的自定义css与js为基础的拓展存在于互联网。</p>
+<div class="admonition info">
+<p class="admonition-title">
+作用
+</p>
+<p>
+自定义字体 <br>拓展主题功能 <br>美化 <br>…
+</p>
+</div>
+<p>那么话不多说，其实很简单，新建个目录，一行代码即可
+<br>首先在<code>hexo-theme-solitude/source/css/</code><br>其实就是你的Solitude主题的<code>source</code>目录下的<code>css</code>目录下创建一个<code>custom</code>文件夹，名称也是随意的<br>接着，使用文本编辑器打开<code>css</code>目录下的<code>index.styl</code><br>在顶部添加这样一行代码。</p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;custom/*.css&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>这样，在custom目录下的所有css都会起作用。 即操作完毕。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
+    <url>/2025/01/13/hello-world/</url>
+    <content><![CDATA[<h1 id="这是">这是？</h1>
+<p><img src="/LimePan/LimeHello.jpeg" alt="封面" /> 欢迎来到 <a
+href="https://LimeBlogs.github.io">莱姆Lime</a>
+平时在这里与大家一起聊聊天（好像还没做评论功能┐(´-｀)┌）叙叙事<br>扯些有的没的<br>该帖子为一切的起点！<br>见证这一切的开始吧！<br><code>此帖子基于一开始生成的hello-world 所修改</code><br>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
+<h2 id="前言">前言</h2>
+<p>本教程并不会很详细，不过大概的步骤都会给你，照做即可。</p>
+<h3 id="关于本站是怎么来的">关于本站是怎么来的</h3>
+<p>之前早就听过<a
+href="https://hexo.io/">Hexo</a>这一博客的大名<br>其实心里早就想要花时间去搭建一个博客<br>于是，纷争开始了</p>
+<h3 id="问题">问题</h3>
+<p>关键是我只有部手机，这怎么玩，装这玩意是要<a
+href="https://git-scm.com/?hl=zh-cn">Git</a>的啊，在安卓上，折腾的过程中出现了很多问题
+<br>而且操作并不方便，这可咋办咋办咋办T^T<br>可是你们还是可以看到这篇文章，说明我已经成功了</p>
+<h3 id="解决方法">解决方法</h3>
+<p>基于<a
+href="https://ghjayce.github.io/p/system/android/env/install-git/">这篇教程</a>，可以在安卓设备上安装<a
+href="https://termux.dev/cn/">termux</a>以在终端里安装并使用<a
+href="https://nodejs.org/">node.js</a>与git<br>
+在参照上篇教程安装git后，在termux使用以下命令安装Node.js<br>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt install nodejs</span><br></pre></td></tr></table></figure> 在跑完进度条后即算作安装成功，接着，按<a
+href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">照该教程</a>一路走即可
+不要按照他的方式在别的目录安装hexo！会出现问题！<br>先cd到根目录，再使用npm安装hexo
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span></span><br><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+安装之后，目录是在<code>/data/user/0/com.termux/files/home/hexo/(至少安卓12是这样的)</code><br>
+将这一切完成后，在修改<code>_config.yml</code>就是部署到github这一步时，请按照如下方式修改<code>踩坑踩出来的教训</code></p>
+<div class="admonition info">
+<p class="admonition-title">
+注意
+</p>
+<p>
+未Root的安卓设备无法修改data目录，这时可以在cd到一个可以修改的目录，然后在该目录安装hexo。
+</p>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#文本末尾</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: #这里按照他的方式做即可</span><br><span class="line">  branch: main  #将那篇文章的gh-pages改成main，后面改分支的操作就不需要了</span><br></pre></td></tr></table></figure>
+<p>将这一切做好后，即可使用你专属的Github.io域名来访问独属于你自己的Hexo！</p>
+<h3 id="注意事项">注意事项</h3>
+<ul>
+<li>请确保你创建<code>id_rsa.pub</code>时的网络环境与你在Github添加时的网络环境<code>（不要翻墙/更换局域网）</code>一致！</li>
+<li>开始前，请把<code>“所有文件的访问权限”给termux！</code>以确保不会出现文件无法访问这一类的错误</li>
+<li>需要安装主题可以去网络上搜索教程，主要是在<code>_config.yml</code>中修改：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions      【第96行】</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: #将此处修改为你要启用的主题名称</span><br></pre></td></tr></table></figure>
+<h3 id="总结">总结</h3>
+<p>算是水了一篇帖子，这真的走了我好久的弯路，实在不会的可以查度娘捏<br></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>建站</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>莱姆の更新日志</title>
+    <url>/2025/01/15/%E8%8E%B1%E5%A7%86%E3%81%AE%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>莱姆｜Lime
+是我于25-1-13日晚上所搭建的一个博客项目<br>其目的是为了平时在上面写一些有的没的，我觉得这是一件很值得记录的事情<br>故在Hexo的基本配置完成后，我决定开始编写该博客的更新日志<br></p>
+<h2 id="版本更新规律">版本更新规律</h2>
+<p>该博客决定以大的版本号来决定，某些细小的更新将算作一个大版本<code>就是写在首页的版本号</code><br>例如：βONE<br>这是一开始的版本，在我添加了n多新功能后，ONE将会变成TWO，THREE<br>等到了一定的限度后将会使用罗马数字代替<br>总而言之就是一堆小功能更新后更新一个大的版本号。</p>
+<h1 id="更新日志">更新日志</h1>
+<p>前言已结束，将开始进入大的更新日志！</p>
+<h2 id="βone">βONE</h2>
+<p><img src="/LimePan/Update-beta1.jpeg"
+alt="Beta1-βONE 版本封面" /><br></p>
+<p><strong>2025-1-15</strong></p>
+<p><br>一切的开始！一切的起源，起因只是我的灵光一闪？</p>
+<hr />
+<h3 id="更新内容">更新内容</h3>
+<ul>
+<li>安装<code>hexo-simple-mindmap</code>插件，对hexo提供了简易的思维导图支持
+<blockquote class="pullquote mindmap mindmap-md"><ul>
+<li>βONE更新内容
+<ul>
+<li>将网站基本内容几乎全部配置完毕
+<ul>
+<li>首页样式</li>
+<li>网站封面</li>
+<li>主题选择配置</li>
+<li>图床选择</li>
+</ul></li>
+<li>插件添加
+<ul>
+<li>hexo-simple-mindmap</li>
+<li>hexo-theme-solitude</li>
+<li>添加置顶功能</li>
+</ul></li>
+<li>将本地Hexo推送至Githubpages</li>
+<li>更新了一篇文章[不算作本篇]</li>
+</ul></li>
+</ul>
+</blockquote></li>
+<li>网站颜色配置基本完成</li>
+<li>添加置顶功能</li>
+<li>部分功能启用调整</li>
+<li>主题基本选择完毕</li>
+<li>*其实就是思维导图里的东西</li>
+</ul>
+<h2 id="βtwo">βTWO</h2>
+<p><img src="/LimePan/Update-beta2.jpg"
+alt="Beta2-βTWO 版本封面" /><br></p>
+<hr />
+<p><strong>2025-5-17</strong></p>
+<p>网站更新许多功能，补齐许多用户以及使用方面包括视觉方面的许多问题。</p>
+<hr />
+<h3 id="更新内容-1">更新内容</h3>
+<blockquote>
+<p>具体的功能实现方法大多可以在<a
+href="https://limeblogs.github.io/2025/01/15/LAB/">Lime实验室</a>查看实现方法和使用方法。</p>
+</blockquote>
+<p><br></p>
+<p><strong>思维导图略写</strong></p>
+<p><br></p>
+<blockquote class="pullquote mindmap mindmap-md"><ul>
+<li>βTWO更新内容
+<ul>
+<li>功能方面
+<ul>
+<li>数学公式支持</li>
+<li>Tikz支持</li>
+<li>文章支持隐藏</li>
+</ul></li>
+<li>用户使用方面
+<ul>
+<li>更新评论系统</li>
+<li>更新页脚</li>
+<li>更新友情链接</li>
+<li>修正部分文章bug</li>
+<li>启用懒加载</li>
+<li>其它优化</li>
+</ul></li>
+<li>视觉方面
+<ul>
+<li>修改字体</li>
+<li>美化首页排版</li>
+</ul></li>
+<li>文章推送方面
+<ul>
+<li>使用插件实现自动URL推送</li>
+</ul></li>
+<li>插件与功能调整
+<ul>
+<li>太多了记不清</li>
+</ul></li>
+<li>文章更新
+<ul>
+<li>更新七篇文章</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<p><br></p>
+<hr />
+<p><strong>具体更新细节</strong></p>
+<ul>
+<li><p><strong>使用Giscus</strong>驱动评论系统，现在可以使用Github登陆</p></li>
+<li><p><strong>友情链接更新</strong>现在可以向LimeOnTop@outlook.com发送邮件以推送你的网站URL</p></li>
+<li><p><strong>图片懒加载</strong>支持，现在许多用户可以更加快速的访问该站点（存疑）</p></li>
+<li><p><strong>PC端文章三列显示</strong>很奇怪，部分设备有效，部分设备无效</p></li>
+<li><p><strong>使用Harmony
+Sans</strong>字体，现在你看的就是该字体。</p></li>
+<li><p><strong>SEO更新将会更加频繁</strong>你将更容易在Bing搜到本站（仅限bing）</p></li>
+<li><p><strong>修复部分页面的排版Bug</strong>要是其它部分还有问题……呵呵🙂</p></li>
+<li><p><strong>编不下去了</strong>感觉这些天就做了这些，其它的都是我这个站长所用的功能</p></li>
+</ul>
+<h3 id="关于该版本">关于该版本</h3>
+<blockquote>
+<p>该版本(beta2)可能是此站点停留时间最长的版本，因为很多功能已经完善，这可能也意味着LimeBlogs进入平稳区，以后将会持续更新文章。</p>
+</blockquote>
+<h2 id="βthree">βTHREE</h2>
+<div class="admonition note">
+<p class="admonition-title">
+提示
+</p>
+<p>
+该篇目正在进行，过段时间再来吧～
+</p>
+</div>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>主站建设</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>置顶</tag>
+        <tag>更新日志</tag>
       </tags>
   </entry>
 </search>

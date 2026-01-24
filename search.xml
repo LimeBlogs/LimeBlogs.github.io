@@ -962,40 +962,6 @@ Gemini模型，而且没用配置预设和正则的情况下发生的</strong> <
       </tags>
   </entry>
   <entry>
-    <title>【Solitude】Hexo如何引入自定义css?</title>
-    <url>/2025/01/21/customcss/</url>
-    <content><![CDATA[<div class="admonition warning">
-<p class="admonition-title">
-警告
-</p>
-<p>
-该教程仅适用于Solitude主题！ <br>不过大概思路以及方法都是类似的
-</p>
-</div>
-<p>说到自定义css，这是个很美妙的东西，在一定程度上，扩展了主题的实用性以及开发性，因此有许多以solitude的自定义css与js为基础的拓展存在于互联网。</p>
-<div class="admonition info">
-<p class="admonition-title">
-作用
-</p>
-<p>
-自定义字体 <br>拓展主题功能 <br>美化 <br>…
-</p>
-</div>
-<p>那么话不多说，其实很简单，新建个目录，一行代码即可
-<br>首先在<code>hexo-theme-solitude/source/css/</code><br>其实就是你的Solitude主题的<code>source</code>目录下的<code>css</code>目录下创建一个<code>custom</code>文件夹，名称也是随意的<br>接着，使用文本编辑器打开<code>css</code>目录下的<code>index.styl</code><br>在顶部添加这样一行代码。</p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;custom/*.css&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>这样，在custom目录下的所有css都会起作用。 即操作完毕。</p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
     <url>/2025/01/13/hello-world/</url>
     <content><![CDATA[<h1 id="这是">这是？</h1>
@@ -1052,6 +1018,40 @@ href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">�
         <tag>博客</tag>
         <tag>建站</tag>
         <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Solitude】Hexo如何引入自定义css?</title>
+    <url>/2025/01/21/customcss/</url>
+    <content><![CDATA[<div class="admonition warning">
+<p class="admonition-title">
+警告
+</p>
+<p>
+该教程仅适用于Solitude主题！ <br>不过大概思路以及方法都是类似的
+</p>
+</div>
+<p>说到自定义css，这是个很美妙的东西，在一定程度上，扩展了主题的实用性以及开发性，因此有许多以solitude的自定义css与js为基础的拓展存在于互联网。</p>
+<div class="admonition info">
+<p class="admonition-title">
+作用
+</p>
+<p>
+自定义字体 <br>拓展主题功能 <br>美化 <br>…
+</p>
+</div>
+<p>那么话不多说，其实很简单，新建个目录，一行代码即可
+<br>首先在<code>hexo-theme-solitude/source/css/</code><br>其实就是你的Solitude主题的<code>source</code>目录下的<code>css</code>目录下创建一个<code>custom</code>文件夹，名称也是随意的<br>接着，使用文本编辑器打开<code>css</code>目录下的<code>index.styl</code><br>在顶部添加这样一行代码。</p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;custom/*.css&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>这样，在custom目录下的所有css都会起作用。 即操作完毕。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>建站</tag>
       </tags>
   </entry>
   <entry>

@@ -256,6 +256,13 @@
   </url>
   
   <url>
+    <loc>https://sudachi.top/tags/Minecraft/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://sudachi.top/tags/java/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -284,7 +291,21 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/Minecraft/</loc>
+    <loc>https://sudachi.top/tags/%E9%85%92%E9%A6%86/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/SillyTavern/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -305,28 +326,7 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/tags/%E9%85%92%E9%A6%86/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/tags/SillyTavern/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -363,14 +363,14 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://sudachi.top/categories/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sudachi.top/categories/%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://sudachi.top/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

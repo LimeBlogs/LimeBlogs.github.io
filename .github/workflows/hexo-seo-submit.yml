@@ -4,7 +4,7 @@ on:
     - cron: 0 4 * * *
   push:
     branches:
-      - main
+      - master
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -48,3 +48,8 @@ jobs:
         run: |
           npx hexo-seo-submit@1.8.0 bing -k ${{ secrets.bing_apikey }} -f bing.json
 
+      - name: push search engine google
+        if: env.is_owner
+        continue-on-error: true
+        run: |
+          npx hexo-seo-submit@1.8.0 google -f google.txt -m ${{ secrets.google_client_email }} -k "${{ secrets.google_private_key }}"

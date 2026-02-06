@@ -4,6 +4,11 @@ Allow: /
 
 Disallow: /tags/
 Disallow: /categories/
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /fancybox/
 
 
 Allow: .js

@@ -1,0 +1,17 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /tags/
+Disallow: /categories/
+
+
+Allow: .js
+Allow: .css
+Allow: .png
+Allow: .jpg
+Allow: .jpeg
+Allow: .gif
+Allow: .svg
+
+Sitemap: https://sudachi.top/sitemap.xml

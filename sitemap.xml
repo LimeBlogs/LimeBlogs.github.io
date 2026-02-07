@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sudachi.top/2025/01/15/updatelog/</loc>
+    
+    <lastmod>2026-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://sudachi.top/travellings/index.html</loc>
     
     <lastmod>2026-02-07</lastmod>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>https://sudachi.top/2026/02/06/galgameAndroid/</loc>
-    
-    <lastmod>2026-02-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/2025/01/15/updatelog/</loc>
     
     <lastmod>2026-02-07</lastmod>
     
@@ -348,13 +348,6 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sudachi.top/tags/%E9%85%92%E9%A6%86/</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -363,6 +356,13 @@
   
   <url>
     <loc>https://sudachi.top/tags/SillyTavern/</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

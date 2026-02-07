@@ -1,34 +1,34 @@
-// 全局变量用于存储动画ID，以便切换页面时停止旧的循环
-let clockAnimationId = null;
+// 使用 var 替换 let，防止 PJAX 局部刷新时重复声明报错
+var clockAnimationId = clockAnimationId || null;
 
 // 入口：绑定事件
-document.addEventListener("DOMContentLoaded", () => {
-    initializeCard();
-});
-
-document.addEventListener("pjax:complete", () => {
-    initializeCard();
-});
+// 仅在首次加载时执行
+if (!window.digitClockInitialized) {
+    document.addEventListener("DOMContentLoaded", () => {
+        initializeCard();
+    });
+    // 针对 PJAX 切换页面后的重新初始化
+    document.addEventListener("pjax:complete", () => {
+        initializeCard();
+    });
+    window.digitClockInitialized = true;
+}
 
 // 主初始化函数
 function initializeCard() {
     cardTimes();        // 初始化日历
     cardRefreshTimes(); // 初始化倒计时
-    initDigitClock();   // 初始化数字时钟 (新增调用)
+    initDigitClock();   // 初始化数字时钟
 }
 
-// --- 1. 日历与倒计时逻辑 (保持原样，微调变量作用域) ---
-let year, month, week, date, dates, weekStr, monthStr, asideTime, asideDay, asideDayNum, animalYear, ganzhiYear, lunarMon, lunarDay;
-const now = new Date();
+// --- 1. 日历与倒计时逻辑 ---
+// 同样建议使用 var 或确保在函数内部定义，避免全局污染报错
+var year, month, week, date, dates, weekStr, monthStr, asideTime, asideDay, asideDayNum, animalYear, ganzhiYear, lunarMon, lunarDay;
 
 function cardRefreshTimes() {
     const e = document.getElementById("card-widget-schedule");
     if (e) {
-        //以此类推，你的原有逻辑保持不变，只需确保每次调用都重新计算
-        const currentNow = new Date(); // 确保时间是最新的
-        // 注意：这里原本你用的全局now只初始化了一次，建议改用动态时间
-        // 但为了不破坏你原有逻辑，这里暂且保留原样，仅做DOM操作
-        
+        const currentNow = new Date(); 
         asideDay = (currentNow - asideTime) / 1e3 / 60 / 60 / 24;
         e.querySelector("#pBar_year").value = asideDay;
         e.querySelector("#p_span_year").innerHTML = (asideDay / 365 * 100).toFixed(1) + "%";
@@ -52,7 +52,6 @@ function cardTimes() {
 
     const e = document.getElementById("card-widget-calendar");
     if (e) {
-        // 清空旧内容防止重复生成（虽然原本逻辑有判断，但清空更保险）
         const c = e.querySelector("#calendar-main");
         c.innerHTML = ""; 
         
@@ -74,7 +73,7 @@ function cardTimes() {
         const o = (dates - s) % 7 === 0 ? Math.floor((dates - s) / 7) + 1 : Math.floor((dates - s) / 7) + 2;
         const l = e.querySelector("#calendar-date");
 
-        l.style.fontSize = ["64px", "48px", "36px"][Math.min(o - 3, 2)];
+        if(l) l.style.fontSize = ["64px", "48px", "36px"][Math.min(o - 3, 2)];
 
         for (let i = 0; i < o; i++) {
             c.innerHTML += `<div class='calendar-r${i}'></div>`;
@@ -87,7 +86,6 @@ function cardTimes() {
             }
         }
 
-        // 确保 chineseLunar 库已加载，否则这里会报错
         if (typeof chineseLunar !== 'undefined') {
             const lunarDate = chineseLunar.solarToLunar(new Date(year, month, date));
             animalYear = chineseLunar.format(lunarDate, "A");
@@ -107,22 +105,24 @@ function cardTimes() {
         e.querySelector("#calendar-week").innerHTML = `第${weekNum}周&nbsp;${weekStr}`;
         e.querySelector("#calendar-date").innerHTML = date.toString().padStart(2, "0");
         e.querySelector("#calendar-solar").innerHTML = `${year}年${monthStr}&nbsp;第${asideDay.toFixed(0)}天`;
-        document.getElementById("schedule-days").innerHTML = daysUntilNewYear;
+        const scheduleDays = document.getElementById("schedule-days");
+        if(scheduleDays) scheduleDays.innerHTML = daysUntilNewYear;
     }
 }
 
-// --- 2. 数字时钟逻辑 (封装版) ---
+// --- 2. 数字时钟逻辑 ---
 function initDigitClock() {
-    // 1. 检查容器是否存在
     const container = document.getElementById("card-digit-clock");
-    if (!container) return; // 如果当前页面没有这个组件，直接退出
+    if (!container) return; 
 
-    // 2. 清理工作：停止旧的动画循环，清空容器内容
-    if (clockAnimationId) cancelAnimationFrame(clockAnimationId);
+    // 清理：确保不会有多个 requestAnimationFrame 同时跑
+    if (clockAnimationId) {
+        cancelAnimationFrame(clockAnimationId);
+        clockAnimationId = null;
+    }
     container.innerHTML = ''; 
 
-    // 3. 定义数据结构
-    var _time10 = Array.from(Array(10)).map((n, i) => i);
+    var _time10 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var _time6 = _time10.slice(0, 6);
     var _time3 = _time10.slice(0, 3);
     var _Structure = [
@@ -131,13 +131,11 @@ function initDigitClock() {
         [_time6, _time10]
     ];
 
-    // 4. 创建 DOM
     var clock = document.createElement('div');
     clock.id = 'clock';
-    container.appendChild(clock); // 使用 container 而不是 getElementById
+    container.appendChild(clock);
 
     var digitGroups = [];
-    
     _Structure.forEach(digits => {
         var digitGroup = document.createElement('div');
         digitGroup.classList.add('digit-group');
@@ -156,22 +154,23 @@ function initDigitClock() {
         });
     });
 
-    // 5. 定义更新函数（定义在 init 内部以闭包形式访问当前的 digitGroups）
     function update() {
-        var date = new Date();
-        var time = [date.getHours(), date.getMinutes(), date.getSeconds()]
+        var dateNow = new Date();
+        var time = [dateNow.getHours(), dateNow.getMinutes(), dateNow.getSeconds()]
             .map(n => `0${n}`.slice(-2).split('').map(e => +e))
             .reduce((p, n) => p.concat(n), []);
             
         time.forEach((n, i) => {
-            var digit = digitGroups[Math.floor(i * 0.5)].children[i % 2].children;
-            Array.from(digit).forEach((e, i2) => e.classList[i2 === n ? 'add' : 'remove']('bright'));
+            var groupIdx = Math.floor(i / 2);
+            var digitIdx = i % 2;
+            var digitElements = digitGroups[groupIdx].children[digitIdx].children;
+            for(let j=0; j<digitElements.length; j++) {
+                digitElements[j].classList[j === n ? 'add' : 'remove']('bright');
+            }
         });
         
-        // 递归调用，并保存 ID 供下次清除
         clockAnimationId = requestAnimationFrame(update);
     }
 
-    // 6. 启动循环
-    requestAnimationFrame(update);
+    update();
 }

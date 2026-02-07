@@ -1,0 +1,71 @@
+(function() {
+    // 1. 节气计算核心算法
+    function getSolarTerm(year, month, day) {
+        // 节气名称列表
+        var termNames = [
+            "小寒", "大寒", "立春", "雨水", "惊蛰", "春分",
+            "清明", "谷雨", "立夏", "小满", "芒种", "夏至",
+            "小暑", "大暑", "立秋", "处暑", "白露", "秋分",
+            "寒露", "霜降", "立冬", "小雪", "大雪", "冬至"
+        ];
+        
+        // 简化的节气日期估算表 (月份对应的两个节气大概日期)
+        const termDays = [
+            5, 20, // 1月
+            4, 19, // 2月
+            5, 20, // 3月
+            4, 20, // 4月
+            5, 21, // 5月
+            6, 21, // 6月
+            7, 22, // 7月
+            7, 23, // 8月
+            7, 23, // 9月
+            8, 23, // 10月
+            7, 22, // 11月
+            7, 21  // 12月
+        ];
+        
+        // 计算当前处于哪个节气区间
+        let termIndex = (month - 1) * 2;
+        
+        // 如果今天的日期还在该月第一个节气之前，说明是上个月的节气
+        if (day < termDays[termIndex]) {
+            termIndex -= 1;
+        } 
+        // 如果今天的日期在该月第二个节气之后，说明进入了该月第二个节气
+        else if (day >= termDays[termIndex + 1]) {
+            termIndex += 1;
+        }
+        
+        // 处理跨年 (如果是小寒之前，则是上一年的冬至)
+        if (termIndex < 0) {
+            return "冬至"; 
+        }
+        
+        return termNames[termIndex];
+    }
+
+    // 2. 更新菜单文字
+    function updateMenuSolarTerm() {
+        const now = new Date();
+        const term = getSolarTerm(now.getFullYear(), now.getMonth() + 1, now.getDate());
+
+        // 找到菜单项
+        const menuItems = document.querySelectorAll('#menus .site-page');
+        menuItems.forEach(item => {
+            // 只要菜单文字包含“节气”二字，就进行替换
+            if (item.textContent.includes('节气solarterms')) { 
+                // 只修改文字，不动图标
+                const spanTag = item.querySelector('span');
+                if (spanTag) {
+                    spanTag.innerText = ' ' + term; 
+                }
+            }
+        });
+    }
+
+    // 3. 绑定事件 (PJAX适配)
+    document.addEventListener('DOMContentLoaded', updateMenuSolarTerm);
+    document.addEventListener('pjax:complete', updateMenuSolarTerm);
+
+})();

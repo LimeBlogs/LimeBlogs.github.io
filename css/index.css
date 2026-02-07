@@ -9274,10 +9274,10 @@ div#banners .bannerText {
   background: var(--efu-card-bg);
 }
 [data-theme=dark] {
-  --efu-theme: #808080;
-  --efu-theme-op: rgba(128,128,128,0.137);
-  --efu-theme-op-deep: rgba(128,128,128,0.867);
-  --efu-theme-none: rgba(128,128,128,0);
+  --efu-theme: #999;
+  --efu-theme-op: rgba(153,153,153,0.137);
+  --efu-theme-op-deep: rgba(153,153,153,0.867);
+  --efu-theme-none: rgba(153,153,153,0);
   --efu-blue: #0084ff;
   --efu-red: #ff3842;
   --efu-pink: #d44040;

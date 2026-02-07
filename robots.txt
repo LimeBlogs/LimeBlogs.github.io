@@ -9,6 +9,7 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 Disallow: /fancybox/
+Disallow: /links/
 
 
 Allow: .js

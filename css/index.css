@@ -4106,14 +4106,14 @@ span.tags-punctuation i {
   filter: alpha(opacity=20);
   width: 100%;
   height: 100%;
-  background-image: url("/LimePan/rbg.jpeg");
+  background-image: url("/LimePan/rbg.webp");
   background-size: cover;
   background-position: center;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 [data-theme=dark] #global_bg {
-  background-image: url("/LimePan/rbg.jpeg");
+  background-image: url("/LimePan/rbg.webp");
 }
 .article-container {
   overflow-wrap: break-word;

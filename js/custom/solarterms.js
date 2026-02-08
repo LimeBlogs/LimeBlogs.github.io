@@ -50,13 +50,13 @@
         const bgElement = document.getElementById('global_bg');
         if (bgElement) {
             // 拼接图片路径：/LimePan/seasons/spring.png
-            const bgUrl = `/LimePan/seasons/${season}.png`;
+            const bgUrl = `/LimePan/seasons/${season}.webp`;
             
             // 强制覆盖背景样式
             bgElement.style.backgroundImage = `url('${bgUrl}')`;
             
             // 打印日志方便调试 (按F12可以看到)
-            console.log(`当前节气: ${term}, 切换背景为: ${season}.jpg`);
+            console.log(`当前节气: ${term}, 切换背景为: ${season}.webp`);
         }
     }
 

@@ -239,6 +239,13 @@
   </url>
   
   <url>
+    <loc>https://sudachi.top/tags/%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://sudachi.top/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -260,35 +267,7 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sudachi.top/tags/%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/tags/minecraft/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -316,14 +295,21 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/phira/</loc>
+    <loc>https://sudachi.top/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/phigros/</loc>
+    <loc>https://sudachi.top/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/minecraft/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -338,6 +324,20 @@
   
   <url>
     <loc>https://sudachi.top/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/phira/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/phigros/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -381,6 +381,13 @@
   </url>
   
   <url>
+    <loc>https://sudachi.top/categories/github/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://sudachi.top/categories/%E4%B8%BB%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -389,13 +396,6 @@
   
   <url>
     <loc>https://sudachi.top/categories/%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/categories/github/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

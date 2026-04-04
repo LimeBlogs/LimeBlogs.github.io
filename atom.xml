@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>Lime</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://sudachi.top/icon.png</icon>
+  <id>https://sudachi.top/</id>
+  <link href="https://sudachi.top/" rel="alternate"/>
+  <link href="https://sudachi.top/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, Lime</rights>
+  <subtitle>聚是火簇，散作繁星。</subtitle>
+  <title>莱姆Lime</title>
+  <updated>2026-02-08T14:53:30.444Z</updated>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="安卓" scheme="https://sudachi.top/tags/%E5%AE%89%E5%8D%93/"/>
+    <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
+    <id>https://sudachi.top/2026/02/06/galgameandroid/</id>
+    <link href="https://sudachi.top/2026/02/06/galgameandroid/"/>
+    <published>2026-02-06T11:19:42.000Z</published>
+    <summary>本文介绍了如何在安卓上快速游玩Galgame以及常用资源的分享，同时还说明了什么是Krkr2与Ons，这是适用于萌新的基础教程项文章</summary>
+    <title>安卓如何使用Tyranor游玩Galgame</title>
+    <updated>2026-02-08T14:53:30.444Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
+    <category term="项目" scheme="https://sudachi.top/tags/%E9%A1%B9%E7%9B%AE/"/>
+    <category term="java" scheme="https://sudachi.top/tags/java/"/>
+    <category term="学习" scheme="https://sudachi.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://sudachi.top/2026/01/24/mooc-java/</id>
+    <link href="https://sudachi.top/2026/01/24/mooc-java/"/>
+    <published>2026-01-24T07:37:09.000Z</published>
+    <summary>本篇目包含了MOOC.fi的java编程课程的部分试题解决思路以及心得体会。</summary>
+    <title>我的TMC Java笔记</title>
+    <updated>2026-02-08T14:49:12.609Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
+    <category term="酒馆" scheme="https://sudachi.top/tags/%E9%85%92%E9%A6%86/"/>
+    <category term="SillyTavern" scheme="https://sudachi.top/tags/sillytavern/"/>
+    <id>https://sudachi.top/2025/07/12/sillytavern/</id>
+    <link href="https://sudachi.top/2025/07/12/sillytavern/"/>
+    <published>2025-07-12T13:46:33.000Z</published>
+    <summary>本文章是一篇SillyTavern酒馆从零到基础的部署教程，并含有配套B站教程</summary>
+    <title>SillyTavern酒馆部署教程</title>
+    <updated>2026-02-08T14:52:37.327Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
+    <category term="Phira" scheme="https://sudachi.top/tags/phira/"/>
+    <category term="Phigros" scheme="https://sudachi.top/tags/phigros/"/>
+    <id>https://sudachi.top/2025/05/20/phira/</id>
+    <link href="https://sudachi.top/2025/05/20/phira/"/>
+    <published>2025-05-20T13:46:33.000Z</published>
+    <summary>本文章提供了Phira的下载地址，以及完整的Phira游玩教程！这绝对是你入坑Phira的必要说明书！</summary>
+    <title>【入坑指南】Phira完整入坑指南！</title>
+    <updated>2026-02-08T14:50:19.628Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="Github" scheme="https://sudachi.top/categories/github/"/>
+    <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
+    <category term="Fork" scheme="https://sudachi.top/tags/fork/"/>
+    <category term="项目" scheme="https://sudachi.top/tags/%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://sudachi.top/2025/02/16/lime-fork/</id>
+    <link href="https://sudachi.top/2025/02/16/lime-fork/"/>
+    <published>2025-02-16T14:58:52.000Z</published>
+    <summary>
+      <![CDATA[<h2]]>
+    </summary>
+    <title>Lime-Fork</title>
+    <updated>2026-02-08T14:49:36.362Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="资源" scheme="https://sudachi.top/categories/%E8%B5%84%E6%BA%90/"/>
+    <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="Minecraft" scheme="https://sudachi.top/tags/minecraft/"/>
+    <id>https://sudachi.top/2025/01/27/mc-launcher/</id>
+    <link href="https://sudachi.top/2025/01/27/mc-launcher/"/>
+    <published>2025-01-27T05:37:16.000Z</published>
+    <summary>PCL2下载｜HMCL下载｜BakaXL下载｜我的世界MC启动器下载｜Minecraft常用启动器下载集合！持续更新！MC启动器是一个在日常游戏中必不可少的工具，此文章就是将各大常用MC启动器的官网以及下载地址整理至此，并持续更新。</summary>
+    <title>【持续更新】各大常用MC启动器下载集合</title>
+    <updated>2026-02-08T14:51:32.151Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="博客" scheme="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="建站" scheme="https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/"/>
+    <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
+    <id>https://sudachi.top/2025/01/21/customcss/</id>
+    <link href="https://sudachi.top/2025/01/21/customcss/"/>
+    <published>2025-01-21T14:17:57.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="方法">方法</h2>
+<p>!!! warning 警告]]>
+    </summary>
+    <title>【Solitude】Hexo如何引入自定义css?</title>
+    <updated>2026-02-08T14:52:56.339Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="主站建设" scheme="https://sudachi.top/categories/%E4%B8%BB%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
+    <category term="博客" scheme="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
+    <category term="实验室" scheme="https://sudachi.top/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    <category term="测试" scheme="https://sudachi.top/tags/%E6%B5%8B%E8%AF%95/"/>
+    <id>https://sudachi.top/2025/01/15/lab/</id>
+    <link href="https://sudachi.top/2025/01/15/lab/"/>
+    <published>2025-01-15T14:06:35.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="起因">起因</h2>
+<p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁</p>
+<h2]]>
+    </summary>
+    <title>LAB</title>
+    <updated>2026-02-08T14:54:41.222Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="主站建设" scheme="https://sudachi.top/categories/%E4%B8%BB%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
+    <category term="博客" scheme="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
+    <category term="置顶" scheme="https://sudachi.top/tags/%E7%BD%AE%E9%A1%B6/"/>
+    <category term="更新日志" scheme="https://sudachi.top/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
+    <id>https://sudachi.top/2025/01/15/updatelog/</id>
+    <link href="https://sudachi.top/2025/01/15/updatelog/"/>
+    <published>2025-01-15T05:22:10.000Z</published>
+    <summary>
+      <![CDATA[<h2]]>
+    </summary>
+    <title>莱姆の更新日志</title>
+    <updated>2026-02-08T14:51:57.901Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="博客" scheme="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="建站" scheme="https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/"/>
+    <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
+    <id>https://sudachi.top/2025/01/13/hello-world/</id>
+    <link href="https://sudachi.top/2025/01/13/hello-world/"/>
+    <published>2025-01-13T14:06:35.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="这是">这是？</h2>
+<p><img src="/LimePan/LimeHello.webp" alt="封面" /> 欢迎来到]]>
+    </summary>
+    <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
+    <updated>2026-02-08T14:53:57.506Z</updated>
+  </entry>
+</feed>

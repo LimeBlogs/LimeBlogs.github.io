@@ -17,10 +17,10 @@
       <name>Lime</name>
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
     <category term="安卓" scheme="https://sudachi.top/tags/%E5%AE%89%E5%8D%93/"/>
     <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <id>https://sudachi.top/2026/02/06/galgameandroid/</id>
     <link href="https://sudachi.top/2026/02/06/galgameandroid/"/>
@@ -142,13 +142,9 @@
     <id>https://sudachi.top/2025/01/15/lab/</id>
     <link href="https://sudachi.top/2025/01/15/lab/"/>
     <published>2025-01-15T14:06:35.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="起因">起因</h2>
-<p>在更新日志撰写完毕后，我觉得开设一个帖子，专门存放一些Hexo与Markdown之类的代码与功能，这就是LimeLAB的由来。<br>主要还是没东西写罢了，只不过是为赋新词强说愁</p>
-<h2]]>
-    </summary>
+    <summary>Hexo魔改折腾记录，内含LimeBlogs的许多插件的使用方法</summary>
     <title>LAB</title>
-    <updated>2026-02-08T14:54:41.222Z</updated>
+    <updated>2026-04-04T04:29:31.888Z</updated>
   </entry>
   <entry>
     <author>

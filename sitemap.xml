@@ -297,13 +297,6 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/minecraft/</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sudachi.top/tags/github/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -333,6 +326,13 @@
   
   <url>
     <loc>https://sudachi.top/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/minecraft/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,14 +397,14 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/categories/%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://sudachi.top/categories/github/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sudachi.top/categories/github/</loc>
+    <loc>https://sudachi.top/categories/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

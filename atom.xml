@@ -54,6 +54,7 @@
     <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
     <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
     <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
+    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <category term="酒馆" scheme="https://sudachi.top/tags/%E9%85%92%E9%A6%86/"/>
     <category term="SillyTavern" scheme="https://sudachi.top/tags/sillytavern/"/>
     <id>https://sudachi.top/2025/07/12/sillytavern/</id>
@@ -61,7 +62,7 @@
     <published>2025-07-12T13:46:33.000Z</published>
     <summary>本文章是一篇SillyTavern酒馆从零到基础的部署教程，并含有配套B站教程</summary>
     <title>SillyTavern酒馆部署教程</title>
-    <updated>2026-02-08T14:52:37.327Z</updated>
+    <updated>2026-04-04T11:48:39.678Z</updated>
   </entry>
   <entry>
     <author>
@@ -104,13 +105,14 @@
     </author>
     <category term="资源" scheme="https://sudachi.top/categories/%E8%B5%84%E6%BA%90/"/>
     <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <category term="Minecraft" scheme="https://sudachi.top/tags/minecraft/"/>
     <id>https://sudachi.top/2025/01/27/mc-launcher/</id>
     <link href="https://sudachi.top/2025/01/27/mc-launcher/"/>
     <published>2025-01-27T05:37:16.000Z</published>
     <summary>PCL2下载｜HMCL下载｜BakaXL下载｜我的世界MC启动器下载｜Minecraft常用启动器下载集合！持续更新！MC启动器是一个在日常游戏中必不可少的工具，此文章就是将各大常用MC启动器的官网以及下载地址整理至此，并持续更新。</summary>
     <title>【持续更新】各大常用MC启动器下载集合</title>
-    <updated>2026-02-08T14:51:32.151Z</updated>
+    <updated>2026-04-04T11:49:31.625Z</updated>
   </entry>
   <entry>
     <author>
@@ -171,6 +173,7 @@
     <category term="建站" scheme="https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/"/>
     <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
     <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <id>https://sudachi.top/2025/01/13/hello-world/</id>
     <link href="https://sudachi.top/2025/01/13/hello-world/"/>
     <published>2025-01-13T14:06:35.000Z</published>
@@ -179,6 +182,6 @@
 <p><img src="/LimePan/LimeHello.webp" alt="封面" /> 欢迎来到]]>
     </summary>
     <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
-    <updated>2026-02-08T14:53:57.506Z</updated>
+    <updated>2026-04-04T11:49:10.639Z</updated>
   </entry>
 </feed>

@@ -158,21 +158,19 @@
     <id>https://sudachi.top/2025/01/15/updatelog/</id>
     <link href="https://sudachi.top/2025/01/15/updatelog/"/>
     <published>2025-01-15T05:22:10.000Z</published>
-    <summary>
-      <![CDATA[<h2]]>
-    </summary>
+    <summary>LimeBlogs/莱姆Lime的完整更新日志。聚是火簇，散作繁星。</summary>
     <title>莱姆の更新日志</title>
-    <updated>2026-02-08T14:51:57.901Z</updated>
+    <updated>2026-04-04T10:54:40.616Z</updated>
   </entry>
   <entry>
     <author>
       <name>Lime</name>
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="博客" scheme="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="建站" scheme="https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/"/>
     <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
-    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <id>https://sudachi.top/2025/01/13/hello-world/</id>
     <link href="https://sudachi.top/2025/01/13/hello-world/"/>
     <published>2025-01-13T14:06:35.000Z</published>

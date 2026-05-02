@@ -6,7 +6,7 @@
     <description>聚是火簇，散作繁星。</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, Lime</copyright>
-    <lastBuildDate>Sun, 08 Feb 2026 14:53:30 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 12:40:07 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://sudachi.top/icon.png</url>
@@ -14,6 +14,13 @@
       <link>https://sudachi.top/</link>
     </image>
     <atom:link href="https://sudachi.top/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Gemma4发布！性能与效果测试以及展示</title>
+      <link>https://sudachi.top/2026/04/04/gemma4/</link>
+      <description>Google DeepMind发布了最新的开源模型Gemma4，是区还是神？一探究竟！</description>
+      <author>Lime</author>
+      <pubDate>Sat, 04 Apr 2026 12:36:56 GMT</pubDate>
+    </item>
     <item>
       <title>安卓如何使用Tyranor游玩Galgame</title>
       <link>https://sudachi.top/2026/02/06/galgameandroid/</link>

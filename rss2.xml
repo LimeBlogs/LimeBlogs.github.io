@@ -6,7 +6,7 @@
     <description>聚是火簇，散作繁星。</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, Lime</copyright>
-    <lastBuildDate>Sat, 04 Apr 2026 12:40:07 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Feb 2026 14:53:30 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://sudachi.top/icon.png</url>
@@ -15,22 +15,15 @@
     </image>
     <atom:link href="https://sudachi.top/rss2.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Gemma4发布！性能与效果测试以及展示</title>
-      <link>https://sudachi.top/2026/04/04/gemma4/</link>
-      <description>Google DeepMind发布了最新的开源模型Gemma4，是区还是神？一探究竟！</description>
-      <author>Lime</author>
-      <pubDate>Sat, 04 Apr 2026 12:36:56 GMT</pubDate>
-    </item>
-    <item>
       <title>安卓如何使用Tyranor游玩Galgame</title>
       <link>https://sudachi.top/2026/02/06/galgameandroid/</link>
       <description>本文介绍了如何在安卓上快速游玩Galgame以及常用资源的分享，同时还说明了什么是Krkr2与Ons，这是适用于萌新的基础教程项文章</description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/">入门</category>
       <category domain="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://sudachi.top/tags/%E5%AE%89%E5%8D%93/">安卓</category>
       <category domain="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/">资源</category>
-      <category domain="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/">入门</category>
       <category domain="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/">指南</category>
       <pubDate>Fri, 06 Feb 2026 11:19:42 GMT</pubDate>
     </item>
@@ -53,10 +46,10 @@
       <description>本文章是一篇SillyTavern酒馆从零到基础的部署教程，并含有配套B站教程</description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://sudachi.top/tags/github/">Github</category>
       <category domain="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/">资源</category>
       <category domain="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/">指南</category>
-      <category domain="https://sudachi.top/tags/github/">Github</category>
       <category domain="https://sudachi.top/tags/%E9%85%92%E9%A6%86/">酒馆</category>
       <category domain="https://sudachi.top/tags/sillytavern/">SillyTavern</category>
       <pubDate>Sat, 12 Jul 2025 13:46:33 GMT</pubDate>
@@ -78,14 +71,12 @@
       <title>Lime-Fork</title>
       <link>https://sudachi.top/2025/02/16/lime-fork/</link>
       <description>
-        <![CDATA[<h2 id="起因">起因</h2>
-<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div]]>
+        <![CDATA[<h2]]>
       </description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/github/">Github</category>
-      <category domain="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/">资源</category>
       <category domain="https://sudachi.top/tags/github/">Github</category>
+      <category domain="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/">资源</category>
       <category domain="https://sudachi.top/tags/fork/">Fork</category>
       <category domain="https://sudachi.top/tags/%E9%A1%B9%E7%9B%AE/">项目</category>
       <pubDate>Sun, 16 Feb 2025 14:58:52 GMT</pubDate>
@@ -96,8 +87,8 @@
       <description>PCL2下载｜HMCL下载｜BakaXL下载｜我的世界MC启动器下载｜Minecraft常用启动器下载集合！持续更新！MC启动器是一个在日常游戏中必不可少的工具，此文章就是将各大常用MC启动器的官网以及下载地址整理至此，并持续更新。</description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E8%B5%84%E6%BA%90/">资源</category>
-      <category domain="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/">资源</category>
       <category domain="https://sudachi.top/tags/github/">Github</category>
+      <category domain="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/">资源</category>
       <category domain="https://sudachi.top/tags/minecraft/">Minecraft</category>
       <pubDate>Mon, 27 Jan 2025 05:37:16 GMT</pubDate>
     </item>
@@ -106,7 +97,7 @@
       <link>https://sudachi.top/2025/01/21/customcss/</link>
       <description>
         <![CDATA[<h2 id="方法">方法</h2>
-<p>!!! warning]]>
+<p>!!! warning 警告]]>
       </description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>
@@ -143,9 +134,8 @@
       <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
       <link>https://sudachi.top/2025/01/13/hello-world/</link>
       <description>
-        <![CDATA[<h2 id="这是？">这是？</h2>
-<p><img src="/LimePan/LimeHello.webp" alt="封面"><br>
-欢迎来到 <a href="https://LimeBlogs.github.io">莱姆Lime</a>]]>
+        <![CDATA[<h2 id="这是">这是？</h2>
+<p><img src="/LimePan/LimeHello.webp" alt="封面" /> 欢迎来到]]>
       </description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>

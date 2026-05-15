@@ -169,10 +169,10 @@
       <name>Lime</name>
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="博客" scheme="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="建站" scheme="https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/"/>
     <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
-    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <id>https://sudachi.top/2025/01/13/hello-world/</id>
     <link href="https://sudachi.top/2025/01/13/hello-world/"/>

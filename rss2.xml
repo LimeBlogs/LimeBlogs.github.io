@@ -71,9 +71,7 @@
       <title>Lime-Fork</title>
       <link>https://sudachi.top/2025/02/16/lime-fork/</link>
       <description>
-        <![CDATA[<h2 id="起因">起因</h2>
-<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div]]>
+        <![CDATA[<h2]]>
       </description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/github/">Github</category>
@@ -99,7 +97,7 @@
       <link>https://sudachi.top/2025/01/21/customcss/</link>
       <description>
         <![CDATA[<h2 id="方法">方法</h2>
-<p>!!! warning]]>
+<p>!!! warning 警告]]>
       </description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>
@@ -136,9 +134,8 @@
       <title>如何只使用一部安卓手机搭建Hexo并部署至GithubPages？</title>
       <link>https://sudachi.top/2025/01/13/hello-world/</link>
       <description>
-        <![CDATA[<h2 id="这是？">这是？</h2>
-<p><img src="/LimePan/LimeHello.webp" alt="封面"><br>
-欢迎来到 <a href="https://LimeBlogs.github.io">莱姆Lime</a>]]>
+        <![CDATA[<h2 id="这是">这是？</h2>
+<p><img src="/LimePan/LimeHello.webp" alt="封面" /> 欢迎来到]]>
       </description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>

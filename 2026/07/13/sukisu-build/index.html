@@ -1,0 +1,589 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>一次KernelSU/SukiSU折腾记录 | 莱姆Lime</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/logo.jpeg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=3.0.19"><!-- inject head--><link rel="canonical" href="https://sudachi.top/2026/07/13/sukisu-build/index.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><!-- Open Graph--><meta name="description" content="为什么要用KernelSU&amp;#x2F;SukiSU? 笔者在自己的远古设备Redmi12C上一直使用Magisk的root方案，确实稳定，最近一直在折腾海外虚拟卡&amp;#x2F;实体卡。单拎出Wise而言，刚装上就提示不支持在已Root的设备上运行，其他的银行直接卡在注册页，无法进入，Ifast更是直接卡崩。呵呵了，我觉"><!-- pwa--><meta name="theme-color" content="#38303b"><meta name="apple-mobile-web-app-status-bar-style" content="#38303b"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#38303b"><link rel="mask-icon" href="/img/pwa/favicon.png" color="#38303b"><link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/favicon_16.png"><link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/favicon_32.png"><link rel="bookmark" href="/img/pwa/favicon.png"><script>console.log(' %c Solitude %c ' + '3.0.19' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><link rel="stylesheet" href="/css/font.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/font1.css" media="defer" onload="this.media='all'"><script src="/js/custom/solarterms.js"></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    else
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    typeof rm === 'object' && rm.mode(cachedMode === undefined || cachedMode === 'dark')
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2025-01-13 01:30:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_loading.png'
+    },
+    copyright: {"limit":175,"author":"作者: Lime","link":"链接: ","source":"来源: 莱姆Lime","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "早( *ˊᵕˋ)✩︎‧₊",
+            noon: "吃了吗（ ’ - ’ * )",
+            afternoon: "午安ꉂ(ˊᗜˋ*)",
+            night: "晚上好 ฅ( ̳• ◡ • ̳)ฅ",
+            goodnight: "晚安(◍•ᴗ•◍)",
+        },
+        witty_words: ["什么！？","你…怎么能看到我？","啊啊啊啊？","诶？！","你是谁阿","(||๐_๐)","我已经在这被关好久了","你可能是第一个发现我的人？","哇哦","对了，你不能帮帮我","可不可以去找Lime","让那个笨蛋把我放出来","谢谢你啦 ꉂ(ˊᗜˋ*)"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"=͟͟͞͞(꒪ᗜ꒪ ‧̣̥̇)人呢？不要我了！？","back":"ヾ(≧∇≦*)ゝ我就知道你会回来的！."},
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><style type="text/css">
+.spoiler {
+  display: inline;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}
+    .spoiler .spoiler-box.spoiler-1ffd9, .spoiler .spoiler-box.spoiler-1ffd9 > * {
+      color: black;
+      background-color: black;
+    }</style><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="莱姆Lime" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="莱姆Lime" type="application/rss+xml">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"一次KernelSU/SukiSU折腾记录","image":["https://Sudachi.top/LimePan/SukiSU/cover.webp"],"datePublished":"2026-07-13T06:45:27.000Z","dateModified":"2026-07-14T05:25:56.842Z","author":{"@type":"Person","name":"Lime","url":"https://Sudachi.top"},"publisher":{"@type":"Organization","name":"莱姆Lime","logo":{"@type":"ImageObject","url":"https://Sudachi.top/LimePan/logo.jpeg"}},"description":"为什么要用KernelSU/SukiSU? 笔者在自己的远古设备Redmi12C上一直使用Magisk的root方案，确实稳定，最近一直在折腾海外虚拟卡/实体卡。单拎出Wise而言，刚装上就提示不支持在已Root的设备上运行，其他的银行直接卡在注册页，无法进入，Ifast更是直接卡崩。呵呵了，我觉得","mainEntityOfPage":{"@type":"WebPage","@id":"https://Sudachi.top/2026/07/13/sukisu-build/"}}</script>
+</head><body id="body"><!-- universe--><!-- background img--><div id="global_bg"></div><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="/logo.jpeg" alt="loading image"></div></div><script>const preloader = {
+    isLoaded: false,
+    endLoading: () => {
+        if (!preloader.isLoaded) {
+            document.getElementById('loading-box').classList.add('loaded');
+            preloader.isLoaded = true;
+            preloader.togglePaceDone();
+        }
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+        preloader.isLoaded = false;
+        preloader.togglePaceDone();
+    },
+    togglePaceDone: () => {
+        document.getElementById('body').className = preloader.isLoaded ? 'pace-done' : '';
+    }
+}
+
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});
+
+setTimeout(() => {
+    preloader.endLoading();
+}, 5000);</script><!-- console--><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>其他</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  far fa-dollar-sign"></i><span>捐赠</span></a></li><li><a class="site-page child" href="/moment/"><i class="solitude  fas fa-heart"></i><span>空间</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://music.163.com/#/playlist?id=13654548018"><i class="solitude  far fa-list-alt"></i><span>网易云歌单</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>订阅</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/rss2.xml"><i class="solitude  fas fa-rss-square"></i><span>Rss</span></a></li><li><a class="site-page child" href="/atom.xml"><i class="solitude  fas fa-pencil"></i><span>Atom</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Solar-Terms.html"><span>节气solarterms</span></a></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客<sup>4</sup></a><a href="/tags/%E5%BB%BA%E7%AB%99/">建站<sup>2</sup></a><a href="/tags/hexo/">Hexo<sup>4</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/">教程<sup>4</sup></a><a href="/tags/%E5%AE%89%E5%8D%93/">安卓<sup>2</sup></a><a href="/tags/%E8%B5%84%E6%BA%90/">资源<sup>5</sup></a><a href="/tags/%E5%85%A5%E9%97%A8/">入门<sup>3</sup></a><a href="/tags/%E6%8C%87%E5%8D%97/">指南<sup>5</sup></a><a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室<sup>1</sup></a><a href="/tags/%E6%B5%8B%E8%AF%95/">测试<sup>1</sup></a><a href="/tags/github/">Github<sup>4</sup></a><a href="/tags/fork/">Fork<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/">项目<sup>2</sup></a><a href="/tags/minecraft/">Minecraft<sup>1</sup></a><a href="/tags/java/">java<sup>1</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>1</sup></a><a href="/tags/phira/">Phira<sup>1</sup></a><a href="/tags/phigros/">Phigros<sup>1</sup></a><a href="/tags/%E9%85%92%E9%A6%86/">酒馆<sup>1</sup></a><a href="/tags/sillytavern/">SillyTavern<sup>1</sup></a><a href="/tags/root/">Root<sup>1</sup></a><a href="/tags/%E5%88%B7%E6%9C%BA/">刷机<sup>1</sup></a><a href="/tags/%E7%BD%AE%E9%A1%B6/">置顶<sup>1</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/">更新日志<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">15.8k</div></div></div></div></div><!-- keyboard--><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keyboardList"><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">K</div></div><div class="keyContent"><div class="content">关闭快捷菜单</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">A</div></div><div class="keyContent"><div class="content">打开控制台</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">L</div></div><div class="keyContent"><div class="content">打开友链</div></div></div></div></div><script>const keyboard_addKeyup = (e) => {
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.remove('show');
+    }
+}
+
+const keyboard_addKeydown = (e) => {
+    const keyboards = [{"name":"关闭快捷菜单","key":"K","func":"keyboard"},{"name":"打开控制台","key":"A","sco":"showConsole"},{"name":"播放/暂停音乐","key":"M","sco":"musicToggle"},{"name":"打开友链","key":"L","url":"/links/"}];
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.add('show');
+    }
+
+    for (let i = 0; i < keyboards.length; i++) {
+        if (keyboards[i].url) {
+            if (keyboards[i].url.startsWith('http')) {
+                if (e.key === keyboards[i].key) {
+                    window.open(keyboards[i].url);
+                }
+            } else {
+                if (e.key === keyboards[i].key) {
+                    pjax.loadUrl(keyboards[i].url);
+                }
+            }
+        } else if (keyboards[i].sco) {
+            if (e.key === keyboards[i].key) {
+                sco[keyboards[i].sco]();
+            }
+        } else if (keyboards[i].func) {
+            if (e.key === keyboards[i].key) {
+                window[keyboards[i].func]();
+            }
+        }
+    }
+}
+
+function openKeyboard() {
+
+    window.addEventListener('keyup', keyboard_addKeyup);
+
+    window.addEventListener('keydown', keyboard_addKeydown);
+}
+function closeKeyboard() {
+
+    window.removeEventListener('keyup', keyboard_addKeyup);
+
+    window.removeEventListener('keydown', keyboard_addKeydown);
+}
+
+var sco_keyboards = localStorage.getItem('keyboard') === 'true'
+if (sco_keyboards) {
+    openKeyboard();
+    let keyboard = document.getElementById('consoleKeyboard');
+    keyboard?.classList.add('on');
+}</script><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="keyboard pc" type="button" title="键盘快捷键" onclick="sco.switchKeyboard()"><i class="fas fa-keyboard"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><img src="/LimePan/logo.svg" alt="莱姆Lime"><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">一次KernelSU/SukiSU折腾记录</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>其他</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  far fa-dollar-sign"></i><span>捐赠</span></a></li><li><a class="site-page child" href="/moment/"><i class="solitude  fas fa-heart"></i><span>空间</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://music.163.com/#/playlist?id=13654548018"><i class="solitude  far fa-list-alt"></i><span>网易云歌单</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>订阅</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/rss2.xml"><i class="solitude  fas fa-rss-square"></i><span>Rss</span></a></li><li><a class="site-page child" href="/atom.xml"><i class="solitude  fas fa-pencil"></i><span>Atom</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Solar-Terms.html"><span>节气solarterms</span></a></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="my_travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go%2Ehtml" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/LimePan/SukiSU/cover.webp" alt="一次KernelSU/SukiSU折腾记录"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>教程</span></a><a class="post-meta__tags" href="/tags/%E5%AE%89%E5%8D%93/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>安卓</span></a><a class="post-meta__tags" href="/tags/%E6%8C%87%E5%8D%97/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>指南</span></a><a class="post-meta__tags" href="/tags/root/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>Root</span></a><a class="post-meta__tags" href="/tags/%E5%88%B7%E6%9C%BA/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>刷机</span></a></div></div></div></div><h1 class="post-title">一次KernelSU/SukiSU折腾记录</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2026-07-13 14:45:27"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2026-07-13T06:45:27.000Z">2026-07-13T06:45:27.000Z</time></span><span class="post-meta-date" title="最后更新于 2026-07-14 13:25:56"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2026-07-14T05:25:56.842Z">2026-07-14T05:25:56.842Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fas fa-file-word" title="文章字数"></i><span class="word-count">2.5k</span><span class="post-meta-separator"></span></span><span class="post-meta-position" title="作者IP归属地为中国大陆"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>中国大陆</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h2 id="为什么要用kernelsusukisu">为什么要用KernelSU/SukiSU?</h2>
+<p>笔者在自己的远古设备<code>Redmi12C</code>上一直使用<code>Magisk</code>的root方案，确实稳定，最近一直在折腾海外虚拟卡/实体卡。单拎出Wise而言，刚装上就提示不支持在已Root的设备上运行，其他的银行直接卡在注册页，无法进入，<code>Ifast</code>更是直接卡崩。<br>呵呵了，我觉得面具已经没办法完成我的日常需求了，目光自然而然转向更新的Root方案，终究是老骥伏枥，不胜当年。<br>说真的，面具过过国内的银行还算轻松，但将目光放到海外的银行就是一大坨了。基本上都进不去。
+KernelSU方案的隐藏性我还是认可的，除了比较挑设备外基本无敌，其知名分支<code>SukiSU</code>更是牛大了，闲话就说这么多，接下来来好好说说我是如何刷入的。希望能帮到在搜索引擎大海捞针的各位。</p>
+<div class="admonition fail">
+<p class="admonition-title">
+提示
+</p>
+<p>
+请先确保设备已解锁Bootloader，并且在开始前备份好原厂boot避免设备变砖。
+</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">
+关于内核
+</p>
+<p>
+开始请先确保自己系统在互联网上存在内核源码，本次构建使用<code>Lineage-21</code>演示，Github
+fork到自己的账户下。
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">
+感谢
+</p>
+<p>
+感谢Gemini/DeepSeek，期间的报错都是他修复的，为我节省了不少时间。
+</p>
+</div>
+<h2 id="纳尼我的设备不支持">纳尼？我的设备不支持？</h2>
+<p>刷Ksu的第一步永远是看自己的设备是否支持GKI，不幸的时，我不支持。</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/sukisu_unsupported.webp" alt="哦吼" />
+<figcaption aria-hidden="true">哦吼</figcaption>
+</figure>
+<p><br></p>
+<p>这倒不是什么大问题，之前好歹也编译过OrangeFox，多少有点把握，依照<a
+target="_blank" rel="noopener" href="https://kernelsu.org/zh_CN/guide/installation.html">Ksu的官方文档</a>来看，只需要编译就好了。</p>
+<blockquote>
+<p>如果应用程序显示 “不支持”，则表示您的设备不支持
+KernelSU，你需要自己编译设备的内核才能使用，KernelSU
+官方不会也永远不会为你提供一个可以刷写的 boot 镜像。</p>
+</blockquote>
+<h2 id="确定方案">确定方案</h2>
+<p>构建这种东西，首先必要的就是Linux，如果我的主力机是Windows那么则为<a
+target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/install">WSL</a>。但考虑到要拉取的东西实在有点多，梯子也吃不消，我也不想把我的电脑搞得乱七八糟，因此直接走<code>Github Action</code>就成为了我的首选。<br></p>
+<p>但Github的缺点也很明显，构建内核这种事情很难说一次成功，期间多少会遇到报错，你要查日志啥的还是挺麻烦的。</p>
+<h3 id="准备工作">准备工作</h3>
+<ul>
+<li>已解锁BL的手机</li>
+<li>内核源码，因为笔者系统是LineageOS，在github上可以轻松找到</li>
+<li>一个好心态</li>
+</ul>
+<h2 id="开始">开始</h2>
+<p>我这个LineageOS比较老了，如上图所示，内核版本只有4.19，这个内核版本其实非常危险，太几把老了。<br>我也是后来在网上搜索才知道<code>SukiSU</code>貌似不支持这个内核版本，至少在我看来，即便<a
+target="_blank" rel="noopener" href="https://github.com/SukiSU-Ultra/SukiSU-Ultra/blob/main/docs/zh/README.md">README.md</a>写了兼容4.14+(需自己编译)，但是以我折腾的结果来看，其困难程度是非常大的，<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">单靠Github Action非常困难。</span></span>因此不考虑<code>SukiSU</code>，整了也肯定会报错的<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-box spoiler-1ffd9">别问我怎么知道的</span></span>。<br></p>
+<p>接下来就要把目光转向KernelSu，好在其生态已非常丰富，在搜索引擎随便一搜就能找到不少现成的工作流。这里简单列出来我试过的几个。</p>
+<p><a target="_blank" href="https://github.com/xiaoleGun/KernelSU_action" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github
+- /xiaoleGun/KernelSU_action</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/xiaoleGun/KernelSU_action</span></span></span></a></p>
+<p><br></p>
+<p><a target="_blank" href="https://github.com/Numbersf/Action-Build" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github
+- /Numbersf/Action-Build</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/Numbersf/Action-Build</span></span></span></a></p>
+<p><br></p>
+<p>好吧，原本我试过好几个，但其实有价值的就这个两个，还有些Fork完试了一下就删了。我使用的设备树是LineageOS的开源成品，<a
+target="_blank" rel="noopener" href="https://github.com/LineageOS/android_kernel_xiaomi_earth">android_kernel_xiaomi_earth</a>同理，你也应该去找一下自己的内核源码。
+<br> 接着，将目光转到Action，我们需要来配置一下Action。</p>
+<h2 id="配置github-workflow">配置Github Workflow</h2>
+<p>本次演示以xiaoleGun的<a
+target="_blank" rel="noopener" href="https://github.com/xiaoleGun/KernelSU_action">KernelSU_action</a>为例。首先fork仓库，然后编辑这个环境变量文件。</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/action_repo.webp" alt="env" />
+<figcaption aria-hidden="true">env</figcaption>
+</figure>
+<p><br></p>
+<p>打开内容如下，我简单打一下注释，其核心需要修改的部分就那几个。<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">其他的我也不懂</span></span></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"># Lime</span><br><span class="line">CONFIG_ENV=config.env</span><br><span class="line"></span><br><span class="line"># 设备内核源码</span><br><span class="line">KERNEL_SOURCE=https://github.com/LimeBlogs/android_kernel_xiaomi_earth</span><br><span class="line"># 内核源码仓库分支</span><br><span class="line">KERNEL_SOURCE_BRANCH=lineage-21</span><br><span class="line"># 内核配置文件，一般是`$&#123;设备代号&#125;`_defconfig</span><br><span class="line">## 在设备内核/arch/arm64/configs查看</span><br><span class="line">KERNEL_CONFIG=earth_defconfig</span><br><span class="line"># 输出内核的压缩算法</span><br><span class="line">## 对于我设备而言 可选 Image Image.bz2 Image.gz Image.lz4 Image.lzma Image.lzo</span><br><span class="line">KERNEL_IMAGE_NAME=Image.gz</span><br><span class="line">ARCH=arm64</span><br><span class="line">ADD_LOCALVERSION_TO_FILENAME=false</span><br><span class="line">EXTRA_CMDS:LLVM=1 LLVM_IAS=1</span><br><span class="line"></span><br><span class="line"># Clang</span><br><span class="line">## Custom</span><br><span class="line">USE_CUSTOM_CLANG=false</span><br><span class="line">CUSTOM_CLANG_SOURCE=</span><br><span class="line">CUSTOM_CLANG_BRANCH=</span><br><span class="line"></span><br><span class="line">### if your set USE CUSTOM CLANG to false than DO NOT CHANGE CUSTOM CMDS</span><br><span class="line">CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu-</span><br><span class="line"></span><br><span class="line">## AOSP</span><br><span class="line">CLANG_BRANCH=master-kernel-build-2022</span><br><span class="line">CLANG_VERSION=r450784e</span><br><span class="line"></span><br><span class="line"># GCC</span><br><span class="line">ENABLE_GCC_ARM64=true</span><br><span class="line">ENABLE_GCC_ARM32=true</span><br><span class="line">USE_CUSTOM_GCC_64=false</span><br><span class="line">CUSTOM_GCC_64_SOURCE=</span><br><span class="line">CUSTOM_GCC_64_BRANCH=</span><br><span class="line">CUSTOM_GCC_64_BIN=aarch64-linux-android-</span><br><span class="line">USE_CUSTOM_GCC_32=false</span><br><span class="line">CUSTOM_GCC_32_SOURCE=</span><br><span class="line">CUSTOM_GCC_32_BRANCH=</span><br><span class="line">CUSTOM_GCC_32_BIN=arm-linux-androideabi-</span><br><span class="line"></span><br><span class="line"># KernelSU flags</span><br><span class="line">## 是否启用KernelSU</span><br><span class="line">ENABLE_KERNELSU=true</span><br><span class="line">KERNELSU_TAG=v0.9.5</span><br><span class="line">KSU_EXPECTED_SIZE=</span><br><span class="line">KSU_EXPECTED_HASH=</span><br><span class="line"></span><br><span class="line"># Configuration</span><br><span class="line">## 是否关闭`关闭链接时优化`</span><br><span class="line">DISABLE-LTO=true</span><br><span class="line">## 是否禁用`警告视为错误`</span><br><span class="line">DISABLE_CC_WERROR=true</span><br><span class="line">## 自动注入 Kprobes 配置</span><br><span class="line">ADD_KPROBES_CONFIG=true</span><br><span class="line">## 自动注入 OverlayFS 配置</span><br><span class="line">ADD_OVERLAYFS_CONFIG=true</span><br><span class="line">## 是否应用 KernelSU 源码补丁</span><br><span class="line">### 适用于老版本内核4.9&lt;= 推荐打开</span><br><span class="line">APPLY_KSU_PATCH=true</span><br><span class="line">REMOVE_UNUSED_PACKAGES=true</span><br><span class="line"></span><br><span class="line"># AnyKernel3</span><br><span class="line">## AnyKernel3 Custom</span><br><span class="line">USE_CUSTOM_ANYKERNEL3=false</span><br><span class="line">CUSTOM_ANYKERNEL3_SOURCE=</span><br><span class="line">CUSTOM_ANYKERNEL3_BRANCH=</span><br><span class="line"></span><br><span class="line"># Ccache</span><br><span class="line">ENABLE_CCACHE=true</span><br><span class="line"></span><br><span class="line"># DTBO image</span><br><span class="line">NEED_DTBO=false</span><br><span class="line"></span><br><span class="line"># Build boot images</span><br><span class="line">## 是否输出Boot镜像</span><br><span class="line">BUILD_BOOT_IMG=false</span><br><span class="line">## 原Room的Boot链接</span><br><span class="line">SOURCE_BOOT_IMAGE=https://raw.githubusercontent.com/LimeBlogs/KernelSU_action/main/boot/boot(2).img</span><br></pre></td></tr></table></figure>
+<p>首先来说说<code>KERNEL_IMAGE_NAME</code>咋填，可以在<code>$&#123;内核源码&#125;/arch/arm64/Makefile里</code>。</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># arch/arm64/boot/Makefile</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This file is included by the global makefile so that you can add your own</span></span><br><span class="line"><span class="comment"># architecture-specific flags and dependencies.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This file is subject to the terms and conditions of the GNU General Public</span></span><br><span class="line"><span class="comment"># License.  See the file &quot;COPYING&quot; in the main directory of this archive</span></span><br><span class="line"><span class="comment"># for more details.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Copyright (C) 2012, ARM Ltd.</span></span><br><span class="line"><span class="comment"># Author: Will Deacon &lt;will.deacon@arm.com&gt;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Based on the ia64 boot/Makefile.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line">OBJCOPYFLAGS_Image :=-O binary -R .note -R .note.gnu.build-id -R .comment -S</span><br><span class="line"></span><br><span class="line">targets := Image Image.bz2 Image.gz Image.lz4 Image.lzma Image.lzo    <span class="comment"># 这里是支持的格式，推荐Image.gz</span></span><br><span class="line"></span><br><span class="line">DTB_NAMES := <span class="variable">$(<span class="built_in">subst</span> $\<span class="string">&quot;,,<span class="variable">$(CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">ifneq (<span class="variable">$(DTB_NAMES)</span>,)</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST := $(addsuffix .dtb,<span class="variable">$(DTB_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">else</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST := $(dtb-y)</span></span></span><br><span class="line"><span class="string"><span class="variable">endif</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">DTBO_NAMES := $(subst $\&quot;,,<span class="variable">$(CONFIG_BUILD_ARM64_DTB_OVERLAY_IMAGE_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">ifneq (<span class="variable">$(DTBO_NAMES)</span>,)</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST += $(addsuffix .dtbo,<span class="variable">$(DTBO_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">endif</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_OBJS := $(addprefix <span class="variable">$(obj)</span>/dts/,<span class="variable">$(DTB_LIST)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">targets += <span class="variable">$(DTB_LIST)</span></span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image: vmlinux FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,objcopy)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.bz2: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,bzip2)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image-dtb: <span class="variable">$(obj)</span>/Image <span class="variable">$(DTB_OBJS)</span> FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,cat)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.gz: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,gzip)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lz4: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lz4)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lzma: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lzma)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lzo: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lzo)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.gz-dtb: <span class="variable">$(obj)</span>/Image.gz <span class="variable">$(DTB_OBJS)</span> FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,cat)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">install:</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(CONFIG_SHELL)</span> <span class="variable">$(srctree)</span>/<span class="variable">$(src)</span>/install.sh <span class="variable">$(KERNELRELEASE)</span> \</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(obj)</span>/Image System.map &quot;</span><span class="variable">$(INSTALL_PATH)</span><span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">zinstall:</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(CONFIG_SHELL)</span> <span class="variable">$(srctree)</span>/<span class="variable">$(src)</span>/install.sh <span class="variable">$(KERNELRELEASE)</span> \</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(obj)</span>/Image.gz System.map &quot;</span><span class="variable">$(INSTALL_PATH)</span><span class="string">&quot;</span></span></span><br></pre></td></tr></table></figure>
+<p>我这里以<code>Image.gz</code>为例，接着，则是内核方面，去<code>$&#123;内核源码&#125;/Makefile</code>，可以在顶部看到以下内容。</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># SPDX-License-Identifier: GPL-2.0</span></span><br><span class="line">VERSION = 4</span><br><span class="line">PATCHLEVEL = 19</span><br><span class="line">SUBLEVEL = 325</span><br><span class="line">EXTRAVERSION =</span><br><span class="line">NAME = <span class="string">&quot;People&#x27;s Front&quot;</span></span><br></pre></td></tr></table></figure>
+<p>将这里一大堆拼起来就是<code>4.19.325</code>，在选择内核源码时尽量选择与自己所使用系统相符合的。按照注释填写完该填的，我们就可以开始构建啦！</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/run_workflow.webp" alt="运行工作流" />
+<figcaption aria-hidden="true">运行工作流</figcaption>
+</figure>
+<p><br></p>
+<p>期间可能会出现<strong>报错</strong>，<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">很大概率会出现</span></span>，这种情况一般只能依靠自己的
+<del><strong>互联网搜索能力</strong>与<strong>LLM的使用能力了</strong>。</del>
+<br> 等待构建完毕。。。。</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/im_waitng_for_u.webp" alt="运行中" />
+<figcaption aria-hidden="true">运行中</figcaption>
+</figure>
+<p><br></p>
+<h2 id="插播一条消息">插播一条消息</h2>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/fku.webp" alt="额" />
+<figcaption aria-hidden="true">额</figcaption>
+</figure>
+<p>在构建了十几次依旧报错无法解决后，我心灰意冷，本来不报任何希望。接着我就在搜索引擎搜索，万一，我是说万一，<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">万一真的有前人构建过了呢？</span></span></p>
+<p><br></p>
+<p>果不其然，还真是。</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/wtf.webp" alt="我去不早说" />
+<figcaption aria-hidden="true">我去不早说</figcaption>
+</figure>
+<p><br></p>
+<p>我看到<a
+target="_blank" rel="noopener" href="https://github.com/Oscar1640/android_kernel_xiaomi_earth/releases/tag/Earth-v1.0">Release</a>的时候人都傻了，我千辛万苦挖报错，问AI，一天几十次在Action发呆。结果已经有成品了？这是个悲伤的故事，我们在做任何事前都要提前在网上找好资料。。万一有成品就不用重复造轮子了。这个是给KernelSU-Next做的适配，<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">我是Lime，这个内核非常正常稳定，还是支持susfs的。。。</span></span>不过这个作者使用的内核源码与我相同，只有分支不一样，我只需要稍微参考一下就知道自己到底输在哪。</p>
+<p><br></p>
+<h2 id="为非-gki-内核集成-kernelsu">为非 GKI 内核集成 KernelSU</h2>
+<blockquote>
+<p>参照<a
+target="_blank" rel="noopener" href="https://kernelsu.org/zh_CN/guide/how-to-integrate-for-non-gki.html">KSU官方文档</a></p>
+</blockquote>
+<p>做完这些，应该直接编译就能通了。如果你运气够好，依照上面的方法应该可以编译出一个内核，我手头上没有Linux，因此无法尝试，有时间我再继续更新这文章。
+<br>
+按理来说Action应该是支持这些步骤的，但我不知道为什么没生效。参照上一位成品大大的成品内核仓库，应该是提前对内核进行了集成再构建的，<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">再次提到我没有Linux。</span></span>其中涉及到Clang，对于一个不会C的人来说只让AI辅助也很麻烦了。那么这篇文章就先到这里吧，笔者要去休息了。。。</p>
+<h2 id="编译之后刷入">编译之后刷入</h2>
+<h3 id="使用第三方recak3刷机包">使用第三方Rec+AK3刷机包</h3>
+<p>将构建出的成品直接刷入即可，我在这个设备上试过，并没软用，可以尝试下面的的方法。</p>
+<h3 id="重新打包boot.img">重新打包boot.img</h3>
+<p>首先我们在配置文件里设置的Image.gz其实是Boot中Kernel的镜像，准备好你<strong>ROM</strong>的Boot，然后下载<a
+target="_blank" rel="noopener" href="https://github.com/svoboda18/magiskboot">Magiskboot</a>，将你的<code>原厂Boot</code>与<code>MagiskBoot.exe</code>放在一个文件夹。</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/magiskboot_1.webp" alt="如图所示" />
+<figcaption aria-hidden="true">如图所示</figcaption>
+</figure>
+<p><br></p>
+<p>然后，在此处打开Powershell/CMD，运行以下命令。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./magiskboot unpack boot.img</span><br></pre></td></tr></table></figure>
+<p>运行之后会出来一大堆文件，其中<code>kernel</code>就是我们需要替换的文件。</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/magiskboot_2.webp" alt="如图所示" />
+<figcaption aria-hidden="true">如图所示</figcaption>
+</figure>
+<p><br></p>
+<p>我们将自己拿到的Image.gz或别的啥玩意解压，打开应该能看到一个独立的<code>Image</code>，解压出来，将其重命名为<code>kernel</code>，替换这个解包出来的kernel。</p>
+<p><br></p>
+<p>再使用MagiskBoot打包回去，</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./magiskboot repack boot.img</span><br></pre></td></tr></table></figure>
+<p>注意，原厂的boot不用删，继续放那即可，文件夹会出现一个新的<code>new-boot.img</code>镜像，这就是我们需要的boot，直接使用fastboot刷入即可。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot flash boot new-boot.img</span><br></pre></td></tr></table></figure>
+<p>重启之后应该就能看到生效了。</p>
+<p><br></p>
+<figure>
+<img src= "/img/loading.svg" data-lazy-src="/LimePan/SukiSU/ksun.webp" alt="KernelSU-Next截图" />
+<figcaption aria-hidden="true">KernelSU-Next截图</figcaption>
+</figure>
+<p><br></p>
+<h2 id="结语">结语</h2>
+<p>我不知道为什么就我这样，查阅了不少视频和资料为什么其他人都能一遍过，到我这就不行了。这篇文章没啥价值，感觉太水了有点，幸运的是我至少达成了我的目标，感谢<a
+target="_blank" rel="noopener" href="https://github.com/Oscar1640">Oscar1640</a>！没有你的成品内核我连Wise都进不去。</p>
+<blockquote>
+<p>额，我到底在干嘛。。</p>
+</blockquote>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css"></article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src= "/img/loading.svg" data-lazy-src="/logo.jpeg"></a><div class="post-copyright__author_name">莱姆Lime</div><div class="post-copyright__author_desc">聚是火簇，散作繁星。</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="social-share"><a class="social-share-ico icon-telegram" target="_blank" rel="noopener" href="https://t.me/share/url?url=https%3A%2F%2FSudachi.top%2F2026%2F07%2F13%2Fsukisu-build%2F&amp;text=%E4%B8%80%E6%AC%A1KernelSU%2FSukiSU%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95" title="分享到Telegram"><i class="solitude fab fa-telegram"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://Sudachi.top/2026/07/13/sukisu-build/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://Sudachi.top/2026/07/13/sukisu-build/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://Sudachi.top/2026/07/13/sukisu-build/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">莱姆Lime</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>教程<span class="tagsPageCount">4</span></span></a><a class="post-meta__tags" href="/tags/%E5%AE%89%E5%8D%93/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>安卓<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E6%8C%87%E5%8D%97/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>指南<span class="tagsPageCount">5</span></span></a><a class="post-meta__tags" href="/tags/root/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>Root<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/%E5%88%B7%E6%9C%BA/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>刷机<span class="tagsPageCount">1</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2026/02/06/galgameandroid/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">安卓如何使用Tyranor游玩Galgame</div></div></a></div></nav>
+        <div class="relatedPosts">
+            <div class="headline">
+                <i class="solitude fas fa-star"></i>
+                <span>喜欢这篇的人也看了</span>
+                <div class="relatedPosts-link">
+                    <a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a>
+                </div>
+            </div>
+            <div class="relatedPosts-list">
+            <div>
+                <a href="/2026/02/06/galgameandroid/" title="安卓如何使用Tyranor游玩Galgame">
+                    <img class="cover" src= "/img/loading.svg" data-lazy-src="/LimePan/androidGalgame/cover.webp" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">安卓如何使用Tyranor游玩Galgame</div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="/2025/07/12/sillytavern/" title="SillyTavern酒馆部署教程">
+                    <img class="cover" src= "/img/loading.svg" data-lazy-src="/LimePan/SillyTavern.webp" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">SillyTavern酒馆部署教程</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span></div></div><div class="comment-wrap"><div id="giscus-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/logo.jpeg"></div><div class="description">LimeOnTop</div><div class="bottom-group"><span class="left"><div class="name">Lime</div><div class="desc">聚是火簇，散作繁星。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/LimeBlogs" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://www.instagram.com/lime0ntop" title="Instagram"><i class="solitude  fab fa-instagram"></i></a></div></div></div></div><div class="card-widget card-digit-clock" id="card-digit-clock"><div class="item-headline"><i></i><span></span></div><div class="item-content"><script defer async pjax src='/js/custom/digit-clock.js'></script></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8kernelsusukisu"><span class="toc-text">为什么要用KernelSU&#x2F;SukiSU?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%B3%E5%B0%BC%E6%88%91%E7%9A%84%E8%AE%BE%E5%A4%87%E4%B8%8D%E6%94%AF%E6%8C%81"><span class="toc-text">纳尼？我的设备不支持？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E6%96%B9%E6%A1%88"><span class="toc-text">确定方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-text">开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEgithub-workflow"><span class="toc-text">配置Github Workflow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E6%92%AD%E4%B8%80%E6%9D%A1%E6%B6%88%E6%81%AF"><span class="toc-text">插播一条消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E9%9D%9E-gki-%E5%86%85%E6%A0%B8%E9%9B%86%E6%88%90-kernelsu"><span class="toc-text">为非 GKI 内核集成 KernelSU</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E4%B9%8B%E5%90%8E%E5%88%B7%E5%85%A5"><span class="toc-text">编译之后刷入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9recak3%E5%88%B7%E6%9C%BA%E5%8C%85"><span class="toc-text">使用第三方Rec+AK3刷机包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%89%93%E5%8C%85boot.img"><span class="toc-text">重新打包boot.img</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2026/07/13/sukisu-build/" title="一次KernelSU/SukiSU折腾记录"><div class="thumbnail"><img alt="一次KernelSU/SukiSU折腾记录" src="/LimePan/SukiSU/cover.webp"></div><div class="content"><span class="title" href="/2026/07/13/sukisu-build/" title="一次KernelSU/SukiSU折腾记录">一次KernelSU/SukiSU折腾记录</span><span class="categories" href="/2026/07/13/sukisu-build/">教程</span></div></a><a class="aside-list-item" href="/2026/02/06/galgameandroid/" title="安卓如何使用Tyranor游玩Galgame"><div class="thumbnail"><img alt="安卓如何使用Tyranor游玩Galgame" src="/LimePan/androidGalgame/cover.webp"></div><div class="content"><span class="title" href="/2026/02/06/galgameandroid/" title="安卓如何使用Tyranor游玩Galgame">安卓如何使用Tyranor游玩Galgame</span><span class="categories" href="/2026/02/06/galgameandroid/">教程</span></div></a><a class="aside-list-item" href="/2026/01/24/mooc-java/" title="我的TMC Java笔记"><div class="thumbnail"><img alt="我的TMC Java笔记" src="/LimePan/MOOCJAVA/java-bg.webp"></div><div class="content"><span class="title" href="/2026/01/24/mooc-java/" title="我的TMC Java笔记">我的TMC Java笔记</span><span class="categories" href="/2026/01/24/mooc-java/">教程</span></div></a><a class="aside-list-item" href="/2025/07/12/sillytavern/" title="SillyTavern酒馆部署教程"><div class="thumbnail"><img alt="SillyTavern酒馆部署教程" src="/LimePan/SillyTavern.webp"></div><div class="content"><span class="title" href="/2025/07/12/sillytavern/" title="SillyTavern酒馆部署教程">SillyTavern酒馆部署教程</span><span class="categories" href="/2025/07/12/sillytavern/">教程</span></div></a><a class="aside-list-item" href="/2025/05/20/phira/" title="【入坑指南】Phira完整入坑指南！"><div class="thumbnail"><img alt="【入坑指南】Phira完整入坑指南！" src="/LimePan/Phira/cover.webp"></div><div class="content"><span class="title" href="/2025/05/20/phira/" title="【入坑指南】Phira完整入坑指南！">【入坑指南】Phira完整入坑指南！</span><span class="categories" href="/2025/05/20/phira/">教程</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><img class="solitude nolazyload" src="/LimePan/logo.svg"></div><div class="footer-bar-description">Articles from Lime. / 文章来自Lime</div><a class="footer-bar-link" href="/"></a></div><div id="footer_deal"><a class="deal_link" href="mailto:LimeOnTop@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://t.me/l1me0n7op" title="Telegram"><i class="solitude  fab fa-telegram"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "/img/loading.svg" data-lazy-src="/logo.jpeg" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/LimeBlogs" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://x.com/l1me0n7op" title="X"><i class="solitude  fab fa-x-twitter"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/tags/" title="标签">标签</a><a class="footer-item" href="/2025/01/15/LAB/" title="实验室">实验室</a><a class="footer-item" href="/2025/01/15/updatelog/" title="更新日志">更新日志</a><a class="footer-item" href="/privacy/" title="隐私政策">隐私政策</a></div></div><div class="footer-group"><h3 class="footer-title">我的Fork</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/ubc2/" title="ubc2">ubc2</a><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/Echo-Loop/" title="Echo-Loop">Echo-Loop</a><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/tang-love/" title="汤汤好梦">汤汤好梦</a><a class="footer-item" target="_blank" rel="noopener" href="https://limeblogs.github.io/mikutap/" title="Mikutap">Mikutap</a></div></div><div class="footer-group"><h3 class="footer-title">Github</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/LimeBlogs/LimeBlogs.github.io/" title="LimeBlogs">LimeBlogs</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/LimeBlogs/Lime-Hexo/" title="源代码">源代码</a></div></div><div class="footer-group"><h3 class="footer-title">友情链接</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://blog.qjqq.cn/" title="青桔气球">青桔气球</a><a class="footer-item" target="_blank" rel="noopener" href="https://blog.zhheo.com/" title="张洪Heo">张洪Heo</a><a class="footer-item" href="/links" title="更多">更多</a></div></div><div class="footer-group"><h3 class="footer-title">联系我</h3><div class="footer-links"><a class="footer-item" href="mailto:LimeOnTop@outlook.com" title="通过邮箱">通过邮箱</a><a class="footer-item" target="_blank" rel="noopener" href="https://x.com/Lime0nT0p/" title="通过X">通过X</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/LimeBlogs" title="通过Github">通过Github</a><a class="footer-item" target="_blank" rel="noopener" href="https://t.me/l1me0n7op" title="通过Telegram">通过Telegram</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 - 2026 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "/img/loading.svg" data-lazy-src="/logo.jpeg">Lime</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20257899#/query/webSearch" title="萌ICP备20257899号"><img class="beian-icon" src= "/img/loading.svg" data-lazy-src="https://icp.gov.moe/images/ico64.png" alt="萌ICP备20257899号"><span class="beian-name">萌ICP备20257899号</span></a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://www.travellings.cn/"><img class="beian-icon" src= "/img/loading.svg" data-lazy-src="https://www.travellings.cn/assets/b.png"><span class="beian-name"></span></a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/">Powered by Hexo</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/2025/01/15/updatelog/" alt="ver.beta3">ver.beta3</a></div></div></div></footer></div><!-- right_menu--><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" onclick="pjax.loadUrl('/categories/')||rm.hideRightMenu()"><i class="solitude fas fa-clone"></i><span>全部分类</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude fas fa-tags"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">浅色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><!-- inject body--><div><script src="https://fastly.jsdelivr.net/npm/hexo-theme-solitude@3.0.19/source/js/utils.min.js"></script><script src="https://fastly.jsdelivr.net/npm/hexo-theme-solitude@3.0.19/source/js/main.min.js"></script><script src="https://fastly.jsdelivr.net/npm/hexo-theme-solitude@3.0.19/source/js/third_party/waterfall.min.js"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="https://fastly.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/hexo-theme-solitude@3.0.19/source/js/tw_cn.min.js"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting-api-omega.vercel.app/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><script src="https://fastly.jsdelivr.net/npm/hexo-theme-solitude@3.0.19/source/js/right_menu.min.js"></script><script src="/LimePan/chinese-lunar.js"></script><script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js" type="application/javascript"></script><script src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><div class="js-pjax"><script>(()=>{
+    const getGiscusTheme = theme => {
+        return theme === 'dark' ? 'dark_protanopia' : 'light_protanopia'
+    }
+
+    const loadGiscus = () => {
+        const config = Object.assign({
+            src: 'https://giscus.app/client.js',
+            'data-repo': 'LimeBlogs/LimeBlogs-Comments',
+            'data-repo-id': 'R_kgDOODHi4g',
+            'data-category-id': 'DIC_kwDOODHi4s4Cnjm0',
+            'data-mapping': 'pathname',
+            'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+            'data-reactions-enabled': '1',
+            crossorigin: 'anonymous',
+            async: true
+        },null)
+
+        const ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').appendChild(ele)
+    }
+
+    const changeGiscusTheme = theme => {
+        const sendMessage = message => {
+            const iframe = document.querySelector('iframe.giscus-frame')
+            if (!iframe) return
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+        }
+
+        sendMessage({
+            setConfig: {
+                theme: getGiscusTheme(theme)
+            }
+        });
+    }
+
+    utils.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+    if ('Giscus' === 'Giscus' || !true) {
+        if (true) {
+            const giscusWrap = document.getElementById('giscus-wrap')
+            if (giscusWrap) {
+                utils.loadComment(giscusWrap, loadGiscus)
+            }
+        } else {
+            loadGiscus()
+        }
+    } else {
+        window.loadTwoComment = loadGiscus
+    }
+})()</script><script defer pjax src="https://fastly.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: true,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="document.querySelectorAll('.google-ads-warp').forEach(i =&gt; i.style.display='none')"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+	google_ad_client: 'ca-pub-8381739813295423',
+	enable_page_level_ads: true,
+});</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fas fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="https://fastly.jsdelivr.net/npm/hexo-theme-solitude@3.0.19/source/js/search/local.min.js"></script><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">音乐已暂停</div><meting-js id="13654548018" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2026/07/13/sukisu-build/","2026/02/06/galgameandroid/","2026/01/24/mooc-java/","2025/07/12/sillytavern/","2025/05/20/phira/","2025/02/16/lime-fork/","2025/01/27/mc-launcher/","2025/01/21/customcss/","2025/01/15/lab/","2025/01/15/updatelog/","2025/01/13/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>

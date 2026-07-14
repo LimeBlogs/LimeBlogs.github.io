@@ -11,7 +11,26 @@
   <rights>All rights reserved 2026, Lime</rights>
   <subtitle>聚是火簇，散作繁星。</subtitle>
   <title>莱姆Lime</title>
-  <updated>2026-02-08T14:53:30.444Z</updated>
+  <updated>2026-07-14T05:25:56.842Z</updated>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="安卓" scheme="https://sudachi.top/tags/%E5%AE%89%E5%8D%93/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
+    <category term="Root" scheme="https://sudachi.top/tags/root/"/>
+    <category term="刷机" scheme="https://sudachi.top/tags/%E5%88%B7%E6%9C%BA/"/>
+    <id>https://sudachi.top/2026/07/13/sukisu-build/</id>
+    <link href="https://sudachi.top/2026/07/13/sukisu-build/"/>
+    <published>2026-07-13T06:45:27.000Z</published>
+    <summary>
+      <![CDATA[<h2]]>
+    </summary>
+    <title>一次KernelSU/SukiSU折腾记录</title>
+    <updated>2026-07-14T05:25:56.842Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Lime</name>
@@ -146,7 +165,7 @@
     <published>2025-01-15T14:06:35.000Z</published>
     <summary>Hexo魔改折腾记录，内含LimeBlogs的许多插件的使用方法</summary>
     <title>LAB</title>
-    <updated>2026-04-04T04:29:31.888Z</updated>
+    <updated>2026-07-13T12:05:03.598Z</updated>
   </entry>
   <entry>
     <author>

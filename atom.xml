@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, Lime</rights>
   <subtitle>聚是火簇，散作繁星。</subtitle>
   <title>莱姆Lime</title>
-  <updated>2026-07-14T05:31:31.411Z</updated>
+  <updated>2026-07-18T12:00:52.025Z</updated>
   <entry>
     <author>
       <name>Lime</name>
@@ -25,11 +25,9 @@
     <id>https://sudachi.top/2026/07/13/sukisu-build/</id>
     <link href="https://sudachi.top/2026/07/13/sukisu-build/"/>
     <published>2026-07-13T06:45:27.000Z</published>
-    <summary>
-      <![CDATA[<h2]]>
-    </summary>
+    <summary>这是一次围绕构建KernelSU官方不适配的设备内核而展开的折腾，其内富含许多经验与教训。</summary>
     <title>一次KernelSU/SukiSU折腾记录</title>
-    <updated>2026-07-14T05:31:31.411Z</updated>
+    <updated>2026-07-18T12:00:52.025Z</updated>
   </entry>
   <entry>
     <author>

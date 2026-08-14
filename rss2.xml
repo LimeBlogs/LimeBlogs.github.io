@@ -6,7 +6,7 @@
     <description>聚是火簇，散作繁星。</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, Lime</copyright>
-    <lastBuildDate>Sat, 18 Jul 2026 12:00:52 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 13:34:10 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://sudachi.top/icon.png</url>
@@ -14,6 +14,20 @@
       <link>https://sudachi.top/</link>
     </image>
     <atom:link href="https://sudachi.top/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>DeepSeek Harness指导</title>
+      <link>https://sudachi.top/2026/08/14/dsh-guide/</link>
+      <description>
+        <![CDATA[<h2 id="介绍">介绍</h2>
+<p>详细你已经听国内媒体吹的差不了，我也懒得介绍，反正就是个Harness，DeepSeek官方的Harness，DeeSeek]]>
+      </description>
+      <author>Lime</author>
+      <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/%E6%8C%87%E5%8D%97/">指南</category>
+      <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/%E6%8C%87%E5%8D%97/ai/">AI</category>
+      <category domain="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/">教程</category>
+      <pubDate>Fri, 14 Aug 2026 12:48:38 GMT</pubDate>
+    </item>
     <item>
       <title>一次KernelSU/SukiSU折腾记录</title>
       <link>https://sudachi.top/2026/07/13/sukisu-build/</link>
@@ -155,10 +169,10 @@
       </description>
       <author>Lime</author>
       <category domain="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/">入门</category>
       <category domain="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/">博客</category>
       <category domain="https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/">建站</category>
       <category domain="https://sudachi.top/tags/hexo/">Hexo</category>
+      <category domain="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/">入门</category>
       <category domain="https://sudachi.top/tags/github/">Github</category>
       <pubDate>Mon, 13 Jan 2025 14:06:35 GMT</pubDate>
     </item>

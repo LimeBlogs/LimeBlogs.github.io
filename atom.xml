@@ -11,7 +11,25 @@
   <rights>All rights reserved 2026, Lime</rights>
   <subtitle>聚是火簇，散作繁星。</subtitle>
   <title>莱姆Lime</title>
-  <updated>2026-07-18T12:00:52.025Z</updated>
+  <updated>2026-08-14T13:34:10.221Z</updated>
+  <entry>
+    <author>
+      <name>Lime</name>
+    </author>
+    <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="指南" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/%E6%8C%87%E5%8D%97/"/>
+    <category term="AI" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/%E6%8C%87%E5%8D%97/ai/"/>
+    <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <id>https://sudachi.top/2026/08/14/dsh-guide/</id>
+    <link href="https://sudachi.top/2026/08/14/dsh-guide/"/>
+    <published>2026-08-14T12:48:38.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="介绍">介绍</h2>
+<p>详细你已经听国内媒体吹的差不了，我也懒得介绍，反正就是个Harness，DeepSeek官方的Harness，DeeSeek]]>
+    </summary>
+    <title>DeepSeek Harness指导</title>
+    <updated>2026-08-14T13:34:10.221Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Lime</name>
@@ -188,10 +206,10 @@
       <name>Lime</name>
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="博客" scheme="https://sudachi.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="建站" scheme="https://sudachi.top/tags/%E5%BB%BA%E7%AB%99/"/>
     <category term="Hexo" scheme="https://sudachi.top/tags/hexo/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <id>https://sudachi.top/2025/01/13/hello-world/</id>
     <link href="https://sudachi.top/2025/01/13/hello-world/"/>

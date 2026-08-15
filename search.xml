@@ -41,35 +41,46 @@
 <p><img src="/LimePan/dsh/msi-install.png" alt="安装"><br></p>
 <p>这样就安装好了，理论上还有个验证部分，但如果中途不报错其实是很难出问题的啦。</p>
 <h3 id="配置镜像源">配置镜像源</h3>
+<blockquote>
+<p>国内用nodejs的基操了，不管你有没有魔法，都建议配置镜像源。</p>
+</blockquote>
 <p>大陆直接用nodejs官方源速度有点一坨，因此在安装完毕后推荐配置镜像源，不然没魔法的情况下有你受的。<br>安装完毕后，右键Windows徽标，选择Powershell(管理员)</p>
 <p><img src="/LimePan/dsh/npmmirror.png" alt="安装"><br></p>
 <p>打开终端界面后，输入以下命令来换源</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
 <p>输入后回车，没有输出任何内容视作成功。</p>
 <h2 id="安装">安装</h2>
-<p>官网是推荐使用以下方式，即使用npx安装和启动。</p>
+<blockquote>
+<p>官网是推荐使用以下方式，即使用npx安装和启动。本篇只推荐使用npm全局安装。</p>
+</blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx @deepseek-ai/dsh web</span><br></pre></td></tr></table></figure>
 <p>我个人其实是不喜欢这样，每次都启动都需要在终端输入这么一大坨，实在是。<br>建议如果有长期使用打算的用户使用以下命令安装。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g @deepseek-ai/dsh</span><br></pre></td></tr></table></figure>
 <p>直接使用npm全局安装，这样以后只需要在终端输入<code>dsh web</code>即可启动。<br>不出意外，接下来输入dsh web应该就能顺利启动了。</p>
 <h2 id="Skills与MCP">Skills与MCP</h2>
+<blockquote>
+<p>这两个东西的配置并不难，Skill建议使用npx命令安装，MCP建议让AI配，当然部分Skill也是要手动创建和克隆的。</p>
+</blockquote>
 <h3 id="Skills">Skills</h3>
 <p>默认存放的Skills在<ruby><code>~/.agents/skills</code><rt>指的是用户/用户名</rt></ruby>目录，只需要按需拖入相关文件即可在dsh使用。<br>没有的话只需要自己创建一个。当然，很多的skills也可以使用<code>npx skills</code>命令来安装，一般README.md内都会有写。<br>使用<code>/</code>+<code>Skill名称</code>即可调用。</p>
 <h3 id="MCP">MCP</h3>
 <p>这东西建议让AI给你配，毕竟都配置好了那不用岂不是有些浪费？<br>当然，个人觉得deepseek不太会配这个东西，所以我写了个Skill(dsh-mcp-install)，用于方便AI安装与配置MCP Server。</p>
 <p><a target="_blank" href="https://github.com/LimeBlogs/dsh-mcp-install" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span class="LinkCard-contents"><span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/dsh-mcp-install</span><span style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/LimeBlogs/dsh-mcp-install</span></span></span></a></p>
-<p><a href="http://xn--SKILL-bi1hu46a161i8ilmjs.md">只需要下载SKILL.md</a>，然后在Skills目录新建文件夹<code>dsh-mcp-install</code>，然后把SKILL.md放入即可使用。</p>
+<p>只需要下载<code>SKILL.md</code>，然后在Skills目录新建文件夹<code>dsh-mcp-install</code>，然后把SKILL.md放入即可使用。</p>
 <h2 id="插件安装">插件安装</h2>
-<p>视频内提到，绝大多数插件只需要输入一条命令安装，这里也简单提一下，一般项目README都有写安装步骤。<br>以<a href="https://github.com/openma-ai/deepseek-harness-tui">DeepSeek Harness TUI</a>为例。这是个可以</p>
+<p>视频内提到，绝大多数插件只需要输入一条命令安装，这里也简单提一下，一般项目README都有写安装步骤。<br>以<a href="https://github.com/openma-ai/deepseek-harness-tui">DeepSeek Harness TUI</a>为例。这是个可以把dsh搞得和cc一样，也就是终端界面的插件。</p>
 <p><a target="_blank" href="https://github.com/openma-ai/deepseek-harness-tui" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span class="LinkCard-contents"><span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/deepseek-harness-tui</span><span style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/openma-ai/deepseek-harness-tui</span></span></span></a></p>
-<p><a href="http://xn--README-hz8lt03a.md">根据README.md</a>，只需要在终端输入</p>
+<p>根据<code>README.md</code>，只需要在终端输入</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dsh plugin --profile tui add @openma/deepseek-harness-tui</span><br></pre></td></tr></table></figure>
 <p>即可成功安装。移除只需要将<code>add</code>换为<code>remove</code>即可删除插件，即</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dsh plugin --profile tui remove @openma/deepseek-harness-tui</span><br></pre></td></tr></table></figure>
 <h3 id="更多插件">更多插件</h3>
+<blockquote>
 <p>虽说是新生Harness，但目前已有许多可用的插件。具体在Github，各位可以多找找可用的，或者我也会分享一些。</p>
+</blockquote>
+<p>这是我个人发现的仓库，目前星星不多，毕竟处于刚起步阶段，但是已经积累了许多可用/实用的插件，我还是贴下面吧。</p>
 <p><a target="_blank" href="https://github.com/libukai/awesome-deepseek-harness/#%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E-agent" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span class="LinkCard-contents"><span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/awesome-deepseek-harness</span><span style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/libukai/awesome-deepseek-harness/#%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E-agent</span></span></span></a></p>
-<p>这个链接为<code>awesome-deepseek-harness</code>的拓展推荐页面，同学们可以依照需求下载和阅读README安装，再或者，让DSH帮帮你呢？</p>
+<p>这个链接为<code>awesome-deepseek-harness</code>的拓展推荐页面，有需要的同学可以依照需求下载和阅读README安装，再或者，让DSH帮帮你呢？</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>教程</category>

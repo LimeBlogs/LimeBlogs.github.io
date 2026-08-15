@@ -282,6 +282,27 @@
   </url>
   
   <url>
+    <loc>https://sudachi.top/tags/%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/ai/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudachi.top/tags/harness/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://sudachi.top/tags/%E5%AE%89%E5%8D%93/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -303,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/tags/%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://sudachi.top/tags/github/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -318,13 +339,6 @@
   
   <url>
     <loc>https://sudachi.top/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/tags/github/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -445,21 +459,7 @@
   </url>
   
   <url>
-    <loc>https://sudachi.top/categories/%E6%95%99%E7%A8%8B/%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sudachi.top/categories/%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sudachi.top/categories/%E6%95%99%E7%A8%8B/%E6%8C%87%E5%8D%97/ai/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

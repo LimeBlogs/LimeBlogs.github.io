@@ -36,8 +36,8 @@
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
-    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <category term="安卓" scheme="https://sudachi.top/tags/%E5%AE%89%E5%8D%93/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <category term="Root" scheme="https://sudachi.top/tags/root/"/>
     <category term="刷机" scheme="https://sudachi.top/tags/%E5%88%B7%E6%9C%BA/"/>
     <id>https://sudachi.top/2026/07/13/sukisu-build/</id>
@@ -53,10 +53,10 @@
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
-    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
-    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
     <category term="安卓" scheme="https://sudachi.top/tags/%E5%AE%89%E5%8D%93/"/>
     <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <id>https://sudachi.top/2026/02/06/galgameandroid/</id>
     <link href="https://sudachi.top/2026/02/06/galgameandroid/"/>
     <published>2026-02-06T11:19:42.000Z</published>
@@ -69,8 +69,8 @@
       <name>Lime</name>
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <category term="入门" scheme="https://sudachi.top/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <category term="项目" scheme="https://sudachi.top/tags/%E9%A1%B9%E7%9B%AE/"/>
     <category term="java" scheme="https://sudachi.top/tags/java/"/>
     <category term="学习" scheme="https://sudachi.top/tags/%E5%AD%A6%E4%B9%A0/"/>
@@ -87,9 +87,9 @@
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
     <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <category term="Github" scheme="https://sudachi.top/tags/github/"/>
-    <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
     <category term="酒馆" scheme="https://sudachi.top/tags/%E9%85%92%E9%A6%86/"/>
     <category term="SillyTavern" scheme="https://sudachi.top/tags/sillytavern/"/>
     <id>https://sudachi.top/2025/07/12/sillytavern/</id>
@@ -105,8 +105,8 @@
     </author>
     <category term="教程" scheme="https://sudachi.top/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="教程" scheme="https://sudachi.top/tags/%E6%95%99%E7%A8%8B/"/>
-    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="指南" scheme="https://sudachi.top/tags/%E6%8C%87%E5%8D%97/"/>
     <category term="Phira" scheme="https://sudachi.top/tags/phira/"/>
     <category term="Phigros" scheme="https://sudachi.top/tags/phigros/"/>
     <id>https://sudachi.top/2025/05/20/phira/</id>
@@ -121,8 +121,8 @@
       <name>Lime</name>
     </author>
     <category term="Github" scheme="https://sudachi.top/categories/github/"/>
-    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <category term="Fork" scheme="https://sudachi.top/tags/fork/"/>
     <category term="项目" scheme="https://sudachi.top/tags/%E9%A1%B9%E7%9B%AE/"/>
     <id>https://sudachi.top/2025/02/16/lime-fork/</id>
@@ -139,8 +139,8 @@
       <name>Lime</name>
     </author>
     <category term="资源" scheme="https://sudachi.top/categories/%E8%B5%84%E6%BA%90/"/>
-    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <category term="资源" scheme="https://sudachi.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="Github" scheme="https://sudachi.top/tags/github/"/>
     <category term="Minecraft" scheme="https://sudachi.top/tags/minecraft/"/>
     <id>https://sudachi.top/2025/01/27/mc-launcher/</id>
     <link href="https://sudachi.top/2025/01/27/mc-launcher/"/>

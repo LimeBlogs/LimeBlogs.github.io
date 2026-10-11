@@ -30,6 +30,108 @@
       </tags>
   </entry>
   <entry>
+    <title>DeepSeek Harness指导</title>
+    <url>/2026/08/14/dsh-guide/</url>
+    <content><![CDATA[<h2 id="介绍">介绍</h2>
+<p>详细你已经听国内媒体吹的差不了，我也懒得介绍，反正就是个Harness，DeepSeek官方的Harness，DeeSeek
+Harness<br>简称dsh<br>我其实平时是不太VibeCoding的，但是这东西太有热度了，我得蹭。<br>我个人其实不太推荐萌新使用这个，目前相对而言，Claude
+Code或其他Harness(Codex OpenCode等)其实更好。</p>
+<div class="admonition todo">
+<p class="admonition-title">
+todo
+</p>
+<p>
+如果能帮助到你，欢迎支持我！谢谢啦。
+</p>
+</div>
+<h2 id="安装nodejs">安装Nodejs</h2>
+<p>每次介绍AI相关的内容时貌似都和这个脱不开关系，简单说一下吧<br>
+首先，打开Nodejs官网。</p>
+<p><a target="_blank" href="https://nodejs.org/zh-cn/download" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Nodejs
+- 下载</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://nodejs.org/zh-cn/download</span></span></span></a></p>
+<p>选择个<code>LTS</code>版本，然后选择MSI，下载打开安装即可。</p>
+<p><img src="/LimePan/dsh/nodejs-install.png" alt="下载" /><br></p>
+<p>下载完毕后，打开msi安装包，确保如图示的内容为硬盘图标。</p>
+<p><img src="/LimePan/dsh/msi-install.png" alt="安装" /><br></p>
+<p>这样就安装好了，理论上还有个验证部分，但如果中途不报错其实是很难出问题的啦。</p>
+<h3 id="配置镜像源">配置镜像源</h3>
+<blockquote>
+<p>国内用nodejs的基操了，不管你有没有魔法，都建议配置镜像源。</p>
+</blockquote>
+<p>大陆直接用nodejs官方源速度有点一坨，因此在安装完毕后推荐配置镜像源，不然没魔法的情况下有你受的。<br>
+安装完毕后，右键Windows徽标，选择Powershell(管理员)</p>
+<p><img src="/LimePan/dsh/npmmirror.png" alt="安装" /><br></p>
+<p>打开终端界面后，输入以下命令来换源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+<p>输入后回车，没有输出任何内容视作成功。</p>
+<h2 id="安装">安装</h2>
+<blockquote>
+<p>官网是推荐使用以下方式，即使用npx安装和启动。本篇只推荐使用npm全局安装。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx @deepseek-ai/dsh web</span><br></pre></td></tr></table></figure>
+<p>我个人其实是不喜欢这样，每次都启动都需要在终端输入这么一大坨，实在是。<br>
+建议如果有长期使用打算的用户使用以下命令安装。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g @deepseek-ai/dsh</span><br></pre></td></tr></table></figure>
+<p>直接使用npm全局安装，这样以后只需要在终端输入<code>dsh web</code>即可启动。<br>
+不出意外，接下来输入dsh web应该就能顺利启动了。</p>
+<h2 id="skills与mcp">Skills与MCP</h2>
+<blockquote>
+<p>这两个东西的配置并不难，Skill建议使用npx命令安装，MCP建议让AI配，当然部分Skill也是要手动创建和克隆的。</p>
+</blockquote>
+<h3 id="skills">Skills</h3>
+<p>默认存放的Skills在<ruby><code>~/.agents/skills</code><rt>指的是用户/用户名</rt></ruby>目录，只需要按需拖入相关文件即可在dsh使用。<br>
+没有的话只需要自己创建一个。当然，很多的skills也可以使用<code>npx skills</code>命令来安装，一般README.md内都会有写。<br>
+使用<code>/</code>+<code>Skill名称</code>即可调用。</p>
+<h3 id="mcp">MCP</h3>
+<p>这东西建议让AI给你配，毕竟都配置好了那不用岂不是有些浪费？<br>当然，个人觉得deepseek不太会配这个东西，所以我写了个Skill(dsh-mcp-install)，用于方便AI安装与配置MCP
+Server。</p>
+<p><a target="_blank" href="https://github.com/LimeBlogs/dsh-mcp-install" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/dsh-mcp-install</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/LimeBlogs/dsh-mcp-install</span></span></span></a></p>
+<p>只需要下载<code>SKILL.md</code>，然后在Skills目录新建文件夹<code>dsh-mcp-install</code>，然后把SKILL.md放入即可使用。</p>
+<h2 id="插件安装">插件安装</h2>
+<p>视频内提到，绝大多数插件只需要输入一条命令安装，这里也简单提一下，一般项目README都有写安装步骤。<br>
+以<a href="https://github.com/openma-ai/deepseek-harness-tui">DeepSeek
+Harness
+TUI</a>为例。这是个可以把dsh搞得和cc一样，也就是终端界面的插件。</p>
+<p><a target="_blank" href="https://github.com/openma-ai/deepseek-harness-tui" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/deepseek-harness-tui</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/openma-ai/deepseek-harness-tui</span></span></span></a></p>
+<p>根据<code>README.md</code>，只需要在终端输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dsh plugin --profile tui add @openma/deepseek-harness-tui</span><br></pre></td></tr></table></figure>
+<p>即可成功安装。移除只需要将<code>add</code>换为<code>remove</code>即可删除插件，即</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dsh plugin --profile tui remove @openma/deepseek-harness-tui</span><br></pre></td></tr></table></figure>
+<h3 id="更多插件">更多插件</h3>
+<blockquote>
+<p>虽说是新生Harness，但目前已有许多可用的插件。具体在Github，各位可以多找找可用的，或者我也会分享一些。</p>
+</blockquote>
+<p>这是我个人发现的仓库，目前星星不多，毕竟处于刚起步阶段，但是已经积累了许多可用/实用的插件，我还是贴下面吧。</p>
+<p><a target="_blank" href="https://github.com/libukai/awesome-deepseek-harness/#%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E-agent" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/awesome-deepseek-harness</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/libukai/awesome-deepseek-harness/#%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E-agent</span></span></span></a></p>
+<p>这个链接为<code>awesome-deepseek-harness</code>的拓展推荐页面，有需要的同学可以依照需求下载和阅读README安装，再或者，让DSH帮帮你呢？</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>指南</tag>
+        <tag>AI</tag>
+        <tag>harness</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安卓如何使用Tyranor游玩Galgame</title>
     <url>/2026/02/06/galgameandroid/</url>
     <content><![CDATA[<h2 id="配套视频教程">配套视频教程</h2>
@@ -269,112 +371,10 @@ Ons 依然是二次元资源库里两座绕不开的大山。</p>
       </categories>
       <tags>
         <tag>教程</tag>
+        <tag>指南</tag>
         <tag>安卓</tag>
         <tag>资源</tag>
         <tag>入门</tag>
-        <tag>指南</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DeepSeek Harness指导</title>
-    <url>/2026/08/14/dsh-guide/</url>
-    <content><![CDATA[<h2 id="介绍">介绍</h2>
-<p>详细你已经听国内媒体吹的差不了，我也懒得介绍，反正就是个Harness，DeepSeek官方的Harness，DeeSeek
-Harness<br>简称dsh<br>我其实平时是不太VibeCoding的，但是这东西太有热度了，我得蹭。<br>我个人其实不太推荐萌新使用这个，目前相对而言，Claude
-Code或其他Harness(Codex OpenCode等)其实更好。</p>
-<div class="admonition todo">
-<p class="admonition-title">
-todo
-</p>
-<p>
-如果能帮助到你，欢迎支持我！谢谢啦。
-</p>
-</div>
-<h2 id="安装nodejs">安装Nodejs</h2>
-<p>每次介绍AI相关的内容时貌似都和这个脱不开关系，简单说一下吧<br>
-首先，打开Nodejs官网。</p>
-<p><a target="_blank" href="https://nodejs.org/zh-cn/download" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
-class="LinkCard-contents"><span
-style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Nodejs
-- 下载</span><span
-style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
-style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://nodejs.org/zh-cn/download</span></span></span></a></p>
-<p>选择个<code>LTS</code>版本，然后选择MSI，下载打开安装即可。</p>
-<p><img src="/LimePan/dsh/nodejs-install.png" alt="下载" /><br></p>
-<p>下载完毕后，打开msi安装包，确保如图示的内容为硬盘图标。</p>
-<p><img src="/LimePan/dsh/msi-install.png" alt="安装" /><br></p>
-<p>这样就安装好了，理论上还有个验证部分，但如果中途不报错其实是很难出问题的啦。</p>
-<h3 id="配置镜像源">配置镜像源</h3>
-<blockquote>
-<p>国内用nodejs的基操了，不管你有没有魔法，都建议配置镜像源。</p>
-</blockquote>
-<p>大陆直接用nodejs官方源速度有点一坨，因此在安装完毕后推荐配置镜像源，不然没魔法的情况下有你受的。<br>
-安装完毕后，右键Windows徽标，选择Powershell(管理员)</p>
-<p><img src="/LimePan/dsh/npmmirror.png" alt="安装" /><br></p>
-<p>打开终端界面后，输入以下命令来换源</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-<p>输入后回车，没有输出任何内容视作成功。</p>
-<h2 id="安装">安装</h2>
-<blockquote>
-<p>官网是推荐使用以下方式，即使用npx安装和启动。本篇只推荐使用npm全局安装。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx @deepseek-ai/dsh web</span><br></pre></td></tr></table></figure>
-<p>我个人其实是不喜欢这样，每次都启动都需要在终端输入这么一大坨，实在是。<br>
-建议如果有长期使用打算的用户使用以下命令安装。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g @deepseek-ai/dsh</span><br></pre></td></tr></table></figure>
-<p>直接使用npm全局安装，这样以后只需要在终端输入<code>dsh web</code>即可启动。<br>
-不出意外，接下来输入dsh web应该就能顺利启动了。</p>
-<h2 id="skills与mcp">Skills与MCP</h2>
-<blockquote>
-<p>这两个东西的配置并不难，Skill建议使用npx命令安装，MCP建议让AI配，当然部分Skill也是要手动创建和克隆的。</p>
-</blockquote>
-<h3 id="skills">Skills</h3>
-<p>默认存放的Skills在<ruby><code>~/.agents/skills</code><rt>指的是用户/用户名</rt></ruby>目录，只需要按需拖入相关文件即可在dsh使用。<br>
-没有的话只需要自己创建一个。当然，很多的skills也可以使用<code>npx skills</code>命令来安装，一般README.md内都会有写。<br>
-使用<code>/</code>+<code>Skill名称</code>即可调用。</p>
-<h3 id="mcp">MCP</h3>
-<p>这东西建议让AI给你配，毕竟都配置好了那不用岂不是有些浪费？<br>当然，个人觉得deepseek不太会配这个东西，所以我写了个Skill(dsh-mcp-install)，用于方便AI安装与配置MCP
-Server。</p>
-<p><a target="_blank" href="https://github.com/LimeBlogs/dsh-mcp-install" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
-class="LinkCard-contents"><span
-style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/dsh-mcp-install</span><span
-style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
-style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/LimeBlogs/dsh-mcp-install</span></span></span></a></p>
-<p>只需要下载<code>SKILL.md</code>，然后在Skills目录新建文件夹<code>dsh-mcp-install</code>，然后把SKILL.md放入即可使用。</p>
-<h2 id="插件安装">插件安装</h2>
-<p>视频内提到，绝大多数插件只需要输入一条命令安装，这里也简单提一下，一般项目README都有写安装步骤。<br>
-以<a href="https://github.com/openma-ai/deepseek-harness-tui">DeepSeek
-Harness
-TUI</a>为例。这是个可以把dsh搞得和cc一样，也就是终端界面的插件。</p>
-<p><a target="_blank" href="https://github.com/openma-ai/deepseek-harness-tui" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
-class="LinkCard-contents"><span
-style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/deepseek-harness-tui</span><span
-style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
-style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/openma-ai/deepseek-harness-tui</span></span></span></a></p>
-<p>根据<code>README.md</code>，只需要在终端输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dsh plugin --profile tui add @openma/deepseek-harness-tui</span><br></pre></td></tr></table></figure>
-<p>即可成功安装。移除只需要将<code>add</code>换为<code>remove</code>即可删除插件，即</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dsh plugin --profile tui remove @openma/deepseek-harness-tui</span><br></pre></td></tr></table></figure>
-<h3 id="更多插件">更多插件</h3>
-<blockquote>
-<p>虽说是新生Harness，但目前已有许多可用的插件。具体在Github，各位可以多找找可用的，或者我也会分享一些。</p>
-</blockquote>
-<p>这是我个人发现的仓库，目前星星不多，毕竟处于刚起步阶段，但是已经积累了许多可用/实用的插件，我还是贴下面吧。</p>
-<p><a target="_blank" href="https://github.com/libukai/awesome-deepseek-harness/#%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E-agent" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
-class="LinkCard-contents"><span
-style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github/awesome-deepseek-harness</span><span
-style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
-style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/libukai/awesome-deepseek-harness/#%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E-agent</span></span></span></a></p>
-<p>这个链接为<code>awesome-deepseek-harness</code>的拓展推荐页面，有需要的同学可以依照需求下载和阅读README安装，再或者，让DSH帮帮你呢？</p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>指南</tag>
-        <tag>AI</tag>
-        <tag>harness</tag>
       </tags>
   </entry>
   <entry>
@@ -435,67 +435,6 @@ href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">�
         <tag>Hexo</tag>
         <tag>入门</tag>
         <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lime-Fork</title>
-    <url>/2025/02/16/lime-fork/</url>
-    <content><![CDATA[<h2 id="起因">起因</h2>
-<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
-href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div class="admonition fail">
-<p>
-该页面仅仅收录我存档的项目，不会注明Github的项目地址。
-</p>
-</div>
-<div class="admonition info">
-<p>
-你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
-</p>
-</div>
-<h3 id="人生重开模拟器">人生重开模拟器</h3>
-<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
-href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
-<h3 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h3>
-<div class="admonition fail">
-<p>
-该页面内容可能引人不适！
-</p>
-</div>
-<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
-href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
-<h3 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h3>
-<div class="admonition fail">
-<p>
-超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
-</p>
-</div>
-<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
-href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
-<h3 id="limelinks">LimeLinks</h3>
-<div class="admonition info">
-<p>
-该页面没有描述
-</p>
-</div>
-<p>/LimeLinks</p>
-<h3 id="masturbation-helper">Masturbation-Helper</h3>
-<div class="admonition info">
-<p>
-该页面没有描述，请自行访问
-</p>
-</div>
-<p><a
-href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>资源</tag>
-        <tag>Github</tag>
-        <tag>Fork</tag>
-        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -714,6 +653,67 @@ Classic</a>输入你要的函数之后点击“分享”</p>
         <tag>Hexo</tag>
         <tag>实验室</tag>
         <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lime-Fork</title>
+    <url>/2025/02/16/lime-fork/</url>
+    <content><![CDATA[<h2 id="起因">起因</h2>
+<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
+href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
+<div class="admonition fail">
+<p>
+该页面仅仅收录我存档的项目，不会注明Github的项目地址。
+</p>
+</div>
+<div class="admonition info">
+<p>
+你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
+</p>
+</div>
+<h3 id="人生重开模拟器">人生重开模拟器</h3>
+<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
+href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
+<h3 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h3>
+<div class="admonition fail">
+<p>
+该页面内容可能引人不适！
+</p>
+</div>
+<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
+href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
+<h3 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h3>
+<div class="admonition fail">
+<p>
+超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
+</p>
+</div>
+<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
+href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
+<h3 id="limelinks">LimeLinks</h3>
+<div class="admonition info">
+<p>
+该页面没有描述
+</p>
+</div>
+<p>/LimeLinks</p>
+<h3 id="masturbation-helper">Masturbation-Helper</h3>
+<div class="admonition info">
+<p>
+该页面没有描述，请自行访问
+</p>
+</div>
+<p><a
+href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>资源</tag>
+        <tag>Github</tag>
+        <tag>Fork</tag>
+        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -1241,8 +1241,8 @@ style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink
         <category>教程</category>
       </categories>
       <tags>
-        <tag>入门</tag>
         <tag>指南</tag>
+        <tag>入门</tag>
         <tag>项目</tag>
         <tag>java</tag>
         <tag>学习</tag>
@@ -1418,8 +1418,8 @@ href="https://github.com/cbs001/open-phiedit/releases/tag/windows">点我出发-
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>资源</tag>
         <tag>指南</tag>
+        <tag>资源</tag>
         <tag>Phira</tag>
         <tag>Phigros</tag>
       </tags>
@@ -1588,159 +1588,11 @@ Gemini模型，而且没用配置预设和正则的情况下发生的</strong> <
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>资源</tag>
         <tag>指南</tag>
+        <tag>资源</tag>
         <tag>Github</tag>
         <tag>酒馆</tag>
         <tag>SillyTavern</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一次KernelSU/SukiSU折腾记录</title>
-    <url>/2026/07/13/sukisu-build/</url>
-    <content><![CDATA[<h2 id="为什么要用kernelsusukisu">为什么要用KernelSU/SukiSU?</h2>
-<p>笔者在自己的远古设备<code>Redmi12C</code>上一直使用<code>Magisk</code>的root方案，确实稳定，最近一直在折腾海外虚拟卡/实体卡。单拎出Wise而言，刚装上就提示不支持在已Root的设备上运行，其他的银行直接卡在注册页，无法进入，<code>Ifast</code>更是直接卡崩。<br>呵呵了，我觉得面具已经没办法完成我的日常需求了，目光自然而然转向更新的Root方案，终究是老骥伏枥，不胜当年。<br>说真的，面具过过国内的银行还算轻松，但将目光放到海外的银行就是一大坨了。基本上都进不去。
-KernelSU方案的隐藏性我还是认可的，除了比较挑设备外基本无敌，其知名分支<code>SukiSU</code>更是牛大了，闲话就说这么多，接下来来好好说说我是如何刷入的。希望能帮到在搜索引擎大海捞针的各位。</p>
-<div class="admonition fail">
-<p class="admonition-title">
-提示
-</p>
-<p>
-请先确保设备已解锁Bootloader，并且在开始前备份好原厂boot避免设备变砖。
-</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">
-关于内核
-</p>
-<p>
-开始请先确保自己系统在互联网上存在内核源码，本次构建使用<code>Lineage-21</code>演示，Github
-fork到自己的账户下。
-</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">
-感谢
-</p>
-<p>
-感谢Gemini/DeepSeek，期间的报错都是他修复的，为我节省了不少时间。
-</p>
-</div>
-<h2 id="纳尼我的设备不支持">纳尼？我的设备不支持？</h2>
-<p>刷Ksu的第一步永远是看自己的设备是否支持GKI，不幸的时，我不支持。</p>
-<p><img src="/LimePan/SukiSU/sukisu_unsupported.webp"
-alt="哦吼" /><br></p>
-<p>这倒不是什么大问题，之前好歹也编译过OrangeFox，多少有点把握，依照<a
-href="https://kernelsu.org/zh_CN/guide/installation.html">Ksu的官方文档</a>来看，只需要编译就好了。</p>
-<blockquote>
-<p>如果应用程序显示 “不支持”，则表示您的设备不支持
-KernelSU，你需要自己编译设备的内核才能使用，KernelSU
-官方不会也永远不会为你提供一个可以刷写的 boot 镜像。</p>
-</blockquote>
-<h2 id="确定方案">确定方案</h2>
-<p>构建这种东西，首先必要的就是Linux，如果我的主力机是Windows那么则为<a
-href="https://learn.microsoft.com/zh-cn/windows/wsl/install">WSL</a>。但考虑到要拉取的东西实在有点多，梯子也吃不消，我也不想把我的电脑搞得乱七八糟，因此直接走<code>Github Action</code>就成为了我的首选。<br></p>
-<p>但Github的缺点也很明显，构建内核这种事情很难说一次成功，期间多少会遇到报错，你要查日志啥的还是挺麻烦的。</p>
-<h3 id="准备工作">准备工作</h3>
-<ul>
-<li>已解锁BL的手机</li>
-<li>内核源码，因为笔者系统是LineageOS，在github上可以轻松找到</li>
-<li>一个好心态</li>
-</ul>
-<h2 id="开始">开始</h2>
-<p>我这个LineageOS比较老了，如上图所示，内核版本只有4.19，这个内核版本其实非常危险，太几把老了。<br>我也是后来在网上搜索才知道<code>SukiSU</code>貌似不支持这个内核版本，至少在我看来，即便<a
-href="https://github.com/SukiSU-Ultra/SukiSU-Ultra/blob/main/docs/zh/README.md">README.md</a>写了兼容4.14+(需自己编译)，但是以我折腾的结果来看，其困难程度是非常大的，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">单靠Github Action非常困难。</span></span>因此不考虑<code>SukiSU</code>，整了也肯定会报错的<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-box spoiler-1ffd9">别问我怎么知道的</span></span>。<br></p>
-<p>接下来就要把目光转向KernelSu，好在其生态已非常丰富，在搜索引擎随便一搜就能找到不少现成的工作流。这里简单列出来我试过的几个。</p>
-<p><a target="_blank" href="https://github.com/xiaoleGun/KernelSU_action" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
-class="LinkCard-contents"><span
-style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github
-- /xiaoleGun/KernelSU_action</span><span
-style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
-style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/xiaoleGun/KernelSU_action</span></span></span></a></p>
-<p><br></p>
-<p><a target="_blank" href="https://github.com/Numbersf/Action-Build" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
-class="LinkCard-contents"><span
-style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github
-- /Numbersf/Action-Build</span><span
-style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
-style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/Numbersf/Action-Build</span></span></span></a></p>
-<p><br></p>
-<p>好吧，原本我试过好几个，但其实有价值的就这个两个，还有些Fork完试了一下就删了。我使用的设备树是LineageOS的开源成品，<a
-href="https://github.com/LineageOS/android_kernel_xiaomi_earth">android_kernel_xiaomi_earth</a>同理，你也应该去找一下自己的内核源码。
-<br> 接着，将目光转到Action，我们需要来配置一下Action。</p>
-<h2 id="配置github-workflow">配置Github Workflow</h2>
-<p>本次演示以xiaoleGun的<a
-href="https://github.com/xiaoleGun/KernelSU_action">KernelSU_action</a>为例。首先fork仓库，然后编辑这个环境变量文件。</p>
-<p><img src="/LimePan/SukiSU/action_repo.webp" alt="env" /><br></p>
-<p>打开内容如下，我简单打一下注释，其核心需要修改的部分就那几个。<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">其他的我也不懂</span></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Lime</span><br><span class="line">CONFIG_ENV=config.env</span><br><span class="line"></span><br><span class="line"># 设备内核源码</span><br><span class="line">KERNEL_SOURCE=https://github.com/LimeBlogs/android_kernel_xiaomi_earth</span><br><span class="line"># 内核源码仓库分支</span><br><span class="line">KERNEL_SOURCE_BRANCH=lineage-21</span><br><span class="line"># 内核配置文件，一般是`$&#123;设备代号&#125;`_defconfig</span><br><span class="line">## 在设备内核/arch/arm64/configs查看</span><br><span class="line">KERNEL_CONFIG=earth_defconfig</span><br><span class="line"># 输出内核的压缩算法</span><br><span class="line">## 对于我设备而言 可选 Image Image.bz2 Image.gz Image.lz4 Image.lzma Image.lzo</span><br><span class="line">KERNEL_IMAGE_NAME=Image.gz</span><br><span class="line">ARCH=arm64</span><br><span class="line">ADD_LOCALVERSION_TO_FILENAME=false</span><br><span class="line">EXTRA_CMDS:LLVM=1 LLVM_IAS=1</span><br><span class="line"></span><br><span class="line"># Clang</span><br><span class="line">## Custom</span><br><span class="line">USE_CUSTOM_CLANG=false</span><br><span class="line">CUSTOM_CLANG_SOURCE=</span><br><span class="line">CUSTOM_CLANG_BRANCH=</span><br><span class="line"></span><br><span class="line">### if your set USE CUSTOM CLANG to false than DO NOT CHANGE CUSTOM CMDS</span><br><span class="line">CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu-</span><br><span class="line"></span><br><span class="line">## AOSP</span><br><span class="line">CLANG_BRANCH=master-kernel-build-2022</span><br><span class="line">CLANG_VERSION=r450784e</span><br><span class="line"></span><br><span class="line"># GCC</span><br><span class="line">ENABLE_GCC_ARM64=true</span><br><span class="line">ENABLE_GCC_ARM32=true</span><br><span class="line">USE_CUSTOM_GCC_64=false</span><br><span class="line">CUSTOM_GCC_64_SOURCE=</span><br><span class="line">CUSTOM_GCC_64_BRANCH=</span><br><span class="line">CUSTOM_GCC_64_BIN=aarch64-linux-android-</span><br><span class="line">USE_CUSTOM_GCC_32=false</span><br><span class="line">CUSTOM_GCC_32_SOURCE=</span><br><span class="line">CUSTOM_GCC_32_BRANCH=</span><br><span class="line">CUSTOM_GCC_32_BIN=arm-linux-androideabi-</span><br><span class="line"></span><br><span class="line"># KernelSU flags</span><br><span class="line">## 是否启用KernelSU</span><br><span class="line">ENABLE_KERNELSU=true</span><br><span class="line">KERNELSU_TAG=v0.9.5</span><br><span class="line">KSU_EXPECTED_SIZE=</span><br><span class="line">KSU_EXPECTED_HASH=</span><br><span class="line"></span><br><span class="line"># Configuration</span><br><span class="line">## 是否关闭`关闭链接时优化`</span><br><span class="line">DISABLE-LTO=true</span><br><span class="line">## 是否禁用`警告视为错误`</span><br><span class="line">DISABLE_CC_WERROR=true</span><br><span class="line">## 自动注入 Kprobes 配置</span><br><span class="line">ADD_KPROBES_CONFIG=true</span><br><span class="line">## 自动注入 OverlayFS 配置</span><br><span class="line">ADD_OVERLAYFS_CONFIG=true</span><br><span class="line">## 是否应用 KernelSU 源码补丁</span><br><span class="line">### 适用于老版本内核4.9&lt;= 推荐打开</span><br><span class="line">APPLY_KSU_PATCH=true</span><br><span class="line">REMOVE_UNUSED_PACKAGES=true</span><br><span class="line"></span><br><span class="line"># AnyKernel3</span><br><span class="line">## AnyKernel3 Custom</span><br><span class="line">USE_CUSTOM_ANYKERNEL3=false</span><br><span class="line">CUSTOM_ANYKERNEL3_SOURCE=</span><br><span class="line">CUSTOM_ANYKERNEL3_BRANCH=</span><br><span class="line"></span><br><span class="line"># Ccache</span><br><span class="line">ENABLE_CCACHE=true</span><br><span class="line"></span><br><span class="line"># DTBO image</span><br><span class="line">NEED_DTBO=false</span><br><span class="line"></span><br><span class="line"># Build boot images</span><br><span class="line">## 是否输出Boot镜像</span><br><span class="line">BUILD_BOOT_IMG=false</span><br><span class="line">## 原Room的Boot链接</span><br><span class="line">SOURCE_BOOT_IMAGE=https://raw.githubusercontent.com/LimeBlogs/KernelSU_action/main/boot/boot(2).img</span><br></pre></td></tr></table></figure>
-<p>首先来说说<code>KERNEL_IMAGE_NAME</code>咋填，可以在<code>$&#123;内核源码&#125;/arch/arm64/Makefile里</code>。</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># arch/arm64/boot/Makefile</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This file is included by the global makefile so that you can add your own</span></span><br><span class="line"><span class="comment"># architecture-specific flags and dependencies.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This file is subject to the terms and conditions of the GNU General Public</span></span><br><span class="line"><span class="comment"># License.  See the file &quot;COPYING&quot; in the main directory of this archive</span></span><br><span class="line"><span class="comment"># for more details.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Copyright (C) 2012, ARM Ltd.</span></span><br><span class="line"><span class="comment"># Author: Will Deacon &lt;will.deacon@arm.com&gt;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Based on the ia64 boot/Makefile.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line">OBJCOPYFLAGS_Image :=-O binary -R .note -R .note.gnu.build-id -R .comment -S</span><br><span class="line"></span><br><span class="line">targets := Image Image.bz2 Image.gz Image.lz4 Image.lzma Image.lzo    <span class="comment"># 这里是支持的格式，推荐Image.gz</span></span><br><span class="line"></span><br><span class="line">DTB_NAMES := <span class="variable">$(<span class="built_in">subst</span> $\<span class="string">&quot;,,<span class="variable">$(CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">ifneq (<span class="variable">$(DTB_NAMES)</span>,)</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST := $(addsuffix .dtb,<span class="variable">$(DTB_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">else</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST := $(dtb-y)</span></span></span><br><span class="line"><span class="string"><span class="variable">endif</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">DTBO_NAMES := $(subst $\&quot;,,<span class="variable">$(CONFIG_BUILD_ARM64_DTB_OVERLAY_IMAGE_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">ifneq (<span class="variable">$(DTBO_NAMES)</span>,)</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST += $(addsuffix .dtbo,<span class="variable">$(DTBO_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">endif</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_OBJS := $(addprefix <span class="variable">$(obj)</span>/dts/,<span class="variable">$(DTB_LIST)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">targets += <span class="variable">$(DTB_LIST)</span></span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image: vmlinux FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,objcopy)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.bz2: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,bzip2)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image-dtb: <span class="variable">$(obj)</span>/Image <span class="variable">$(DTB_OBJS)</span> FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,cat)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.gz: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,gzip)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lz4: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lz4)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lzma: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lzma)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lzo: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lzo)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.gz-dtb: <span class="variable">$(obj)</span>/Image.gz <span class="variable">$(DTB_OBJS)</span> FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,cat)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">install:</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(CONFIG_SHELL)</span> <span class="variable">$(srctree)</span>/<span class="variable">$(src)</span>/install.sh <span class="variable">$(KERNELRELEASE)</span> \</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(obj)</span>/Image System.map &quot;</span><span class="variable">$(INSTALL_PATH)</span><span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">zinstall:</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(CONFIG_SHELL)</span> <span class="variable">$(srctree)</span>/<span class="variable">$(src)</span>/install.sh <span class="variable">$(KERNELRELEASE)</span> \</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(obj)</span>/Image.gz System.map &quot;</span><span class="variable">$(INSTALL_PATH)</span><span class="string">&quot;</span></span></span><br></pre></td></tr></table></figure>
-<p>我这里以<code>Image.gz</code>为例，接着，则是内核方面，去<code>$&#123;内核源码&#125;/Makefile</code>，可以在顶部看到以下内容。</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># SPDX-License-Identifier: GPL-2.0</span></span><br><span class="line">VERSION = 4</span><br><span class="line">PATCHLEVEL = 19</span><br><span class="line">SUBLEVEL = 325</span><br><span class="line">EXTRAVERSION =</span><br><span class="line">NAME = <span class="string">&quot;People&#x27;s Front&quot;</span></span><br></pre></td></tr></table></figure>
-<p>将这里一大堆拼起来就是<code>4.19.325</code>，在选择内核源码时尽量选择与自己所使用系统相符合的。按照注释填写完该填的，我们就可以开始构建啦！</p>
-<p><img src="/LimePan/SukiSU/run_workflow.webp"
-alt="运行工作流" /><br></p>
-<p>期间可能会出现<strong>报错</strong>，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">很大概率会出现</span></span>，这种情况一般只能依靠自己的
-<del><strong>互联网搜索能力</strong>与<strong>LLM的使用能力了</strong>。</del>
-<br> 等待构建完毕。。。。</p>
-<p><img src="/LimePan/SukiSU/im_waitng_for_u.webp"
-alt="运行中" /><br></p>
-<h2 id="插播一条消息">插播一条消息</h2>
-<p><img src="/LimePan/SukiSU/fku.webp" alt="额" /><br></p>
-<p>在构建了十几次依旧报错无法解决后，我心灰意冷，本来不报任何希望。接着我就在搜索引擎搜索，万一，我是说万一，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">万一真的有前人构建过了呢？</span></span></p>
-<p><br></p>
-<p>果不其然，还真是。</p>
-<p><img src="/LimePan/SukiSU/wtf.webp" alt="我去不早说" /><br></p>
-<p>我看到<a
-href="https://github.com/Oscar1640/android_kernel_xiaomi_earth/releases/tag/Earth-v1.0">Release</a>的时候人都傻了，我千辛万苦挖报错，问AI，一天几十次在Action发呆。结果已经有成品了？这是个悲伤的故事，我们在做任何事前都要提前在网上找好资料。。万一有成品就不用重复造轮子了。这个是给KernelSU-Next做的适配，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">我是Lime，这个内核非常正常稳定，还是支持susfs的。。。</span></span>不过这个作者使用的内核源码与我相同，只有分支不一样，我只需要稍微参考一下就知道自己到底输在哪。</p>
-<p><br></p>
-<h2 id="为非-gki-内核集成-kernelsu">为非 GKI 内核集成 KernelSU</h2>
-<blockquote>
-<p>参照<a
-href="https://kernelsu.org/zh_CN/guide/how-to-integrate-for-non-gki.html">KSU官方文档</a></p>
-</blockquote>
-<p>做完这些，应该直接编译就能通了。如果你运气够好，依照上面的方法应该可以编译出一个内核，我手头上没有Linux，因此无法尝试，有时间我再继续更新这文章。
-<br>
-按理来说Action应该是支持这些步骤的，但我不知道为什么没生效。参照上一位成品大大的成品内核仓库，应该是提前对内核进行了集成再构建的，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">再次提到我没有Linux。</span></span>其中涉及到Clang，对于一个不会C的人来说只让AI辅助也很麻烦了。那么这篇文章就先到这里吧，笔者要去休息了。。。</p>
-<h2 id="编译之后刷入">编译之后刷入</h2>
-<h3 id="使用第三方recak3刷机包">使用第三方Rec+AK3刷机包</h3>
-<p>将构建出的成品直接刷入即可，我在这个设备上试过，并没软用，可以尝试下面的的方法。</p>
-<h3 id="重新打包boot.img">重新打包boot.img</h3>
-<p>首先我们在配置文件里设置的Image.gz其实是Boot中Kernel的镜像，准备好你<strong>ROM</strong>的Boot，然后下载<a
-href="https://github.com/svoboda18/magiskboot">Magiskboot</a>，将你的<code>原厂Boot</code>与<code>MagiskBoot.exe</code>放在一个文件夹。</p>
-<p><img src="/LimePan/SukiSU/magiskboot_1.webp"
-alt="如图所示" /><br></p>
-<p>然后，在此处打开Powershell/CMD，运行以下命令。</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">./magiskboot unpack boot.img</span><br></pre></td></tr></table></figure>
-<p>运行之后会出来一大堆文件，其中<code>kernel</code>就是我们需要替换的文件。</p>
-<p><img src="/LimePan/SukiSU/magiskboot_2.webp"
-alt="如图所示" /><br></p>
-<p>我们将自己拿到的Image.gz或别的啥玩意解压，打开应该能看到一个独立的<code>Image</code>，解压出来，将其重命名为<code>kernel</code>，替换这个解包出来的kernel。</p>
-<p><br></p>
-<p>再使用MagiskBoot打包回去，</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">./magiskboot repack boot.img</span><br></pre></td></tr></table></figure>
-<p>注意，原厂的boot不用删，继续放那即可，文件夹会出现一个新的<code>new-boot.img</code>镜像，这就是我们需要的boot，直接使用fastboot刷入即可。</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">fastboot flash boot new-boot.img</span><br></pre></td></tr></table></figure>
-<p>重启之后应该就能看到生效了。</p>
-<p><img src="/LimePan/SukiSU/ksun.webp"
-alt="KernelSU-Next截图" /><br></p>
-<h2 id="结语">结语</h2>
-<p>我不知道为什么就我这样，查阅了不少视频和资料为什么其他人都能一遍过，到我这就不行了。这篇文章没啥价值，感觉太水了有点，幸运的是我至少达成了我的目标，感谢<a
-href="https://github.com/Oscar1640">Oscar1640</a>！没有你的成品内核我连Wise都进不去。</p>
-<blockquote>
-<p>额，我到底在干嘛。。</p>
-</blockquote>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>安卓</tag>
-        <tag>指南</tag>
-        <tag>Root</tag>
-        <tag>刷机</tag>
       </tags>
   </entry>
   <entry>
@@ -1936,6 +1788,154 @@ alt="Limeの空间 - 冬" /><br></p>
         <tag>Hexo</tag>
         <tag>置顶</tag>
         <tag>更新日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一次KernelSU/SukiSU折腾记录</title>
+    <url>/2026/07/13/sukisu-build/</url>
+    <content><![CDATA[<h2 id="为什么要用kernelsusukisu">为什么要用KernelSU/SukiSU?</h2>
+<p>笔者在自己的远古设备<code>Redmi12C</code>上一直使用<code>Magisk</code>的root方案，确实稳定，最近一直在折腾海外虚拟卡/实体卡。单拎出Wise而言，刚装上就提示不支持在已Root的设备上运行，其他的银行直接卡在注册页，无法进入，<code>Ifast</code>更是直接卡崩。<br>呵呵了，我觉得面具已经没办法完成我的日常需求了，目光自然而然转向更新的Root方案，终究是老骥伏枥，不胜当年。<br>说真的，面具过过国内的银行还算轻松，但将目光放到海外的银行就是一大坨了。基本上都进不去。
+KernelSU方案的隐藏性我还是认可的，除了比较挑设备外基本无敌，其知名分支<code>SukiSU</code>更是牛大了，闲话就说这么多，接下来来好好说说我是如何刷入的。希望能帮到在搜索引擎大海捞针的各位。</p>
+<div class="admonition fail">
+<p class="admonition-title">
+提示
+</p>
+<p>
+请先确保设备已解锁Bootloader，并且在开始前备份好原厂boot避免设备变砖。
+</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">
+关于内核
+</p>
+<p>
+开始请先确保自己系统在互联网上存在内核源码，本次构建使用<code>Lineage-21</code>演示，Github
+fork到自己的账户下。
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">
+感谢
+</p>
+<p>
+感谢Gemini/DeepSeek，期间的报错都是他修复的，为我节省了不少时间。
+</p>
+</div>
+<h2 id="纳尼我的设备不支持">纳尼？我的设备不支持？</h2>
+<p>刷Ksu的第一步永远是看自己的设备是否支持GKI，不幸的时，我不支持。</p>
+<p><img src="/LimePan/SukiSU/sukisu_unsupported.webp"
+alt="哦吼" /><br></p>
+<p>这倒不是什么大问题，之前好歹也编译过OrangeFox，多少有点把握，依照<a
+href="https://kernelsu.org/zh_CN/guide/installation.html">Ksu的官方文档</a>来看，只需要编译就好了。</p>
+<blockquote>
+<p>如果应用程序显示 “不支持”，则表示您的设备不支持
+KernelSU，你需要自己编译设备的内核才能使用，KernelSU
+官方不会也永远不会为你提供一个可以刷写的 boot 镜像。</p>
+</blockquote>
+<h2 id="确定方案">确定方案</h2>
+<p>构建这种东西，首先必要的就是Linux，如果我的主力机是Windows那么则为<a
+href="https://learn.microsoft.com/zh-cn/windows/wsl/install">WSL</a>。但考虑到要拉取的东西实在有点多，梯子也吃不消，我也不想把我的电脑搞得乱七八糟，因此直接走<code>Github Action</code>就成为了我的首选。<br></p>
+<p>但Github的缺点也很明显，构建内核这种事情很难说一次成功，期间多少会遇到报错，你要查日志啥的还是挺麻烦的。</p>
+<h3 id="准备工作">准备工作</h3>
+<ul>
+<li>已解锁BL的手机</li>
+<li>内核源码，因为笔者系统是LineageOS，在github上可以轻松找到</li>
+<li>一个好心态</li>
+</ul>
+<h2 id="开始">开始</h2>
+<p>我这个LineageOS比较老了，如上图所示，内核版本只有4.19，这个内核版本其实非常危险，太几把老了。<br>我也是后来在网上搜索才知道<code>SukiSU</code>貌似不支持这个内核版本，至少在我看来，即便<a
+href="https://github.com/SukiSU-Ultra/SukiSU-Ultra/blob/main/docs/zh/README.md">README.md</a>写了兼容4.14+(需自己编译)，但是以我折腾的结果来看，其困难程度是非常大的，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">单靠Github Action非常困难。</span></span>因此不考虑<code>SukiSU</code>，整了也肯定会报错的<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-box spoiler-1ffd9">别问我怎么知道的</span></span>。<br></p>
+<p>接下来就要把目光转向KernelSu，好在其生态已非常丰富，在搜索引擎随便一搜就能找到不少现成的工作流。这里简单列出来我试过的几个。</p>
+<p><a target="_blank" href="https://github.com/xiaoleGun/KernelSU_action" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github
+- /xiaoleGun/KernelSU_action</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/xiaoleGun/KernelSU_action</span></span></span></a></p>
+<p><br></p>
+<p><a target="_blank" href="https://github.com/Numbersf/Action-Build" style="position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; box-sizing: border-box; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 390px; min-height: 84px; border-radius: 8px; max-width: 100%; overflow: hidden; margin: 16px auto; padding: 12px 12px 9px 12px; background-color: #F6F6F6;"><span
+class="LinkCard-contents"><span
+style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; max-height: 40px; line-height: 1.25; color: #121212;">Github
+- /Numbersf/Action-Build</span><span
+style="display: -webkit-box; font-size: 13px; height: 18px; line-height: 18px; color: #999; word-break: break-all; text-overflow: ellipsis; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><span
+style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink" fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M13.414 4.222a4.5 4.5 0 1 1 6.364 6.364l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005a2.5 2.5 0 1 0-3.536-3.536l-3.005 3.005a.5.5 0 0 1-.707 0l-.707-.707a.5.5 0 0 1 0-.707l3.005-3.005zm-6.187 6.187a.5.5 0 0 1 .638-.058l.07.058.706.707a.5.5 0 0 1 .058.638l-.058.07-3.005 3.004a2.5 2.5 0 0 0 3.405 3.658l.13-.122 3.006-3.005a.5.5 0 0 1 .638-.058l.069.058.707.707a.5.5 0 0 1 .058.638l-.058.069-3.005 3.005a4.5 4.5 0 0 1-6.524-6.196l.16-.168 3.005-3.005zm8.132-3.182a.25.25 0 0 1 .353 0l1.061 1.06a.25.25 0 0 1 0 .354l-8.132 8.132a.25.25 0 0 1-.353 0l-1.061-1.06a.25.25 0 0 1 0-.354l8.132-8.132z"></path></svg></span><span>https://github.com/Numbersf/Action-Build</span></span></span></a></p>
+<p><br></p>
+<p>好吧，原本我试过好几个，但其实有价值的就这个两个，还有些Fork完试了一下就删了。我使用的设备树是LineageOS的开源成品，<a
+href="https://github.com/LineageOS/android_kernel_xiaomi_earth">android_kernel_xiaomi_earth</a>同理，你也应该去找一下自己的内核源码。
+<br> 接着，将目光转到Action，我们需要来配置一下Action。</p>
+<h2 id="配置github-workflow">配置Github Workflow</h2>
+<p>本次演示以xiaoleGun的<a
+href="https://github.com/xiaoleGun/KernelSU_action">KernelSU_action</a>为例。首先fork仓库，然后编辑这个环境变量文件。</p>
+<p><img src="/LimePan/SukiSU/action_repo.webp" alt="env" /><br></p>
+<p>打开内容如下，我简单打一下注释，其核心需要修改的部分就那几个。<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">其他的我也不懂</span></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Lime</span><br><span class="line">CONFIG_ENV=config.env</span><br><span class="line"></span><br><span class="line"># 设备内核源码</span><br><span class="line">KERNEL_SOURCE=https://github.com/LimeBlogs/android_kernel_xiaomi_earth</span><br><span class="line"># 内核源码仓库分支</span><br><span class="line">KERNEL_SOURCE_BRANCH=lineage-21</span><br><span class="line"># 内核配置文件，一般是`$&#123;设备代号&#125;`_defconfig</span><br><span class="line">## 在设备内核/arch/arm64/configs查看</span><br><span class="line">KERNEL_CONFIG=earth_defconfig</span><br><span class="line"># 输出内核的压缩算法</span><br><span class="line">## 对于我设备而言 可选 Image Image.bz2 Image.gz Image.lz4 Image.lzma Image.lzo</span><br><span class="line">KERNEL_IMAGE_NAME=Image.gz</span><br><span class="line">ARCH=arm64</span><br><span class="line">ADD_LOCALVERSION_TO_FILENAME=false</span><br><span class="line">EXTRA_CMDS:LLVM=1 LLVM_IAS=1</span><br><span class="line"></span><br><span class="line"># Clang</span><br><span class="line">## Custom</span><br><span class="line">USE_CUSTOM_CLANG=false</span><br><span class="line">CUSTOM_CLANG_SOURCE=</span><br><span class="line">CUSTOM_CLANG_BRANCH=</span><br><span class="line"></span><br><span class="line">### if your set USE CUSTOM CLANG to false than DO NOT CHANGE CUSTOM CMDS</span><br><span class="line">CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu-</span><br><span class="line"></span><br><span class="line">## AOSP</span><br><span class="line">CLANG_BRANCH=master-kernel-build-2022</span><br><span class="line">CLANG_VERSION=r450784e</span><br><span class="line"></span><br><span class="line"># GCC</span><br><span class="line">ENABLE_GCC_ARM64=true</span><br><span class="line">ENABLE_GCC_ARM32=true</span><br><span class="line">USE_CUSTOM_GCC_64=false</span><br><span class="line">CUSTOM_GCC_64_SOURCE=</span><br><span class="line">CUSTOM_GCC_64_BRANCH=</span><br><span class="line">CUSTOM_GCC_64_BIN=aarch64-linux-android-</span><br><span class="line">USE_CUSTOM_GCC_32=false</span><br><span class="line">CUSTOM_GCC_32_SOURCE=</span><br><span class="line">CUSTOM_GCC_32_BRANCH=</span><br><span class="line">CUSTOM_GCC_32_BIN=arm-linux-androideabi-</span><br><span class="line"></span><br><span class="line"># KernelSU flags</span><br><span class="line">## 是否启用KernelSU</span><br><span class="line">ENABLE_KERNELSU=true</span><br><span class="line">KERNELSU_TAG=v0.9.5</span><br><span class="line">KSU_EXPECTED_SIZE=</span><br><span class="line">KSU_EXPECTED_HASH=</span><br><span class="line"></span><br><span class="line"># Configuration</span><br><span class="line">## 是否关闭`关闭链接时优化`</span><br><span class="line">DISABLE-LTO=true</span><br><span class="line">## 是否禁用`警告视为错误`</span><br><span class="line">DISABLE_CC_WERROR=true</span><br><span class="line">## 自动注入 Kprobes 配置</span><br><span class="line">ADD_KPROBES_CONFIG=true</span><br><span class="line">## 自动注入 OverlayFS 配置</span><br><span class="line">ADD_OVERLAYFS_CONFIG=true</span><br><span class="line">## 是否应用 KernelSU 源码补丁</span><br><span class="line">### 适用于老版本内核4.9&lt;= 推荐打开</span><br><span class="line">APPLY_KSU_PATCH=true</span><br><span class="line">REMOVE_UNUSED_PACKAGES=true</span><br><span class="line"></span><br><span class="line"># AnyKernel3</span><br><span class="line">## AnyKernel3 Custom</span><br><span class="line">USE_CUSTOM_ANYKERNEL3=false</span><br><span class="line">CUSTOM_ANYKERNEL3_SOURCE=</span><br><span class="line">CUSTOM_ANYKERNEL3_BRANCH=</span><br><span class="line"></span><br><span class="line"># Ccache</span><br><span class="line">ENABLE_CCACHE=true</span><br><span class="line"></span><br><span class="line"># DTBO image</span><br><span class="line">NEED_DTBO=false</span><br><span class="line"></span><br><span class="line"># Build boot images</span><br><span class="line">## 是否输出Boot镜像</span><br><span class="line">BUILD_BOOT_IMG=false</span><br><span class="line">## 原Room的Boot链接</span><br><span class="line">SOURCE_BOOT_IMAGE=https://raw.githubusercontent.com/LimeBlogs/KernelSU_action/main/boot/boot(2).img</span><br></pre></td></tr></table></figure>
+<p>首先来说说<code>KERNEL_IMAGE_NAME</code>咋填，可以在<code>$&#123;内核源码&#125;/arch/arm64/Makefile里</code>。</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># arch/arm64/boot/Makefile</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This file is included by the global makefile so that you can add your own</span></span><br><span class="line"><span class="comment"># architecture-specific flags and dependencies.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This file is subject to the terms and conditions of the GNU General Public</span></span><br><span class="line"><span class="comment"># License.  See the file &quot;COPYING&quot; in the main directory of this archive</span></span><br><span class="line"><span class="comment"># for more details.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Copyright (C) 2012, ARM Ltd.</span></span><br><span class="line"><span class="comment"># Author: Will Deacon &lt;will.deacon@arm.com&gt;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Based on the ia64 boot/Makefile.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line">OBJCOPYFLAGS_Image :=-O binary -R .note -R .note.gnu.build-id -R .comment -S</span><br><span class="line"></span><br><span class="line">targets := Image Image.bz2 Image.gz Image.lz4 Image.lzma Image.lzo    <span class="comment"># 这里是支持的格式，推荐Image.gz</span></span><br><span class="line"></span><br><span class="line">DTB_NAMES := <span class="variable">$(<span class="built_in">subst</span> $\<span class="string">&quot;,,<span class="variable">$(CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">ifneq (<span class="variable">$(DTB_NAMES)</span>,)</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST := $(addsuffix .dtb,<span class="variable">$(DTB_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">else</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST := $(dtb-y)</span></span></span><br><span class="line"><span class="string"><span class="variable">endif</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">DTBO_NAMES := $(subst $\&quot;,,<span class="variable">$(CONFIG_BUILD_ARM64_DTB_OVERLAY_IMAGE_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">ifneq (<span class="variable">$(DTBO_NAMES)</span>,)</span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_LIST += $(addsuffix .dtbo,<span class="variable">$(DTBO_NAMES)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable">endif</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">DTB_OBJS := $(addprefix <span class="variable">$(obj)</span>/dts/,<span class="variable">$(DTB_LIST)</span>)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">targets += <span class="variable">$(DTB_LIST)</span></span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image: vmlinux FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,objcopy)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.bz2: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,bzip2)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image-dtb: <span class="variable">$(obj)</span>/Image <span class="variable">$(DTB_OBJS)</span> FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,cat)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.gz: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,gzip)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lz4: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lz4)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lzma: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lzma)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.lzo: <span class="variable">$(obj)</span>/Image FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,lzo)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable"><span class="variable">$(obj)</span>/Image.gz-dtb: <span class="variable">$(obj)</span>/Image.gz <span class="variable">$(DTB_OBJS)</span> FORCE</span></span></span><br><span class="line"><span class="string"><span class="variable">	$(call if_changed,cat)</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">install:</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(CONFIG_SHELL)</span> <span class="variable">$(srctree)</span>/<span class="variable">$(src)</span>/install.sh <span class="variable">$(KERNELRELEASE)</span> \</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(obj)</span>/Image System.map &quot;</span><span class="variable">$(INSTALL_PATH)</span><span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="variable"></span></span></span><br><span class="line"><span class="string"><span class="variable">zinstall:</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(CONFIG_SHELL)</span> <span class="variable">$(srctree)</span>/<span class="variable">$(src)</span>/install.sh <span class="variable">$(KERNELRELEASE)</span> \</span></span></span><br><span class="line"><span class="string"><span class="variable">	<span class="variable">$(obj)</span>/Image.gz System.map &quot;</span><span class="variable">$(INSTALL_PATH)</span><span class="string">&quot;</span></span></span><br></pre></td></tr></table></figure>
+<p>我这里以<code>Image.gz</code>为例，接着，则是内核方面，去<code>$&#123;内核源码&#125;/Makefile</code>，可以在顶部看到以下内容。</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># SPDX-License-Identifier: GPL-2.0</span></span><br><span class="line">VERSION = 4</span><br><span class="line">PATCHLEVEL = 19</span><br><span class="line">SUBLEVEL = 325</span><br><span class="line">EXTRAVERSION =</span><br><span class="line">NAME = <span class="string">&quot;People&#x27;s Front&quot;</span></span><br></pre></td></tr></table></figure>
+<p>将这里一大堆拼起来就是<code>4.19.325</code>，在选择内核源码时尽量选择与自己所使用系统相符合的。按照注释填写完该填的，我们就可以开始构建啦！</p>
+<p><img src="/LimePan/SukiSU/run_workflow.webp"
+alt="运行工作流" /><br></p>
+<p>期间可能会出现<strong>报错</strong>，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">很大概率会出现</span></span>，这种情况一般只能依靠自己的
+<del><strong>互联网搜索能力</strong>与<strong>LLM的使用能力了</strong>。</del>
+<br> 等待构建完毕。。。。</p>
+<p><img src="/LimePan/SukiSU/im_waitng_for_u.webp"
+alt="运行中" /><br></p>
+<h2 id="插播一条消息">插播一条消息</h2>
+<p><img src="/LimePan/SukiSU/fku.webp" alt="额" /><br></p>
+<p>在构建了十几次依旧报错无法解决后，我心灰意冷，本来不报任何希望。接着我就在搜索引擎搜索，万一，我是说万一，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">万一真的有前人构建过了呢？</span></span></p>
+<p><br></p>
+<p>果不其然，还真是。</p>
+<p><img src="/LimePan/SukiSU/wtf.webp" alt="我去不早说" /><br></p>
+<p>我看到<a
+href="https://github.com/Oscar1640/android_kernel_xiaomi_earth/releases/tag/Earth-v1.0">Release</a>的时候人都傻了，我千辛万苦挖报错，问AI，一天几十次在Action发呆。结果已经有成品了？这是个悲伤的故事，我们在做任何事前都要提前在网上找好资料。。万一有成品就不用重复造轮子了。这个是给KernelSU-Next做的适配，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">我是Lime，这个内核非常正常稳定，还是支持susfs的。。。</span></span>不过这个作者使用的内核源码与我相同，只有分支不一样，我只需要稍微参考一下就知道自己到底输在哪。</p>
+<p><br></p>
+<h2 id="为非-gki-内核集成-kernelsu">为非 GKI 内核集成 KernelSU</h2>
+<blockquote>
+<p>参照<a
+href="https://kernelsu.org/zh_CN/guide/how-to-integrate-for-non-gki.html">KSU官方文档</a></p>
+</blockquote>
+<p>做完这些，应该直接编译就能通了。如果你运气够好，依照上面的方法应该可以编译出一个内核，我手头上没有Linux，因此无法尝试，有时间我再继续更新这文章。
+<br>
+按理来说Action应该是支持这些步骤的，但我不知道为什么没生效。参照上一位成品大大的成品内核仓库，应该是提前对内核进行了集成再构建的，<!-- spoiler-1ffd9:black --><span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur spoiler-1ffd9">再次提到我没有Linux。</span></span>其中涉及到Clang，对于一个不会C的人来说只让AI辅助也很麻烦了。那么这篇文章就先到这里吧，笔者要去休息了。。。</p>
+<h2 id="编译之后刷入">编译之后刷入</h2>
+<h3 id="使用第三方recak3刷机包">使用第三方Rec+AK3刷机包</h3>
+<p>将构建出的成品直接刷入即可，我在这个设备上试过，并没软用，可以尝试下面的的方法。</p>
+<h3 id="重新打包boot.img">重新打包boot.img</h3>
+<p>首先我们在配置文件里设置的Image.gz其实是Boot中Kernel的镜像，准备好你<strong>ROM</strong>的Boot，然后下载<a
+href="https://github.com/svoboda18/magiskboot">Magiskboot</a>，将你的<code>原厂Boot</code>与<code>MagiskBoot.exe</code>放在一个文件夹。</p>
+<p><img src="/LimePan/SukiSU/magiskboot_1.webp"
+alt="如图所示" /><br></p>
+<p>然后，在此处打开Powershell/CMD，运行以下命令。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">./magiskboot unpack boot.img</span><br></pre></td></tr></table></figure>
+<p>运行之后会出来一大堆文件，其中<code>kernel</code>就是我们需要替换的文件。</p>
+<p><img src="/LimePan/SukiSU/magiskboot_2.webp"
+alt="如图所示" /><br></p>
+<p>我们将自己拿到的Image.gz或别的啥玩意解压，打开应该能看到一个独立的<code>Image</code>，解压出来，将其重命名为<code>kernel</code>，替换这个解包出来的kernel。</p>
+<p><br></p>
+<p>再使用MagiskBoot打包回去，</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">./magiskboot repack boot.img</span><br></pre></td></tr></table></figure>
+<p>注意，原厂的boot不用删，继续放那即可，文件夹会出现一个新的<code>new-boot.img</code>镜像，这就是我们需要的boot，直接使用fastboot刷入即可。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">fastboot flash boot new-boot.img</span><br></pre></td></tr></table></figure>
+<p>重启之后应该就能看到生效了。</p>
+<p><img src="/LimePan/SukiSU/ksun.webp"
+alt="KernelSU-Next截图" /><br></p>
+<h2 id="结语">结语</h2>
+<p>我不知道为什么就我这样，查阅了不少视频和资料为什么其他人都能一遍过，到我这就不行了。这篇文章没啥价值，感觉太水了有点，幸运的是我至少达成了我的目标，感谢<a
+href="https://github.com/Oscar1640">Oscar1640</a>！没有你的成品内核我连Wise都进不去。</p>
+<blockquote>
+<p>额，我到底在干嘛。。</p>
+</blockquote>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>指南</tag>
+        <tag>安卓</tag>
+        <tag>Root</tag>
+        <tag>刷机</tag>
       </tags>
   </entry>
 </search>

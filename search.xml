@@ -68,6 +68,8 @@ style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink
 <p>打开终端界面后，输入以下命令来换源</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
 <p>输入后回车，没有输出任何内容视作成功。</p>
+<p>如果遇到报错或出现问题，只需要输入以下命令，输入y即可解决。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br></pre></td></tr></table></figure>
 <h2 id="安装">安装</h2>
 <blockquote>
 <p>官网是推荐使用以下方式，即使用npx安装和启动。本篇只推荐使用npm全局安装。</p>
@@ -438,6 +440,67 @@ href="https://tech.yemengstar.com/hexo-tutorial-deploy-githubpages-beginner/">�
       </tags>
   </entry>
   <entry>
+    <title>Lime-Fork</title>
+    <url>/2025/02/16/lime-fork/</url>
+    <content><![CDATA[<h2 id="起因">起因</h2>
+<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
+href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
+<div class="admonition fail">
+<p>
+该页面仅仅收录我存档的项目，不会注明Github的项目地址。
+</p>
+</div>
+<div class="admonition info">
+<p>
+你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
+</p>
+</div>
+<h3 id="人生重开模拟器">人生重开模拟器</h3>
+<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
+href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
+<h3 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h3>
+<div class="admonition fail">
+<p>
+该页面内容可能引人不适！
+</p>
+</div>
+<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
+href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
+<h3 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h3>
+<div class="admonition fail">
+<p>
+超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
+</p>
+</div>
+<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
+href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
+<h3 id="limelinks">LimeLinks</h3>
+<div class="admonition info">
+<p>
+该页面没有描述
+</p>
+</div>
+<p>/LimeLinks</p>
+<h3 id="masturbation-helper">Masturbation-Helper</h3>
+<div class="admonition info">
+<p>
+该页面没有描述，请自行访问
+</p>
+</div>
+<p><a
+href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>资源</tag>
+        <tag>Github</tag>
+        <tag>Fork</tag>
+        <tag>项目</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LAB</title>
     <url>/2025/01/15/lab/</url>
     <content><![CDATA[<h2 id="起因">起因</h2>
@@ -653,67 +716,6 @@ Classic</a>输入你要的函数之后点击“分享”</p>
         <tag>Hexo</tag>
         <tag>实验室</tag>
         <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lime-Fork</title>
-    <url>/2025/02/16/lime-fork/</url>
-    <content><![CDATA[<h2 id="起因">起因</h2>
-<p>闲来无事，有时间就把网络上那些爆火的项目通过GithubPages部署到<a
-href="https://LimeBlogs.github.io">LimeBlogs</a>这个域名下了，感谢Github大人！</p>
-<div class="admonition fail">
-<p>
-该页面仅仅收录我存档的项目，不会注明Github的项目地址。
-</p>
-</div>
-<div class="admonition info">
-<p>
-你依旧可以试图在Bing搜索关键词以查找Github的项目地址，这很轻松，真的。
-</p>
-</div>
-<h3 id="人生重开模拟器">人生重开模拟器</h3>
-<p>顾名思义，一个n年前就有许多B站Up玩过的游戏<br>在Github搜索后发现没有静态页面的仓库，不方便fork，于是git了下来自己把静态的页面搬上来GithubPages。<br><a
-href="https://limeblogs.github.io/Echo-Loop/">点我访问</a></p>
-<h3 id="ubc2-资料参闻馆">ubc2 资料参闻馆</h3>
-<div class="admonition fail">
-<p>
-该页面内容可能引人不适！
-</p>
-</div>
-<p>该网站专注于保存B站上因审核、版权或其他原因被删除的视频，尤其是小众、猎奇或带有“精神污染”标签的作品。<br>早期的创价类视频也在此存档，可能是因为用的Github的缘故，导致视频全部都是240P。<br><a
-href="https://limeblogs.github.io/ubc2/">点我访问</a></p>
-<h3 id="tang-love-汤汤好梦">tang-love 汤汤好梦</h3>
-<div class="admonition fail">
-<p>
-超喜欢的一个页面！<br>好可爱૧(●´৺`●)૭
-</p>
-</div>
-<p>汤汤好梦的一个表白html页面，在抖音火炸了，许多人倒卖，一个很治愈的页面，将此fork到我的github域名下。<br><a
-href="https://limeblogs.github.io/tang-love/">点我访问</a></p>
-<h3 id="limelinks">LimeLinks</h3>
-<div class="admonition info">
-<p>
-该页面没有描述
-</p>
-</div>
-<p>/LimeLinks</p>
-<h3 id="masturbation-helper">Masturbation-Helper</h3>
-<div class="admonition info">
-<p>
-该页面没有描述，请自行访问
-</p>
-</div>
-<p><a
-href="https://limeblogs.github.io/Masturbation-Helper/">点我直达</a></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>资源</tag>
-        <tag>Github</tag>
-        <tag>Fork</tag>
-        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -1249,6 +1251,177 @@ style="display: inline-flex; align-items: center;"><svg class="Zi Zi--InsertLink
       </tags>
   </entry>
   <entry>
+    <title>SillyTavern酒馆部署教程</title>
+    <url>/2025/07/12/sillytavern/</url>
+    <content><![CDATA[<h2 id="过时的教程">过时的教程</h2>
+<p>这个教程已经过时，且存在诸多问题，建议你查看新视频，新教程，更方便，更实用
+<a
+href="https://www.bilibili.com/video/BV17zZVBjEom">搭建SillyTavern总出错？｜想入坑SillyTavern却卡在的搭建？｜一键教你怎么安装和搭建SillyTavern与CLI反代！</a>
+## 文档 <strong>本教程在B站同步更新，欢迎查看视频教程</strong> <br> <a
+href="https://www.bilibili.com/video/BV1yoGuzEEKc">点我跳转至B站</a>
+<br> <strong>如果教程能帮到你，求个三连，谢谢你啦</strong> <br>
+<strong>该教程已于2025年7月16日完结</strong> <br>
+<strong>本以为完事大吉了，在2025年7月16日再次更新</strong></p>
+<h1 id="遇到问题请尝试termux挂小窗">遇到问题请尝试Termux挂小窗！</h1>
+<h2 id="无法回复爆红尝试将最大回复长度拉大">#
+无法回复(爆红)尝试将最大回复长度拉大！</h2>
+<p><em>操作步骤均不需要Root与魔法，仅仅只是无脑复制粘贴命令而已</em>
+<br> 您需要先下载Termux <br>
+Termux使用本文档提供的！<code>arm64-v8a</code>！不要使用<code>GooglePlay</code>版本！会报错!</p>
+<p><a
+href="https://github.com/termux/termux-app">点我跳转至GithubRelease</a>
+<br> <a
+href="https://github.akams.cn/https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk">国内镜像源高速下载</a>
+<br> <a
+href="https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk">Github直链下载</a>
+—</p>
+<p>在安装Termux后，输入以下命令来修改镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.aliyun.com/termux/termux-packages-24 stable main@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<p><em>修改为阿里镜像源，清华源谁用谁倒霉…</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
+<p><em>更新软件包管理器</em></p>
+<p>安装必要软件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install vim wget git nodejs -y</span><br></pre></td></tr></table></figure>
+<p><em>安装必要工具，添加参数-y无需手动输入y</em></p>
+<p>配置nodejs镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+<p><em>配置npmMirror镜像源，以便国内用户可以高速下载</em></p>
+<h1 id="开始部署">开始部署</h1>
+<p>使用wget获取酒馆源码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O ST.zip https://github.akams.cn/https://github.com/SillyTavern/SillyTavern/archive/refs/tags/1.17.0.zip</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果您在运行这步后报错，挂上魔法，运行以下命令 <br></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O ST.zip https://github.com/SillyTavern/SillyTavern/archive/refs/tags/1.17.0.zip</span><br></pre></td></tr></table></figure>
+<p>继续后续操作即可</p>
+<p>解压该文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">unzip ST.zip</span><br></pre></td></tr></table></figure>
+<p><em>解压ST.zip</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> SillyTavern-1.17.0 st</span><br></pre></td></tr></table></figure>
+<p><em>将Sillyxxxxx这个目录重命名为ST，方便cd和后续启动</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br></pre></td></tr></table></figure>
+<p><em>进入st这个目录</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./start.sh</span><br></pre></td></tr></table></figure>
+<p><em>运行启动脚本</em></p>
+<h1 id="后续如何启动">后续如何启动</h1>
+<p>关闭Termux再启动后通过以下命令再次启动</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br></pre></td></tr></table></figure>
+<p><em>切换到st目录</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./start.sh</span><br></pre></td></tr></table></figure>
+<p><em>运行启动脚本</em></p>
+<h1 id="自定义启动脚本可选">自定义启动脚本（可选）</h1>
+<p>觉得每次启动都要cd和运行个sh?<br>你可以尝试写一个脚本来一条命令直接启动
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line"><span class="comment"># 返回到根目录</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim &lt;脚本名称&gt;.sh</span><br><span class="line"><span class="comment"># 选择一个方便好记忆的内容</span></span><br><span class="line"><span class="comment"># 比如vim 123.sh</span></span><br></pre></td></tr></table></figure>
+<p>然后，进入输入界面后，按下键盘上的<code>i</code>键 <br>
+屏幕上出现<code>-- INSERT --</code>后，输入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 酒馆正在启动</span><br><span class="line"><span class="built_in">echo</span> 浏览器：127.0.0.1:8000</span><br><span class="line"><span class="built_in">echo</span> 默认用户：user</span><br><span class="line"><span class="built_in">echo</span> 默认密码：password</span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="built_in">cd</span> st</span><br><span class="line">./start.sh</span><br><span class="line"><span class="comment"># 低下的shell水平，见谅。</span></span><br></pre></td></tr></table></figure>
+<p>输入完成之后，先按下<em>ESC</em>然后输入<code>:wq</code>+<code>回车</code>即可，保存后你就可以直接运行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh &lt;你设置的脚本名称&gt;.sh</span><br><span class="line"><span class="comment"># 如：</span></span><br><span class="line"><span class="comment"># sh 123.sh</span></span><br></pre></td></tr></table></figure>
+<p>来快速启动！ # 清理剩余文件（可选）</p>
+<p>你可以使用ls命令和rm/rmdir来清理下载的文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="comment">#回到根目录</span></span><br><span class="line"><span class="built_in">ls</span> <span class="comment">#列出文件与文件夹</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> &lt;文件名&gt;</span><br><span class="line"><span class="built_in">rm</span> -r &lt;文件夹名&gt;</span><br></pre></td></tr></table></figure>
+<p>这玩意会问你要不要删，打个y回他就行</p>
+<h1 id="一键安装脚本可选">一键安装脚本（可选）</h1>
+<p><strong>如果你觉得上述操作太过麻烦，可以尝试以下脚本来一键安装</strong>
+<br> <em>该脚本并非UP主所写</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -O https://gitee.com/print-yuhuan/SillyTavern-Termux/raw/main/Install.sh &amp;&amp; bash Install.sh​</span><br></pre></td></tr></table></figure>
+<h1 id="api密钥导入与拓展管理">API密钥导入与拓展管理</h1>
+<p><strong>首先，你需要一个魔法环境，这是必须的</strong> <br>
+在完事大吉（部署完毕后），你可以正式来配置API密钥（APIKEY）以开始游玩SillyTavern。</p>
+<p><strong>在文档里写有点干巴，所以这一节也有配套教程～</strong> <br> <a
+href="https://www.bilibili.com/video/BV1sqMQztEH7">点我跳转至B站</a></p>
+<h2 id="如何获取api密钥">如何获取API密钥</h2>
+<blockquote>
+<p>使用酒馆必要的就是API密钥，这里提供三位哔哩哔哩UP主的视频给大家参考～
+<strong>除了国内的AI以外，其它所有的，如Grok，Gemini等AI均需要魔法环境才能使用</strong></p>
+</blockquote>
+<p><a href="https://b23.tv/cGyWl0q">【1.3 硅基流动APi密钥在Cherry
+Studio的使用-哔哩哔哩】</a> <br> <a
+href="https://b23.tv/aZXmraX">【如何免费使用deepseek大模型的apikey-哔哩哔哩】</a>
+<br> <a href="https://b23.tv/9bc4wQU">【如何获取Gemini API
+Key-哔哩哔哩】</a> <br>
+注意！获取过程中遇到问题不要去询问这些UP主！问我！不要打扰其他人！ <br>
+硅基流动的API需要选择在<strong>聊天补全来源处</strong>选择自定义，然后在<strong>自定义端点（基础URL）处</strong>填写<code>https://api.siliconflow.cn/v1</code>后填写你获取的密钥即可
+<br>
+<code>DeepSeek注册已不赠送金额</code>，如果想免费使用<code>DeepSeek模型</code>请考虑使用硅基流动的API密钥
+## 酒馆助手的安装
+&gt;<code>酒馆助手</code>是一个<strong>酒馆拓展</strong>，安装后可以让酒馆渲染前端页面，可以说是玩酒馆必装了。
+按照视频教程找到<strong>拓展</strong>选项卡，然后选择<strong>安装拓展</strong>，后输入以下仓库链接。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">https://gitlab.com/novi028/JS-Slash-Runner</span><br></pre></td></tr></table></figure>
+<h1 id="你可能会用到的链接">你可能会用到的链接</h1>
+<p>整理了以下文档/链接，有兴趣你可以去看看，由于特殊原因，类脑(odysseia)的链接已不再提供</p>
+<blockquote>
+<p>1.<a
+href="https://sillytavern.wiki/">SillyTavern傻酒馆中文文档</a><br>2.<a
+href="https://www.erocraft.com/silly-tavern/">艾萝工坊</a><br>3.<a
+href="https://www.baidu.com">类脑ΟΔΥΣΣΕΙΑ</a><br>4.<a
+href="https://n0vi028.github.io/JS-Slash-Runner-Doc/">酒馆助手官方文档</a><br>5.<a
+href="https://discord.gg/https://discord.gg/elysianhorizon">旅程</a><br>6.<a
+href="https://discord.gg/qAFuVjpcRU">ReLST2C</a></p>
+</blockquote>
+<p>其中<code>SillyTavern傻酒馆中文文档</code>与<code>艾萝工坊</code>都是教程文档，从部署到角色卡/预设的获取写的都非常详尽
+是很优秀的酒馆文档<br>而<code>旅程</code>是在<em>Discord上的中文酒馆频道</em>，有很多大大在这里发布他们制作的角色卡与模型预设。</p>
+<h1 id="后续可能的问题">后续可能的问题</h1>
+<p>因为评论区反馈的人太多，故单开一个板块来说说可能遇到的问题。 <br>
+<strong>请确保自己认真阅读并使用文档之后再在评论区提问，否则这将会浪费你我的时间</strong>
+<br>
+<strong>大多数错误都是命令复制漏了/镜像没配置到/干脆就是没复制命令</strong>
+<br>
+<strong>这种问题出现在评论区将不予回复，如果是文档内标注过的问题将会直接删除</strong></p>
+<h2 id="输出过程卡顿">输出过程卡顿</h2>
+<p>1<strong>这可能是由于你使用是Google
+Gemini模型，而且没用配置预设和正则的情况下发生的</strong> <br>
+2<strong>可能是安卓后台机制的原因，确保给Termux后台运行权限/开小窗</strong></p>
+<h2 id="软件安装问题">软件安装问题</h2>
+<p>如果你遇到wget/nodejs not install 这一情况，输出以下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install wget nodejs</span><br></pre></td></tr></table></figure>
+<p><strong>这很有可能是你没复制安装必要软件那一步的命令</strong></p>
+<h1 id="进阶clewdr的配置">【进阶】ClewdR的配置</h1>
+<h2 id="clewdr是什么">ClewdR是什么</h2>
+<p>是一个<em>高性能的</em>的<strong>LLM反代项目</strong>，支持<strong>Claude与Gemini</strong>。<br>经过实测，配置Clewdr可以很大程度上提高Gemini的输出速度。<br>还有，用<strong>Rust</strong>写的</p>
+<blockquote>
+<p>看到过一个很形象的比喻，SillTavern是酒馆，大模型是少女，而Clewdr则是将少女带去酒馆的黄毛(具体出处忘了)</p>
+</blockquote>
+<h2 id="安装clewdr">安装Clewdr</h2>
+<p>回到根目录 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br></pre></td></tr></table></figure></p>
+<p>创建并进入目录 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> clewdr &amp;&amp; <span class="built_in">cd</span> clewdr</span><br></pre></td></tr></table></figure></p>
+<p>接着，下载Clewdr。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O clewdr.zip https://github.akams.cn/https://github.com/Xerxes-2/clewdr/releases/download/v0.11.12/clewdr-android-aarch64.zip</span><br></pre></td></tr></table></figure>
+<p>解压 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">unzip clewdr.zip</span><br></pre></td></tr></table></figure></p>
+<p>运行clewdr</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./clewdr</span><br></pre></td></tr></table></figure>
+<p>这将会生成配置，并在本地创建配置文件。
+<br>尝试在浏览器输入<code>127.0.0.1:8484</code>进入Clewdr配置页。</p>
+<h1 id="后续如何再次启动clewdr">后续如何再次启动ClewdR</h1>
+<p>在你新开一个终端后，先运行以下命令回到根目录 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br></pre></td></tr></table></figure>
+然后运行以下两条命令启动 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> clewdr</span><br><span class="line">./clewdr</span><br></pre></td></tr></table></figure>
+如果你是先开酒馆再开Clewdr，这样做就没问题了 <br>
+如果你是先开clewdr再开酒馆，可以直接运行下面两条命令，不用<code>cd</code>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> clewdr</span><br><span class="line">./clewdr</span><br></pre></td></tr></table></figure>
+新开的终端同样需要先运行<code>cd</code>然后运行如下命令方可启动酒馆
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br><span class="line">./start.sh</span><br></pre></td></tr></table></figure></p>
+<h1 id="捐赠">捐赠</h1>
+<p><strong>教程录制与文档撰写不易，需要经过多次测试后发出</strong> <br>
+<strong>如果可以的话，请支持我哦</strong> <br> <strong>感激不尽 ฅ( ̳• ◡
+• ̳)ฅ</strong> <br></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 蟹蟹！ꉂ(ˊᗜˋ*)</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/LimeOnTop/sill-tavern/raw/master/mm_reward_qrcode_1765118195981.png" width = "200" height = "200" alt="捐赠" align=center /></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>指南</tag>
+        <tag>资源</tag>
+        <tag>Github</tag>
+        <tag>酒馆</tag>
+        <tag>SillyTavern</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【入坑指南】Phira完整入坑指南！</title>
     <url>/2025/05/20/phira/</url>
     <content><![CDATA[<h2 id="准备工作">准备工作</h2>
@@ -1422,177 +1595,6 @@ href="https://github.com/cbs001/open-phiedit/releases/tag/windows">点我出发-
         <tag>资源</tag>
         <tag>Phira</tag>
         <tag>Phigros</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SillyTavern酒馆部署教程</title>
-    <url>/2025/07/12/sillytavern/</url>
-    <content><![CDATA[<h2 id="过时的教程">过时的教程</h2>
-<p>这个教程已经过时，且存在诸多问题，建议你查看新视频，新教程，更方便，更实用
-<a
-href="https://www.bilibili.com/video/BV17zZVBjEom">搭建SillyTavern总出错？｜想入坑SillyTavern却卡在的搭建？｜一键教你怎么安装和搭建SillyTavern与CLI反代！</a>
-## 文档 <strong>本教程在B站同步更新，欢迎查看视频教程</strong> <br> <a
-href="https://www.bilibili.com/video/BV1yoGuzEEKc">点我跳转至B站</a>
-<br> <strong>如果教程能帮到你，求个三连，谢谢你啦</strong> <br>
-<strong>该教程已于2025年7月16日完结</strong> <br>
-<strong>本以为完事大吉了，在2025年7月16日再次更新</strong></p>
-<h1 id="遇到问题请尝试termux挂小窗">遇到问题请尝试Termux挂小窗！</h1>
-<h2 id="无法回复爆红尝试将最大回复长度拉大">#
-无法回复(爆红)尝试将最大回复长度拉大！</h2>
-<p><em>操作步骤均不需要Root与魔法，仅仅只是无脑复制粘贴命令而已</em>
-<br> 您需要先下载Termux <br>
-Termux使用本文档提供的！<code>arm64-v8a</code>！不要使用<code>GooglePlay</code>版本！会报错!</p>
-<p><a
-href="https://github.com/termux/termux-app">点我跳转至GithubRelease</a>
-<br> <a
-href="https://github.akams.cn/https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk">国内镜像源高速下载</a>
-<br> <a
-href="https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk">Github直链下载</a>
-—</p>
-<p>在安装Termux后，输入以下命令来修改镜像源</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.aliyun.com/termux/termux-packages-24 stable main@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-<p><em>修改为阿里镜像源，清华源谁用谁倒霉…</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
-<p><em>更新软件包管理器</em></p>
-<p>安装必要软件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install vim wget git nodejs -y</span><br></pre></td></tr></table></figure>
-<p><em>安装必要工具，添加参数-y无需手动输入y</em></p>
-<p>配置nodejs镜像源</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-<p><em>配置npmMirror镜像源，以便国内用户可以高速下载</em></p>
-<h1 id="开始部署">开始部署</h1>
-<p>使用wget获取酒馆源码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O ST.zip https://github.akams.cn/https://github.com/SillyTavern/SillyTavern/archive/refs/tags/1.17.0.zip</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果您在运行这步后报错，挂上魔法，运行以下命令 <br></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O ST.zip https://github.com/SillyTavern/SillyTavern/archive/refs/tags/1.17.0.zip</span><br></pre></td></tr></table></figure>
-<p>继续后续操作即可</p>
-<p>解压该文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">unzip ST.zip</span><br></pre></td></tr></table></figure>
-<p><em>解压ST.zip</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> SillyTavern-1.17.0 st</span><br></pre></td></tr></table></figure>
-<p><em>将Sillyxxxxx这个目录重命名为ST，方便cd和后续启动</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br></pre></td></tr></table></figure>
-<p><em>进入st这个目录</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./start.sh</span><br></pre></td></tr></table></figure>
-<p><em>运行启动脚本</em></p>
-<h1 id="后续如何启动">后续如何启动</h1>
-<p>关闭Termux再启动后通过以下命令再次启动</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br></pre></td></tr></table></figure>
-<p><em>切换到st目录</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./start.sh</span><br></pre></td></tr></table></figure>
-<p><em>运行启动脚本</em></p>
-<h1 id="自定义启动脚本可选">自定义启动脚本（可选）</h1>
-<p>觉得每次启动都要cd和运行个sh?<br>你可以尝试写一个脚本来一条命令直接启动
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line"><span class="comment"># 返回到根目录</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim &lt;脚本名称&gt;.sh</span><br><span class="line"><span class="comment"># 选择一个方便好记忆的内容</span></span><br><span class="line"><span class="comment"># 比如vim 123.sh</span></span><br></pre></td></tr></table></figure>
-<p>然后，进入输入界面后，按下键盘上的<code>i</code>键 <br>
-屏幕上出现<code>-- INSERT --</code>后，输入以下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 酒馆正在启动</span><br><span class="line"><span class="built_in">echo</span> 浏览器：127.0.0.1:8000</span><br><span class="line"><span class="built_in">echo</span> 默认用户：user</span><br><span class="line"><span class="built_in">echo</span> 默认密码：password</span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="built_in">cd</span> st</span><br><span class="line">./start.sh</span><br><span class="line"><span class="comment"># 低下的shell水平，见谅。</span></span><br></pre></td></tr></table></figure>
-<p>输入完成之后，先按下<em>ESC</em>然后输入<code>:wq</code>+<code>回车</code>即可，保存后你就可以直接运行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh &lt;你设置的脚本名称&gt;.sh</span><br><span class="line"><span class="comment"># 如：</span></span><br><span class="line"><span class="comment"># sh 123.sh</span></span><br></pre></td></tr></table></figure>
-<p>来快速启动！ # 清理剩余文件（可选）</p>
-<p>你可以使用ls命令和rm/rmdir来清理下载的文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="comment">#回到根目录</span></span><br><span class="line"><span class="built_in">ls</span> <span class="comment">#列出文件与文件夹</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> &lt;文件名&gt;</span><br><span class="line"><span class="built_in">rm</span> -r &lt;文件夹名&gt;</span><br></pre></td></tr></table></figure>
-<p>这玩意会问你要不要删，打个y回他就行</p>
-<h1 id="一键安装脚本可选">一键安装脚本（可选）</h1>
-<p><strong>如果你觉得上述操作太过麻烦，可以尝试以下脚本来一键安装</strong>
-<br> <em>该脚本并非UP主所写</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -O https://gitee.com/print-yuhuan/SillyTavern-Termux/raw/main/Install.sh &amp;&amp; bash Install.sh​</span><br></pre></td></tr></table></figure>
-<h1 id="api密钥导入与拓展管理">API密钥导入与拓展管理</h1>
-<p><strong>首先，你需要一个魔法环境，这是必须的</strong> <br>
-在完事大吉（部署完毕后），你可以正式来配置API密钥（APIKEY）以开始游玩SillyTavern。</p>
-<p><strong>在文档里写有点干巴，所以这一节也有配套教程～</strong> <br> <a
-href="https://www.bilibili.com/video/BV1sqMQztEH7">点我跳转至B站</a></p>
-<h2 id="如何获取api密钥">如何获取API密钥</h2>
-<blockquote>
-<p>使用酒馆必要的就是API密钥，这里提供三位哔哩哔哩UP主的视频给大家参考～
-<strong>除了国内的AI以外，其它所有的，如Grok，Gemini等AI均需要魔法环境才能使用</strong></p>
-</blockquote>
-<p><a href="https://b23.tv/cGyWl0q">【1.3 硅基流动APi密钥在Cherry
-Studio的使用-哔哩哔哩】</a> <br> <a
-href="https://b23.tv/aZXmraX">【如何免费使用deepseek大模型的apikey-哔哩哔哩】</a>
-<br> <a href="https://b23.tv/9bc4wQU">【如何获取Gemini API
-Key-哔哩哔哩】</a> <br>
-注意！获取过程中遇到问题不要去询问这些UP主！问我！不要打扰其他人！ <br>
-硅基流动的API需要选择在<strong>聊天补全来源处</strong>选择自定义，然后在<strong>自定义端点（基础URL）处</strong>填写<code>https://api.siliconflow.cn/v1</code>后填写你获取的密钥即可
-<br>
-<code>DeepSeek注册已不赠送金额</code>，如果想免费使用<code>DeepSeek模型</code>请考虑使用硅基流动的API密钥
-## 酒馆助手的安装
-&gt;<code>酒馆助手</code>是一个<strong>酒馆拓展</strong>，安装后可以让酒馆渲染前端页面，可以说是玩酒馆必装了。
-按照视频教程找到<strong>拓展</strong>选项卡，然后选择<strong>安装拓展</strong>，后输入以下仓库链接。</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">https://gitlab.com/novi028/JS-Slash-Runner</span><br></pre></td></tr></table></figure>
-<h1 id="你可能会用到的链接">你可能会用到的链接</h1>
-<p>整理了以下文档/链接，有兴趣你可以去看看，由于特殊原因，类脑(odysseia)的链接已不再提供</p>
-<blockquote>
-<p>1.<a
-href="https://sillytavern.wiki/">SillyTavern傻酒馆中文文档</a><br>2.<a
-href="https://www.erocraft.com/silly-tavern/">艾萝工坊</a><br>3.<a
-href="https://www.baidu.com">类脑ΟΔΥΣΣΕΙΑ</a><br>4.<a
-href="https://n0vi028.github.io/JS-Slash-Runner-Doc/">酒馆助手官方文档</a><br>5.<a
-href="https://discord.gg/https://discord.gg/elysianhorizon">旅程</a><br>6.<a
-href="https://discord.gg/qAFuVjpcRU">ReLST2C</a></p>
-</blockquote>
-<p>其中<code>SillyTavern傻酒馆中文文档</code>与<code>艾萝工坊</code>都是教程文档，从部署到角色卡/预设的获取写的都非常详尽
-是很优秀的酒馆文档<br>而<code>旅程</code>是在<em>Discord上的中文酒馆频道</em>，有很多大大在这里发布他们制作的角色卡与模型预设。</p>
-<h1 id="后续可能的问题">后续可能的问题</h1>
-<p>因为评论区反馈的人太多，故单开一个板块来说说可能遇到的问题。 <br>
-<strong>请确保自己认真阅读并使用文档之后再在评论区提问，否则这将会浪费你我的时间</strong>
-<br>
-<strong>大多数错误都是命令复制漏了/镜像没配置到/干脆就是没复制命令</strong>
-<br>
-<strong>这种问题出现在评论区将不予回复，如果是文档内标注过的问题将会直接删除</strong></p>
-<h2 id="输出过程卡顿">输出过程卡顿</h2>
-<p>1<strong>这可能是由于你使用是Google
-Gemini模型，而且没用配置预设和正则的情况下发生的</strong> <br>
-2<strong>可能是安卓后台机制的原因，确保给Termux后台运行权限/开小窗</strong></p>
-<h2 id="软件安装问题">软件安装问题</h2>
-<p>如果你遇到wget/nodejs not install 这一情况，输出以下命令即可</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install wget nodejs</span><br></pre></td></tr></table></figure>
-<p><strong>这很有可能是你没复制安装必要软件那一步的命令</strong></p>
-<h1 id="进阶clewdr的配置">【进阶】ClewdR的配置</h1>
-<h2 id="clewdr是什么">ClewdR是什么</h2>
-<p>是一个<em>高性能的</em>的<strong>LLM反代项目</strong>，支持<strong>Claude与Gemini</strong>。<br>经过实测，配置Clewdr可以很大程度上提高Gemini的输出速度。<br>还有，用<strong>Rust</strong>写的</p>
-<blockquote>
-<p>看到过一个很形象的比喻，SillTavern是酒馆，大模型是少女，而Clewdr则是将少女带去酒馆的黄毛(具体出处忘了)</p>
-</blockquote>
-<h2 id="安装clewdr">安装Clewdr</h2>
-<p>回到根目录 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br></pre></td></tr></table></figure></p>
-<p>创建并进入目录 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> clewdr &amp;&amp; <span class="built_in">cd</span> clewdr</span><br></pre></td></tr></table></figure></p>
-<p>接着，下载Clewdr。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O clewdr.zip https://github.akams.cn/https://github.com/Xerxes-2/clewdr/releases/download/v0.11.12/clewdr-android-aarch64.zip</span><br></pre></td></tr></table></figure>
-<p>解压 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">unzip clewdr.zip</span><br></pre></td></tr></table></figure></p>
-<p>运行clewdr</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./clewdr</span><br></pre></td></tr></table></figure>
-<p>这将会生成配置，并在本地创建配置文件。
-<br>尝试在浏览器输入<code>127.0.0.1:8484</code>进入Clewdr配置页。</p>
-<h1 id="后续如何再次启动clewdr">后续如何再次启动ClewdR</h1>
-<p>在你新开一个终端后，先运行以下命令回到根目录 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br></pre></td></tr></table></figure>
-然后运行以下两条命令启动 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> clewdr</span><br><span class="line">./clewdr</span><br></pre></td></tr></table></figure>
-如果你是先开酒馆再开Clewdr，这样做就没问题了 <br>
-如果你是先开clewdr再开酒馆，可以直接运行下面两条命令，不用<code>cd</code>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> clewdr</span><br><span class="line">./clewdr</span><br></pre></td></tr></table></figure>
-新开的终端同样需要先运行<code>cd</code>然后运行如下命令方可启动酒馆
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> st</span><br><span class="line">./start.sh</span><br></pre></td></tr></table></figure></p>
-<h1 id="捐赠">捐赠</h1>
-<p><strong>教程录制与文档撰写不易，需要经过多次测试后发出</strong> <br>
-<strong>如果可以的话，请支持我哦</strong> <br> <strong>感激不尽 ฅ( ̳• ◡
-• ̳)ฅ</strong> <br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 蟹蟹！ꉂ(ˊᗜˋ*)</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/LimeOnTop/sill-tavern/raw/master/mm_reward_qrcode_1765118195981.png" width = "200" height = "200" alt="捐赠" align=center /></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>指南</tag>
-        <tag>资源</tag>
-        <tag>Github</tag>
-        <tag>酒馆</tag>
-        <tag>SillyTavern</tag>
       </tags>
   </entry>
   <entry>
